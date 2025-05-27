@@ -56,6 +56,20 @@ def export_rikishi_to_csv(rikishi_list, filename="rikishi_results.csv"):
 
         # Write Rikishi data line-by-line
         for rikishi in rikishi_list:
+            # try:
+            print(
+                rikishi.name,
+                rikishi.wins,
+                rikishi.losses,
+                rikishi.record,
+                rikishi.neustadl,
+                rikishi.weighted_neustadl if rikishi.weighted_neustadl is not None else "",
+                rikishi.rank if rikishi.rank is not None else "",
+                rikishi.inverse_rank if rikishi.inverse_rank is not None else "",
+                rikishi.weight if rikishi.weight is not None else "",
+                rikishi.sanyaku,
+                rikishi.beats  # Joins opponents by semicolon
+            )
             writer.writerow([
                 rikishi.name,
                 rikishi.wins,
@@ -67,8 +81,10 @@ def export_rikishi_to_csv(rikishi_list, filename="rikishi_results.csv"):
                 rikishi.inverse_rank if rikishi.inverse_rank is not None else "",
                 rikishi.weight if rikishi.weight is not None else "",
                 rikishi.sanyaku,
-                 ";".join(rikishi.beats),  # Joins opponents by semicolon
+                ";".join([rikishi.name for rikishi in rikishi.beats]),  # Joins opponents by semicolon
             ])
+            # except Exception as e:
+            #     print("Got an error writing", e)
 
 def import_rikishi_from_csv(filename="rikishi_results.csv"):
     rikishi_list = []
@@ -182,6 +198,9 @@ def scrape_sumodb(suffix, csvname):
                         if rank_counter % 10 == 0:
                             print("sleeping to avoid rate timeout")
                             time.sleep(10)
+                            # rikishi_list = fill_in_rikishi_list_data(rikishi_list)
+                            # export_rikishi_to_csv(rikishi_list, csvname)
+                            # return
 
                     else:
                         print("failed somehow due to link fucking up")
@@ -290,11 +309,39 @@ def prevent_downrank_with_kk(sorted_rikishi, offset):
 
     return final_ranking
 
+def print_row(row, east, west, rlistlen, should_print_wn=False):
+
+    trueranke = rlistlen - (east.inverse_rank + east.record)
+
+    if west:
+        truerankw = rlistlen - (west.inverse_rank + west.record)
+        if should_print_wn:
+            print(
+                f"{row[1]}: {row[0]} (N:{east.neustadl}) (WN:{east.weighted_neustadl}) (TrueRank:{trueranke}) | "
+                f"{row[3]}: {row[2]} (N:{west.neustadl}) (WN:{west.weighted_neustadl}) (TrueRank:{truerankw})"
+            )
+        else:
+            print(
+                f"{row[1]}: {row[0]} (N:{east.neustadl}) (TrueRank:{trueranke}) | "
+                f"{row[3]}: {row[2]} (N:{west.neustadl}) (TrueRank:{truerankw})"
+            )
+    else:
+        if should_print_wn:
+             print(
+                f"{row[1]}: {row[0]} (N:{east.neustadl}) (WN:{east.weighted_neustadl}) (TrueRank:{trueranke}) | "
+                f"{row[3]}: (empty)"
+            )
+        else:
+            print(
+                f"{row[1]}: {row[0]} (N:{east.neustadl}) (TrueRank:{trueranke}) | "
+                f"{row[3]}: (empty)"
+            )
+
 #sanyaku heuristics:
 #0 = no heuristics, will not attempt to determine sekiwakes etc
 #1 = fair, simple heuristics
 #2 = prevent downranking
-def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
+def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neustadl_rank=False):
     with open(filename, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
 
@@ -302,6 +349,9 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
         ozeki_list = []
         komusubi_list = []
         sekiwake_list = []
+
+        #make lambda print
+        rlistlen = len(rikishi_list)
 
         for rikishi in rikishi_list[:]:  # Iterate over a shallow copy
             if rikishi.sanyaku in ['O1e', 'O1w', 'O2e', 'O2w', 'O3e', 'O3w']:
@@ -336,10 +386,11 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
         )
 
 
-        #TODO handle sekiwake promotion criteria
+        #TODO handle ozeki promotion criteria
 
-        sorted_list = sort_non_ozeki_raw(rikishi_list)
+        sorted_list = sort_non_ozeki_raw(rikishi_list) if do_simple_neustadl_rank == False else weighted_neustadl_banzuke(rikishi_list)
         final_sekiwake_out = []
+        final_komusubi_out = []
         #do heuristics to determine who gets the sekiwake slots
         # print("pop " , sorted_list.pop(0).name)
         if use_sanyaku_heuristics > 0:
@@ -376,7 +427,6 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
                 # final_sekiwake_out = prevent_downrank_with_kk(final_sekiwake_out, offset)
                 # final_sekiwake_out = prevent_uprank_with_mk(final_sekiwake_out, offset)
 
-            #TODO: change the sekiwake comparison to be more fair
 
             sekiwake_prefix = "S"
             sekiwake_number = 1
@@ -393,20 +443,15 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
 
                 writer.writerow(row)
 
-                if west:
-                    # print(f"{row[1]}: {row[0]} ({east.weighted_neustadl}) | {row[3]}: {row[2]} ({west.weighted_neustadl})")
-                     print(f"{row[1]}: {row[0]} ({east.neustadl}) | {row[3]}: {row[2]} ({west.weighted_neustadl})")
-                else:
-                    print(f"{row[1]}: {row[0]} ({east.neustadl}) | {row[3]}: (empty)")
-                    # print(f"{row[1]}: {row[0]} ({east.weighted_neustadl}) | {row[3]}: (empty)")
+                print_row(row, east, west, rlistlen, do_simple_neustadl_rank)
 
                 sekiwake_number += 1  # Increment sekiwake rank each iteration
 
-        #TODO: make non-heuristic out for sekiwake (doable with just changing the final sorted list out)
+            #TODO: make non-heuristic out for sekiwake (doable with just changing the final sorted list out)
 
 
             #Next, figure out who our komusubi are
-            final_komusubi_out = []
+
             for rikishi in sorted_list[:]:
                 #first, check if there are any komusubi remaining with a kachikoshi. They are still komusubi
                 if rikishi in komusubi_list and rikishi.record > 0:
@@ -427,7 +472,16 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
                     final_komusubi_out.append(rikishi)
                     sorted_list.remove(rikishi)
 
-            #TODO: add more komusubi if this doesnt give us enough!!!
+            #If we don't have enough komusubi after checking for existing komusubi, and people who under normal circumstances would made it to komusubi even with 2 slots filled,
+            #Then fill the slots with the next highest sorted wrestler.
+            while len(final_komusubi_out) < 2 and sorted_list:
+                final_komusubi_out.append(sorted_list.pop(0))
+            # while len(final_komusubi_out < 2):
+            #     for rikishi in sorted_list[:]:
+            #         final_komusubi_out.append(rikishi)
+            #         sorted_list.remove(rikishi)
+            #         if len(final_komusubi_out == 2):
+            #             break
             #TODO: only add extra komusubi to the threshold if they would go PAST komusubi
 
             #prevent downranks and upranks
@@ -453,10 +507,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
 
                 writer.writerow(row)
 
-                if west:
-                    print(f"{row[1]}: {row[0]} ({east.weighted_neustadl}) | {row[3]}: {row[2]} ({west.weighted_neustadl})")
-                else:
-                    print(f"{row[1]}: {row[0]} ({east.weighted_neustadl}) | {row[3]}: (empty)")
+                print_row(row, east, west, rlistlen, do_simple_neustadl_rank)
 
                 komusubi_number += 1  # Increment komusubi rank each iteration
 
@@ -464,6 +515,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
         #now, finally handle maegashira
         offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out) + len(final_komusubi_out)
 
+        final_list = sorted_list.copy()
         if use_sanyaku_heuristics == 2:
             trouble_list = []
             for i in range(len(sorted_list)):
@@ -473,7 +525,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
                     trouble_list.append(rikishi)
 
             finalized_list = []
-            final_list = sorted_list.copy()
+
             for i in range(len(sorted_list)):
                 rikishi = sorted_list[i]
 
@@ -490,14 +542,14 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
 
                     # If they're ranked better now (lower index) than their original rank, move them down
                     while current_pos <= original_pos:
-                        print("found", rikishi.name)
-                        print(current_pos, original_pos)
+                        # print("found", rikishi.name)
+                        # print(current_pos, original_pos)
                         # Swap downward with wrestler below
                         # if current_pos+1> len(sorted_list):
                         #     finalized_list.append(rikishi)
                         #     break
-                        print("###")
-                        print(final_list[current_pos].name)
+                        # print("###")
+                        # print(final_list[current_pos].name)
                         swap_index = current_pos+1
 
                         # if
@@ -507,7 +559,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
                             final_list[swap_index],
                             final_list[current_pos],
                         )
-                        print(final_list[current_pos].name)
+                        # print(final_list[current_pos].name)
 
                         current_pos += 1
                     finalized_list.append(rikishi)
@@ -551,12 +603,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
 
             writer.writerow(row)
 
-            if west:
-                # print(f"{row[1]}: {row[0]} ({east.weighted_neustadl}) ({east.inverse_rank+east.record}) | {row[3]}: {row[2]} ({west.weighted_neustadl}) ({west.inverse_rank+west.record})")
-                print(f"{row[1]}: {row[0]} ({east.neustadl}) ({east.inverse_rank+east.record}) | {row[3]}: {row[2]} ({west.neustadl}) ({west.inverse_rank+west.record})")
-            else:
-                # print(f"{row[1]}: {row[0]} ({east.weighted_neustadl}) | {row[3]}: (empty)")
-                print(f"{row[1]}: {row[0]} ({east.neustadl}) | {row[3]}: (empty)")
+            print_row(row, east, west, rlistlen, do_simple_neustadl_rank)
 
             rank_number += 1  # Increment rank after each row
 
@@ -567,10 +614,10 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1):
 
 
 # "Banzuke.aspx?b=202503"
-# scrape_sumodb('Banzuke.aspx?b=202503', "haru2025new.csv")
-rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("haru2025manualweights.csv"))
-make_banzuke(rlist, "testoutneueonlynew.csv", 2)
-
+# scrape_sumodb('Banzuke.aspx?b=202505#M', "Natsu2025.csv")
+rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025.csv"))
+make_banzuke(rlist, "testoutnatsu.csv", 2)
+make_banzuke(rlist, "testoutnatsuraw.csv", 0, True)
 
 
 

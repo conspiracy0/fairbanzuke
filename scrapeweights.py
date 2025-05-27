@@ -23,10 +23,10 @@ def scrape_weight(rank1, rank2):
     #     return None, None
 
 # List of all ranks including yokozuna
-all_ranks = ["y", "o", "s", "k"] + [f"m{i}" for i in range(1, 19)]
+all_ranks = ['y','o','s','k'] + [f"m{i}" for i in range(1, 19)] + [f"j{i}" for i in range(1, 15)]
 
 # Open CSV file to write
-with open("all_ranks_head_to_head.csv", mode='w', newline='', encoding='utf-8') as file:
+with open("weightswithjuryo.csv", mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
     header = ["Rank vs"] + all_ranks
     writer.writerow(header)
@@ -38,6 +38,10 @@ with open("all_ranks_head_to_head.csv", mode='w', newline='', encoding='utf-8') 
         total_matches = 0
 
         for opponent_rank in all_ranks:
+            if len(match_counts) != 0 and len(match_counts) % 8 == 0:
+                print("sleeping")
+                time.sleep(9)
+                print("finished_sleep")
             if primary_rank == opponent_rank:
                 row.append("-")
                 match_counts.append(0)
@@ -53,7 +57,8 @@ with open("all_ranks_head_to_head.csv", mode='w', newline='', encoding='utf-8') 
                 weighted_total += matches * weight
                 total_matches += matches
                 print("got weight of", primary_rank, "vs", opponent_rank, ":", weight, "matches:", matches)
-                time.sleep(0.25)
+                # time.sleep(0.25)
+                # print("finished_sleep")
             else:
                 row.append("N/A")
                 match_counts.append(0)

@@ -13,37 +13,40 @@ The primary goal of this algorithm is to minimize arbitrary decision-making and 
 Each rikishi (wrestler) is initially sorted into a raw banzuke using a custom comparator sort function based on their tournament performance:
 
 - Determine each rikishi’s **true rank**: the position directly resulting from their win-loss record (e.g., a rikishi at Maegashira 6 East with a 9-6 record moves up to Maegashira 3 East, three slots higher).
-- Resolve ties using the [**Neustadtl Sonneborn-Berger Score**](https://en.wikipedia.org/wiki/Sonneborn%E2%80%93Berger_score#Neustadtl_Sonneborn%E2%80%93Berger_score) (adapted for drawless sumo tournaments):
+- Resolve ties for a rank's slot using the [**Neustadtl Sonneborn-Berger Score**](https://en.wikipedia.org/wiki/Sonneborn%E2%80%93Berger_score#Neustadtl_Sonneborn%E2%80%93Berger_score) (adapted for drawless sumo tournaments):
 
 $$
 N_i = W_i + \sum_{j \in O_i} W_j
 $$
 
 Where:
-- \( N_i \): Neustadtl score for rikishi \( i \)
-- \( W_i \): Number of wins by rikishi \( i \)
-- \( O_i \): Set of opponents defeated by rikishi \( i \)
-- \( W_j \): Number of wins by opponent \( j \)
+- $N_i$: Neustadtl score for rikishi $i$
+- $W_i$: Number of wins by rikishi $i$
+- $O_i$: Set of opponents defeated by rikishi $i$
+- $W_j$: Number of wins by opponent $j$
 
-A higher Neustadtl score ranks a rikishi higher, rewarding victories over stronger opponents.
+
+In simple terms, the Neustadtl score measures a rikishi’s overall performance by adding:
+1. Their total number of wins, and
+2. The total number of wins earned by each opponent they defeated.
+
+Therefore, a Maegashira with an 8-7 record who scored wins against the 1st and 2nd place finishers of the tournament will have a higher Neustadl score than a similar 8-7 Rikishi who only beat opponents who posted makekoshis. This rewards not just how many bouts a rikishi wins, but *who* they beat — victories over stronger opponents contribute more to the score.
 
 ### Step 2: Determining Sanyaku
 
-Currently, there is no logic implemented for promotions or demotions involving the ranks of Ozeki or Yokozuna. Rankings within these categories rely purely on tournament records.
+Currently, there is no logic implemented for promotions or demotions for Ozeki or Yokozuna, as the algorithm only looks at a single basho, and promotions to these ranks also rely on external, non-performant criteria. East/West rankings within these ranks rely purely on tournament results, where the better-performing Ozekis/Yokozunas get higher slots.
 
 #### Sekiwake Criteria:
 - Rikishi already ranked Sekiwake with a kachikoshi (winning record) retain their rank.
 - Komusubi achieving at least 11 wins are promoted to Sekiwake.
+- If fewer than two Sekiwake are identified through these criteria, the next highest-ranked wrestlers from the raw banzuke fill the remaining Sekiwake slots.
 
-If fewer than two Sekiwake are identified through these criteria, the next highest-ranked wrestlers from the raw banzuke fill the remaining Sekiwake slots.
-
-> **TODO:** Implement a secondary comparator sort exclusively for Sekiwake.
+Note this does currently not account for kadoban Ozeki being demoted to Sekiwake.
 
 #### Komusubi Criteria:
 - Komusubi with a kachikoshi retain their rank.
-- Wrestlers whose true rank after the tournament surpasses Komusubi are promoted to Komusubi, even if this exceeds the standard two-slot limit.
-
-> **TODO:** If fewer than two Komusubi are found, select the next highest-ranked wrestlers from the raw banzuke.
+- Wrestlers whose true rank after the tournament _surpasses_ Komusubi(i.e. if their performance would justify a promotion to Sekiwake, were there not already enough Sekiwake) are promoted to Komusubi, even if this exceeds the standard two-slot limit.
+- If fewer than two Komusubi are identified through these criteria, the next highest-ranked wrestlers from the raw banzuke fill the remaining Komusubi slots.
 
 ### Step 3: Filling Maegashira and Juryo Slots
 
@@ -56,10 +59,6 @@ If fewer than two Sekiwake are identified through these criteria, the next highe
 
 - **Promotion/Demotion Logic**: Currently lacks rules for Ozeki promotion/demotion and Yokozuna promotion.
 - **Weighted Neustadtl Scores**: Does not currently account for the relative value of wins over higher or lower-ranked opponents. Infrastructure for \"Weight-Ranked Neustadtl\" exists, but a satisfactory weighting system is still under development.
-
-Potential weighting solutions under consideration include:
-- Weighted mean of expected wins/losses per bout by rank.
-- Incorporating historical performance data of individual rikishi.
 
 ---
 

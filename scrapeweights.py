@@ -26,7 +26,7 @@ def scrape_weight(rank1, rank2):
 all_ranks = ['y','o','s','k'] + [f"m{i}" for i in range(1, 19)] + [f"j{i}" for i in range(1, 15)]
 
 # Open CSV file to write
-with open("weightswithjuryo.csv", mode='w', newline='', encoding='utf-8') as file:
+with open("weightswithjuryonew.csv", mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
     header = ["Rank vs"] + all_ranks
     writer.writerow(header)

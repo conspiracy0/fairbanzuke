@@ -1,6 +1,6 @@
 # Fair Banzuke Maker
 
-This repository contains the alpha version of the **Fair Banzuke Maker** for Grand Sumo. It automatically scrapes information from the SumoDB for each basho (tournament) and generates a banzuke based on predefined, transparent criteria.
+This repository contains the alpha version of the **Fair Banzuke Maker** for Grand Sumo. It automatically scrapes information from the SumoDB for each basho (tournament) and generates a banzuke based on predefined, transparent criteria. Currently the repo is messy and WIP.
 
 ---
 

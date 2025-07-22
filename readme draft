@@ -1,0 +1,37 @@
+This repo contains the alpha version of the "Fair Banzuke" maker for Grand Sumo. It automatically scrapes info off the sumodb from a basho and spits out a banzuke based on basic criteria.
+
+METHODOLOGY
+
+The goal of this algorithm is to remove as much arbitrary decision-making from the banzuke, and rank wrestlers based exclusively on in-tournament performance. It therefore works as follows:
+    1. Via a a custom comparator sort, sort each rikishi into a raw banzuke based on their performance. The comparison function first checks if one rikishi's "true rank" is above another rikishi's. The "true rank" is their direct placement based on their record -- if they went 9-6, at maegashira 6e, then they should should go up to maegashira 3e, 3 slots ahead. If there are ties at a slot, we evaluate tiebreaks with the Neustadl Sonnenborn-Berger Score(https://en.wikipedia.org/wiki/Sonneborn%E2%80%93Berger_score#Neustadtl_Sonneborn%E2%80%93Berger_score), adapted to be drawless.
+
+    The Neustadl score implemented here is the (make this fancy latex/etc):
+        Number of wins a rikishi had + number of wins each opponent they beat had
+
+    Wrestlers with a higher Neustadl score go above wrestlers with a lower one. This means that beating stronger opponents puts you ahead of rikishi who farmed weaker opponents, or had a losing record and dropped to that slot.
+
+    2. We then do heuristics to determine sanyaku. Currently there is not logic for promotion (or demotion) to ozeki and yokozuna. Rankings inside those ranks are determined by whomever had the best records.
+
+    For sekiwake, we start by checking rikishi with the following criteria:
+    1. If someone is already a sekiwake, and posts a kachikoshi, they remain a sekiwake.
+    2. If a komusubi gets at least 11 wins, move him to sekiwake.
+
+    If this does not give us two sekiwake, we look for the next highest ranked wrestlers based on the raw sorted banzuke.
+
+    #IMPLEMENT ME From here, we do a second comparator sort of just the sekiwake.
+
+    Next, a similar process is performed for komusubi.
+    1. Check if there are any komusubi remaining with a kachikoshi. They are still komusubi.
+    2. Then, check for anyone whose true rank given their performance would be ABOVE komusubi. These people should not be denied a promotion to komusubi, even if we already have two komusubi.
+
+    #IMPLEMENT ME If this does not give us two komusubi, then we look for the next highest ranked wrestlers based on the raw sorted banzuke still remaining.
+
+    3. The remaining wrestlers are slotted into maegashira and juryo slots based on their true rank, as determined in step 1. We finally go over these ranks and ensure that wrestlers are not moved /up/ in rank with a makekoshi by re-iterating over the list and bubble-sorting down spuriously promoted wrestlers to the first available rank that is not better than their starting. Note that a move "up" because a rank slot was closed (i.e. M18 to M17 because the M18 rank disappeared) does not count for this process.
+
+
+Issues/Planned future features:
+    - Does not currently account for ozeki promotion/demotion, or yokozuna promotion
+    - Does not give any weight to individuals beating higher-ranked or lower-ranked opponent. The infrastructure is in place for what I will call "Weight-Ranked Neustadl" evaluation, but I have not yet found a satisfactory way to weigh wins over a yokozuna with an bad performance at an individual tournament more highly than a win over an equal-performance M17. An attempt was made at this with a linear relationship of weights by rank, but this (seemingly) just results in the same outcome as evaluating the raw Neustadl score. Potential solutions include the weighted mean of expected wins/losses a bout by rank, or historical performance of a given rikishi.
+
+
+

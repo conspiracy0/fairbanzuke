@@ -4,8 +4,8 @@ import csv, time
 
 # Function to scrape head-to-head weight
 def scrape_weight(rank1, rank2):
-    winurl = f"https://sumodb.sumogames.de/Query_bout.aspx?show_form=0&rank1={rank1}&onlyw1=on&rank2={rank2}"
-    lossurl = f"https://sumodb.sumogames.de/Query_bout.aspx?show_form=0&rank1={rank1}&onlyl1=on&rank2={rank2}"
+    winurl = f"https://sumodb.sumogames.de/Query_bout.aspx?show_form=0&rank1={rank1}&onlyw1=on&rank2={rank2}&form1_year=1958-now"
+    lossurl = f"https://sumodb.sumogames.de/Query_bout.aspx?show_form=0&rank1={rank1}&onlyl1=on&rank2={rank2}&form1_year=1958-now"
     response = requests.get(winurl)
     lresponse = requests.get(lossurl)
     soup = BeautifulSoup(response.content, "html.parser")
@@ -26,7 +26,7 @@ def scrape_weight(rank1, rank2):
 all_ranks = ['y','o','s','k'] + [f"m{i}" for i in range(1, 19)] + [f"j{i}" for i in range(1, 15)]
 
 # Open CSV file to write
-with open("weightswithjuryonew.csv", mode='w', newline='', encoding='utf-8') as file:
+with open("weightswithjuryonewdatelimited.csv", mode='w', newline='', encoding='utf-8') as file:
     writer = csv.writer(file)
     header = ["Rank vs"] + all_ranks
     writer.writerow(header)

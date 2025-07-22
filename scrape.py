@@ -353,7 +353,7 @@ def fill_in_rikishi_list_data(rikishi_list, use_linear_weights=False):
     rikishi_dict = {rikishi.name: rikishi for rikishi in rikishi_list}
     for rikishi in rikishi_list:
         rikishi.beats = [rikishi_dict[opponent] for opponent in rikishi.beats if opponent in rikishi_dict]
-        rikishi.inverse_rank = len(rikishi_list)-rikishi.rank
+        rikishi.inverse_rank = len(rikishi_list)-rikishi.rank-1
         #figure out rank weight
         rikishi.weight = rank_weights[rikishi.starting_rank[:-1].lower()] if use_linear_weights==False else rank_weights_linear[rikishi.starting_rank[:-1].lower()]
 
@@ -457,8 +457,119 @@ def sort_non_ozeki_weighted(a, b):
     print("returning 0 on ", a.name, "vs", b.name)
     return 0
 
-def sort_non_ozeki_raw(rlist, weighted=False):
-    return sorted(rlist, key=cmp_to_key(sort_non_ozeki_raw_compare)) if weighted == False else sorted(rlist, key=cmp_to_key(sort_non_ozeki_weighted))
+rank_list_print = [f"M{i}{side}" for i in range(1, 19) for side in ("e", "w")] + [f"J{i}{side}" for i in range(1, 15) for side in ("e", "w")]
+
+def sort_non_ozeki_weighted_fuzzy(a, b):
+
+    #true rank is the "true placement" they should be at given their rank and record. i.e, a M8e with a 8-7 should go to M7e
+    atruerank = (a.inverse_rank + a.record)
+    btruerank = (b.inverse_rank + b.record)
+    # print("ghv2", global_hack_var)
+    atr2 = global_hack_var - atruerank
+    btr2 = global_hack_var - btruerank
+    atrfindable = atr2 > -1 and atr2 < len(rank_list_print)
+    btrfindable = btr2 > -1 and btr2 < len(rank_list_print)
+    if atrfindable and btrfindable and (a.name == "Kusano" or b.name == "Kusano") :
+        print(a.name, atr2, rank_list_print[atr2], b.name, btr2, rank_list_print[btr2])
+
+    #if a wrestler is more than 2 ranks higher than someone, just automatically place him
+    if atruerank - btruerank >= 2:
+        print("moving up", a.name, "moving down", b.name, "on raw truerank")
+        return (-1)
+    if btruerank - atruerank >= 2:
+        print("moving up", b.name, "moving down", a.name, "on raw truerank")
+        return 1
+
+    #if there are multiple people at the same true rank, then break ties with the weighted neustadl
+    # the neustadl score is the sum of the weighted ranks you beat, and every weighted rank your opponents beat.
+    # this means that if you beat better opponents, who either did better in the tournament, and/or were higher ranked, you will do better
+
+
+    if atrfindable and btrfindable:
+        # print(a.name, atr2, rank_list_print[atr2], b.name, btr2, rank_list_print[btr2])
+        #if they are the same maegashira ranks, try to fuzzy it a bit
+        if rank_list_print[atr2][:-1] == rank_list_print[btr2][:-1]:
+            # print(a.name, atr2, rank_list_print[atr2], b.name, btr2, rank_list_print[btr2])
+            if (a.weighted_neustadl > b.weighted_neustadl):
+                print("moving up", a.name, "moving down", b.name, "on fuzzy wn")
+                return (-1)
+            elif (a.weighted_neustadl < b.weighted_neustadl):
+                print("moving up", b.name, "moving down", a.name, "on fuzzy wn")
+                return 1
+
+    #if we can't figure it out still, go back to default un-fuzzy behavior
+    if atruerank > btruerank:
+        return (-1)
+    if atruerank < btruerank:
+        return 1
+
+    if (a.weighted_neustadl > b.weighted_neustadl):
+        print("moving up", a.name, "moving down", b.name, "on leftover wn ")
+        return (-1)
+    elif (a.weighted_neustadl < b.weighted_neustadl):
+        print("moving up", b.name, "moving down", a.name, "on leftover wn ")
+        return 1
+
+
+    # final tiebreak, f b is in a.beats, then a should go before b
+    print("got to tiebreaks")
+    if b in a.beats:
+        return -1
+    elif a in b.beats:
+        # if a is in b.beats, then b should go before a
+        return 1
+    print("returning 0 on ", a.name, "vs", b.name)
+    return 0
+
+def sort_non_ozeki_fuzzy(a, b):
+
+    #true rank is the "true placement" they should be at given their rank and record. i.e, a M8e with a 8-7 should go to M7e
+    atruerank = (a.inverse_rank + a.record)
+    btruerank = (b.inverse_rank + b.record)
+
+    #first, if one wrestlers true rank is objectively better than another wrestler, then he should go higher.
+    if atruerank - btruerank >= 2:
+        return (-1)
+    if btruerank - atruerank >= 2:
+        return 1
+
+    #if there are multiple people at the same true rank, then break ties with the weighted neustadl
+    # the neustadl score is the sum of the weighted ranks you beat, and every weighted rank your opponents beat.
+    # this means that if you beat better opponents, who either did better in the tournament, and/or were higher ranked, you will do better
+    # if (a.weighted_neustadl > b.weighted_neustadl):
+    #     return (-1)
+    # elif (a.weighted_neustadl < b.weighted_neustadl):
+    #     return 1
+    if (a.neustadl > b.neustadl):
+        return (-1)
+    elif (a.neustadl < b.neustadl):
+        return 1
+
+
+    # final tiebreak, f b is in a.beats, then a should go before b
+    if b in a.beats:
+        return -1
+    elif a in b.beats:
+        # if a is in b.beats, then b should go before a
+        return 1
+    print("returning 0 on ", a.name, "vs", b.name)
+    return 0
+
+global_hack_var = None
+def sort_non_ozeki_raw(rlist, rating_options):
+    global global_hack_var
+    global_hack_var = len(rlist) - 5
+    # print("ghv", global_hack_var)
+    match rating_options:
+        case 0:
+            return sorted(rlist, key=cmp_to_key(sort_non_ozeki_raw_compare))
+        case 1:
+            return sorted(rlist, key=cmp_to_key(sort_non_ozeki_weighted))
+        case 2:
+            return sorted(rlist, key=cmp_to_key(sort_non_ozeki_fuzzy))
+        case 3:
+            return sorted(rlist, key=cmp_to_key(sort_non_ozeki_weighted_fuzzy))
+
 
 #prevent downranking if the rikishi has a kk after raw weighted neustadl evaluation
 def prevent_downrank_with_kk(sorted_rikishi, offset):
@@ -479,12 +590,31 @@ def prevent_downrank_with_kk(sorted_rikishi, offset):
 
     return final_ranking
 
-def print_row(row, east, west, rlistlen, should_print_wn=False):
+rank_list_print = [f"M{i}{side}" for i in range(1, 19) for side in ("e", "w")] + [f"J{i}{side}" for i in range(1, 15) for side in ("e", "w")]
 
-    trueranke = rlistlen - (east.inverse_rank + east.record)
+def print_row(row, east, west, rlistlen, should_print_wn=False, is_maegashira_offset = 0):
+
+    #if we are going to try and print the actual rank name on the true rank
+    if is_maegashira_offset > 0:
+        trueranke = rlistlen - (east.inverse_rank + east.record)
+        # if trueranke - is_maegashira_offset -1 > -1:\
+        if trueranke- is_maegashira_offset > -1 and trueranke - is_maegashira_offset < len(rank_list_print):
+            # print(len(rank_list_print), trueranke - is_maegashira_offset, east.name, east.record)
+            trueranke = rank_list_print[trueranke - is_maegashira_offset]
+
+    else:
+        trueranke = rlistlen - (east.inverse_rank + east.record)
+
 
     if west:
-        truerankw = rlistlen - (west.inverse_rank + west.record)
+        if is_maegashira_offset > 0:
+            truerankw = rlistlen - (west.inverse_rank + west.record)
+            if truerankw- is_maegashira_offset > -1 and truerankw - is_maegashira_offset < len(rank_list_print):
+            # print(len(rank_list_print), trueranke - is_maegashira_offset, east.name, east.record)
+                truerankw = rank_list_print[truerankw - is_maegashira_offset]
+        else:
+            truerankw = rlistlen - (west.inverse_rank + west.record)
+
         if should_print_wn:
             print(
                 f"{row[1]}: {row[0]} (N:{east.neustadl}) (WN:{east.weighted_neustadl}) (TrueRank:{trueranke}) | "
@@ -511,7 +641,12 @@ def print_row(row, east, west, rlistlen, should_print_wn=False):
 #0 = no heuristics, will not attempt to determine sekiwakes etc
 #1 = fair, simple heuristics
 #2 = prevent downranking
-def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neustadl_rank=False):
+#ranking system:
+#0 = Truerank strict, regular neustadl
+#1 = Truerank strict, weighted neustadl
+#2 = Truerank fuzzy, regular Neustadl
+#3 = Truerank fuzzy, weighted  neustadl
+def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_options=0):
     with open(filename, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
 
@@ -532,6 +667,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neus
                 # rikishi_list.remove(rikishi)
             elif rikishi.sanyaku in ['Y1e', 'Y1w', "Y2e", "Y2w"]:
                 yokozuna_list.append(rikishi)
+
                 rikishi_list.remove(rikishi)
             elif rikishi.sanyaku in ['K1e', 'K1w', 'K2e', 'K2w']:
                 komusubi_list.append(rikishi)
@@ -558,7 +694,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neus
 
         #TODO handle ozeki promotion criteria
 
-        sorted_list = sort_non_ozeki_raw(rikishi_list, do_simple_neustadl_rank)
+        sorted_list = sort_non_ozeki_raw(rikishi_list, ranking_options)
         final_sekiwake_out = []
         final_komusubi_out = []
         #do heuristics to determine who gets the sekiwake slots
@@ -591,7 +727,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neus
 
 
             #now, sort the sekiwake ranking based on true rank
-            final_sekiwake_out = sort_non_ozeki_raw(final_sekiwake_out, do_simple_neustadl_rank)
+            final_sekiwake_out = sort_non_ozeki_raw(final_sekiwake_out, ranking_options)
             if use_sanyaku_heuristics == 2:
                 offset = len(yokozuna_list) + len(ozeki_list)
                 # final_sekiwake_out = prevent_downrank_with_kk(final_sekiwake_out, offset)
@@ -613,7 +749,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neus
 
                 writer.writerow(row)
 
-                print_row(row, east, west, rlistlen, do_simple_neustadl_rank)
+                print_row(row, east, west, rlistlen, True if ranking_options % 2 != 0 else False)
 
                 sekiwake_number += 1  # Increment sekiwake rank each iteration
 
@@ -646,7 +782,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neus
                 final_komusubi_out.append(sorted_list.pop(0))
 
             #prevent downranks and upranks
-            final_komusubi_out = sort_non_ozeki_raw(final_komusubi_out, do_simple_neustadl_rank)
+            final_komusubi_out = sort_non_ozeki_raw(final_komusubi_out, ranking_options)
             if use_sanyaku_heuristics == 2:
                 offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out)
                 final_komusubi_out = prevent_downrank_with_kk(final_komusubi_out, offset)
@@ -668,7 +804,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neus
 
                 writer.writerow(row)
 
-                print_row(row, east, west, rlistlen, do_simple_neustadl_rank)
+                print_row(row, east, west, rlistlen, True if ranking_options % 2 != 0 else False)
 
                 komusubi_number += 1  # Increment komusubi rank each iteration
 
@@ -681,8 +817,8 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neus
             trouble_list = []
             for i in range(len(sorted_list)):
                 rikishi = sorted_list[i]
-
-                if (i+offset <= 70 and rikishi.wins < 8 and i+offset < rikishi.rank):
+                # print(rikishi.name, i+offset, rikishi.rank)
+                if (i+offset <= 70 and rikishi.wins < 8 and i+offset <= rikishi.rank):
                     trouble_list.append(rikishi)
 
             finalized_list = []
@@ -764,7 +900,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neus
 
             writer.writerow(row)
 
-            print_row(row, east, west, rlistlen, do_simple_neustadl_rank)
+            print_row(row, east, west, rlistlen, True if ranking_options % 2 != 0 else False, offset)
 
             rank_number += 1  # Increment rank after each row
 
@@ -773,12 +909,19 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, do_simple_neus
 
 
 # "Banzuke.aspx?b=202503"
-# scrape_sumodb('Banzuke.aspx?b=202505#M', "Natsu2025weights.csv")
-rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))
-make_banzuke(rlist, "testoutnatsuweight.csv", 2, True)
-
-rlistlinear = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"), True)
-
-make_banzuke(rlistlinear, "testoutnatsuweightlinear.csv", 2, True)
-
-
+scrape_sumodb('Banzuke.aspx?b=202401', "bashoresults/Hatsu2024.csv")
+# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))
+# #make fuzzy
+# make_banzuke(rlist, "testoutnatsufuzzy.csv", 2, 2)
+# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))
+# make_banzuke(rlist, "testoutnatsunormal.csv", 2, 0)
+# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))
+# make_banzuke(rlist, "testoutnatsuweightedfuzzy.csv", 2, 3)
+# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))
+# make_banzuke(rlist, "testoutnatsuweighted.csv", 2, 1)
+#
+# rlistlinear = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"), True)
+#
+# make_banzuke(rlistlinear, "testoutnatsuweightlinear.csv", 2, True)
+#
+#

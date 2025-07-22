@@ -1,0 +1,1176 @@
+returning 0 on  Takanosho vs Atamifuji
+returning 0 on  Hatsuyama vs Shimanoumi
+returning 0 on  Asashiyu vs Tsushimanada
+returning 0 on  Kawamura vs Murayama
+S1e: Wakatakakage (N:110) (TrueRank:-11) | S1w: Kirishima (N:90) (TrueRank:-9)
+S2e: Daieisho (N:85) (TrueRank:-6) | : (empty)
+detected wins
+detected wins
+K1e: Oshoma (N:78) (TrueRank:8) | K1w: Aonishiki (N:92) (TrueRank:10)
+M1e: Onokatsu (N:84) (TrueRank:M3e) | M1w: Oho (N:59) (TrueRank:M2w)
+M2e: Wakamotoharu (N:46) (TrueRank:M2e) | M2w: Abi (N:61) (TrueRank:M3e)
+M3e: Kinbozan (N:80) (TrueRank:M3w) | M3w: Takayasu (N:43) (TrueRank:M3e)
+M4e: Hakuoho (N:59) (TrueRank:M6e) | M4w: Hiradoumi (N:46) (TrueRank:M6w)
+M5e: Tamawashi (N:43) (TrueRank:M6e) | M5w: Meisei (N:70) (TrueRank:M7e)
+M6e: Kusano (N:116) (TrueRank:M8e) | M6w: Endo (N:64) (TrueRank:M8e)
+M7e: Tobizaru (N:47) (TrueRank:M7w) | M7w: Takerufuji (N:39) (TrueRank:M7e)
+M8e: Sadanoumi (N:75) (TrueRank:M8w) | M8w: Ura (N:36) (TrueRank:M10e)
+M9e: Ichiyamamoto (N:32) (TrueRank:M9w) | M9w: Gonoyama (N:32) (TrueRank:M9w)
+M10e: Roga (N:67) (TrueRank:M11w) | M10w: Atamifuji (N:61) (TrueRank:M11e)
+M11e: Tokihayate (N:65) (TrueRank:M12e) | M11w: Takanosho (N:61) (TrueRank:M11w)
+M12e: Asakoryu (N:78) (TrueRank:M12w) | M12w: Midorifuji (N:34) (TrueRank:M12w)
+M13e: Chiyoshoma (N:28) (TrueRank:M12w) | M13w: Wakaikari (N:101) (TrueRank:M14e)
+M14e: Shodai (N:37) (TrueRank:M13w) | M14w: Churanoumi (N:30) (TrueRank:M14w)
+M15e: Hidenoumi (N:74) (TrueRank:M16w) | M15w: Mitakeumi (N:63) (TrueRank:M17w)
+M16e: Kayo (N:59) (TrueRank:M17e) | M16w: Kotoshoho (N:37) (TrueRank:M17e)
+M17e: Kotoeiho (N:86) (TrueRank:M18e) | M17w: Shishi (N:24) (TrueRank:M18w)
+J1e: Tomokaze (N:83) (TrueRank:J1w) | J1w: Nishikigi (N:39) (TrueRank:J1w)
+J2e: Shonannoumi (N:34) (TrueRank:J2w) | J2w: Ryuden (N:32) (TrueRank:J2e)
+J3e: Oshoumi (N:81) (TrueRank:J3w) | J3w: Tohakuryu (N:76) (TrueRank:J6w)
+J4e: Kazekeno (N:60) (TrueRank:J7w) | J4w: Shirokuma (N:41) (TrueRank:J6e)
+J5e: Kagayaki (N:49) (TrueRank:J7e) | J5w: Hakuyozan (N:40) (TrueRank:J6w)
+J6e: Tamashoho (N:34) (TrueRank:J6e) | J6w: Takarafuji (N:38) (TrueRank:J7w)
+J7e: Hitoshi (N:50) (TrueRank:J6w) | J7w: Daiseizan (N:52) (TrueRank:J7e)
+J8e: Tochitaikai (N:25) (TrueRank:J7e) | J8w: Nishikifuji (N:39) (TrueRank:J9w)
+J9e: Fujiseiun (N:31) (TrueRank:J9e) | J9w: Mitoryu (N:57) (TrueRank:J10w)
+J10e: Nabatame (N:57) (TrueRank:J11e) | J10w: Tsurugisho (N:57) (TrueRank:J10e)
+J11e: Shiden (N:47) (TrueRank:J11e) | J11w: Mita (N:56) (TrueRank:J12w)
+J12e: Shimanoumi (N:37) (TrueRank:J12w) | J12w: Hatsuyama (N:37) (TrueRank:J13e)
+J13e: Miyanokaze (N:41) (TrueRank:73) | J13w: Daiamami (N:47) (TrueRank:J14e)
+J14e: Kyokukaiyu (N:24) (TrueRank:89) | J14w: Kitanowaka (N:15) (TrueRank:89)
+J15e: Mudoho (N:35) (TrueRank:80) | J15w: Ishizaki (N:14) (TrueRank:91)
+J16e: Wakanosho (N:9) (TrueRank:90) | J16w: Dewanoryu (N:10) (TrueRank:92)
+J17e: Akua (N:7) (TrueRank:94) | J17w: Otsuji (N:43) (TrueRank:77)
+J18e: Asahakuryu (N:24) (TrueRank:96) | J18w: Oshoryu (N:5) (TrueRank:95)
+J19e: Satorufuji (N:14) (TrueRank:97) | J19w: Kotokuzan (N:27) (TrueRank:88)
+J20e: Nishinoryu (N:17) (TrueRank:99) | J20w: Tochimusashi (N:9) (TrueRank:98)
+J21e: Inami (N:14) (TrueRank:101) | J21w: Asanoyama (N:26) (TrueRank:104)
+J22e: Takakento (N:21) (TrueRank:103) | J22w: Hananoumi (N:16) (TrueRank:106)
+J23e: Hamayutaka (N:13) (TrueRank:106) | J23w: Daishoho (N:1) (TrueRank:107)
+J24e: Hokutofuji (N:0) (TrueRank:106) | J24w: Enho (N:11) (TrueRank:108)
+J25e: Chiyomaru (N:11) (TrueRank:109) | J25w: Gojinyu (N:25) (TrueRank:112)
+J26e: Toseiryu (N:18) (TrueRank:113) | J26w: Narutaki (N:13) (TrueRank:114)
+J27e: Nobehara (N:10) (TrueRank:113) | J27w: Kiryuko (N:0) (TrueRank:112)
+J28e: Chiyotora (N:10) (TrueRank:115) | J28w: Tochimaru (N:0) (TrueRank:114)
+J29e: Tendozan (N:4) (TrueRank:116) | J29w: Okaryu (N:18) (TrueRank:118)
+J30e: Anosho (N:31) (TrueRank:121) | J30w: Kamito (N:24) (TrueRank:120)
+J31e: Hokutomaru (N:0) (TrueRank:119) | J31w: Kazuto (N:21) (TrueRank:121)
+J32e: Matsui (N:17) (TrueRank:122) | J32w: Fujinoyama (N:15) (TrueRank:121)
+J33e: Kitaharima (N:9) (TrueRank:121) | J33w: Kazenoumi (N:27) (TrueRank:124)
+J34e: Nagamura (N:13) (TrueRank:123) | J34w: Kaiseijo (N:4) (TrueRank:122)
+J35e: Obara (N:5) (TrueRank:127) | J35w: Kawazoe (N:1) (TrueRank:127)
+J36e: Goshima (N:31) (TrueRank:131) | J36w: Tenshoho (N:17) (TrueRank:131)
+J37e: Kaisho (N:12) (TrueRank:131) | J37w: Asakoki (N:2) (TrueRank:132)
+J38e: Fukai (N:15) (TrueRank:134) | J38w: Yuma (N:5) (TrueRank:134)
+J39e: Tanji (N:16) (TrueRank:138) | J39w: Seihakuho (N:19) (TrueRank:140)
+J40e: Asonoyama (N:12) (TrueRank:139) | J40w: Hinataryu (N:5) (TrueRank:138)
+J41e: Tsushimanada (N:9) (TrueRank:140) | J41w: Asashiyu (N:9) (TrueRank:141)
+J42e: Awanokuni (N:6) (TrueRank:140) | J42w: Oyamatoumi (N:3) (TrueRank:141)
+J43e: Toshunryu (N:17) (TrueRank:144) | J43w: Mikazuchiyama (N:16) (TrueRank:143)
+J44e: Daikosho (N:25) (TrueRank:145) | J44w: Yoshii (N:21) (TrueRank:146)
+J45e: Haruyama (N:11) (TrueRank:145) | J45w: Daiyusho (N:10) (TrueRank:150)
+J46e: Tosamidori (N:10) (TrueRank:149) | J46w: Aratakayama (N:5) (TrueRank:150)
+J47e: Fujitoshi (N:24) (TrueRank:153) | J47w: Kitadaichi (N:21) (TrueRank:152)
+J48e: Fukuzaki (N:30) (TrueRank:154) | J48w: Daishomaru (N:20) (TrueRank:155)
+J49e: Higonoumi (N:8) (TrueRank:156) | J49w: Daishoryu (N:4) (TrueRank:155)
+J50e: Hokutenkai (N:12) (TrueRank:157) | J50w: Sengaku (N:7) (TrueRank:158)
+J51e: Shohoryu (N:13) (TrueRank:160) | J51w: Mishima (N:7) (TrueRank:159)
+J52e: Kurohimeyama (N:25) (TrueRank:162) | J52w: Osanai (N:23) (TrueRank:163)
+J53e: Hayatefuji (N:13) (TrueRank:162) | J53w: Chiyooga (N:21) (TrueRank:165)
+J54e: Noda (N:13) (TrueRank:164) | J54w: Oyamada (N:10) (TrueRank:163)
+J55e: Kotodaigo (N:0) (TrueRank:164) | J55w: Shiroma (N:22) (TrueRank:168)
+J56e: Tokitenran (N:15) (TrueRank:168) | J56w: Shimazuumi (N:17) (TrueRank:170)
+J57e: Kotokenryu (N:26) (TrueRank:172) | J57w: Kotodaishin (N:3) (TrueRank:173)
+J58e: Shunrai (N:5) (TrueRank:175) | J58w: Ikarigata (N:12) (TrueRank:177)
+J59e: Tochikodai (N:12) (TrueRank:177) | J59w: Chiyonoo (N:20) (TrueRank:180)
+J60e: Goseizan (N:10) (TrueRank:179) | J60w: Daishinkai (N:5) (TrueRank:179)
+J61e: Ryusei (N:16) (TrueRank:182) | J61w: Yoshiyasu (N:15) (TrueRank:183)
+J62e: Bushozan (N:6) (TrueRank:182) | J62w: Wakamiyabi (N:23) (TrueRank:184)
+J63e: Yago (N:17) (TrueRank:186) | J63w: Asagyokusei (N:11) (TrueRank:185)
+J64e: Shuji (N:6) (TrueRank:184) | J64w: Suzaki (N:0) (TrueRank:185)
+J65e: Ienoshima (N:13) (TrueRank:187) | J65w: Akiyoshi (N:18) (TrueRank:190)
+J66e: Kototsubasa (N:17) (TrueRank:189) | J66w: Daimasakari (N:13) (TrueRank:191)
+J67e: Tokunomusashi (N:9) (TrueRank:191) | J67w: Oka (N:14) (TrueRank:195)
+J68e: Aron (N:9) (TrueRank:194) | J68w: Hoshuzan (N:5) (TrueRank:193)
+J69e: Tsurubayashi (N:0) (TrueRank:194) | J69w: Gyotoku (N:25) (TrueRank:197)
+J70e: Sazanami (N:17) (TrueRank:197) | J70w: Dewataikai (N:17) (TrueRank:196)
+J71e: Nionoumi (N:10) (TrueRank:197) | J71w: Tochiseiryu (N:19) (TrueRank:202)
+J72e: Murayama (N:9) (TrueRank:203) | J72w: Kawamura (N:9) (TrueRank:204)
+J73e: Yutakasho (N:1) (TrueRank:204) | J73w: Hanaoka (N:9) (TrueRank:207)
+J74e: Urayama (N:6) (TrueRank:206) | J74w: Hakuonada (N:3) (TrueRank:206)
+J75e: Kirinryu (N:10) (TrueRank:208) | J75w: Gyokuozan (N:0) (TrueRank:209)
+J76e: Wakatakamoto (N:0) (TrueRank:219) | : (empty)
+S1e: Wakatakakage (N:110) (TrueRank:-11) | S1w: Kirishima (N:90) (TrueRank:-9)
+S2e: Daieisho (N:85) (TrueRank:-6) | : (empty)
+detected wins
+detected wins
+K1e: Oshoma (N:78) (TrueRank:8) | K1w: Aonishiki (N:92) (TrueRank:10)
+M1e: Wakamotoharu (N:46) (TrueRank:M2e) | M1w: Oho (N:59) (TrueRank:M2w)
+M2e: Onokatsu (N:84) (TrueRank:M3e) | M2w: Abi (N:61) (TrueRank:M3e)
+M3e: Takayasu (N:43) (TrueRank:M3e) | M3w: Kinbozan (N:80) (TrueRank:M3w)
+M4e: Hakuoho (N:59) (TrueRank:M6e) | M4w: Tamawashi (N:43) (TrueRank:M6e)
+M5e: Hiradoumi (N:46) (TrueRank:M6w) | M5w: Meisei (N:70) (TrueRank:M7e)
+M6e: Takerufuji (N:39) (TrueRank:M7e) | M6w: Tobizaru (N:47) (TrueRank:M7w)
+M7e: Kusano (N:116) (TrueRank:M8e) | M7w: Endo (N:64) (TrueRank:M8e)
+M8e: Sadanoumi (N:75) (TrueRank:M8w) | M8w: Ichiyamamoto (N:32) (TrueRank:M9w)
+M9e: Gonoyama (N:32) (TrueRank:M9w) | M9w: Ura (N:36) (TrueRank:M10e)
+M10e: Atamifuji (N:61) (TrueRank:M11e) | M10w: Roga (N:67) (TrueRank:M11w)
+M11e: Takanosho (N:61) (TrueRank:M11w) | M11w: Tokihayate (N:65) (TrueRank:M12e)
+M12e: Asakoryu (N:78) (TrueRank:M12w) | M12w: Midorifuji (N:34) (TrueRank:M12w)
+M13e: Chiyoshoma (N:28) (TrueRank:M12w) | M13w: Shodai (N:37) (TrueRank:M13w)
+M14e: Wakaikari (N:101) (TrueRank:M14e) | M14w: Churanoumi (N:30) (TrueRank:M14w)
+M15e: Hidenoumi (N:74) (TrueRank:M16w) | M15w: Kotoshoho (N:37) (TrueRank:M17e)
+M16e: Mitakeumi (N:63) (TrueRank:M17w) | M16w: Kayo (N:59) (TrueRank:M17e)
+M17e: Kotoeiho (N:86) (TrueRank:M18e) | M17w: Shishi (N:24) (TrueRank:M18w)
+J1e: Tomokaze (N:83) (TrueRank:J1w) | J1w: Nishikigi (N:39) (TrueRank:J1w)
+J2e: Ryuden (N:32) (TrueRank:J2e) | J2w: Shonannoumi (N:34) (TrueRank:J2w)
+J3e: Oshoumi (N:81) (TrueRank:J3w) | J3w: Tamashoho (N:34) (TrueRank:J6e)
+J4e: Tohakuryu (N:76) (TrueRank:J6w) | J4w: Shirokuma (N:41) (TrueRank:J6e)
+J5e: Hakuyozan (N:40) (TrueRank:J6w) | J5w: Kagayaki (N:49) (TrueRank:J7e)
+J6e: Tochitaikai (N:25) (TrueRank:J7e) | J6w: Hitoshi (N:50) (TrueRank:J6w)
+J7e: Kazekeno (N:60) (TrueRank:J7w) | J7w: Daiseizan (N:52) (TrueRank:J7e)
+J8e: Takarafuji (N:38) (TrueRank:J7w) | J8w: Fujiseiun (N:31) (TrueRank:J9e)
+J9e: Nishikifuji (N:39) (TrueRank:J9w) | J9w: Mitoryu (N:57) (TrueRank:J10w)
+J10e: Nabatame (N:57) (TrueRank:J11e) | J10w: Tsurugisho (N:57) (TrueRank:J10e)
+J11e: Shiden (N:47) (TrueRank:J11e) | J11w: Mita (N:56) (TrueRank:J12w)
+J12e: Shimanoumi (N:37) (TrueRank:J12w) | J12w: Hatsuyama (N:37) (TrueRank:J13e)
+J13e: Miyanokaze (N:41) (TrueRank:73) | J13w: Daiamami (N:47) (TrueRank:J14e)
+J14e: Kyokukaiyu (N:24) (TrueRank:89) | J14w: Kitanowaka (N:15) (TrueRank:89)
+J15e: Mudoho (N:35) (TrueRank:80) | J15w: Wakanosho (N:9) (TrueRank:90)
+J16e: Ishizaki (N:14) (TrueRank:91) | J16w: Dewanoryu (N:10) (TrueRank:92)
+J17e: Akua (N:7) (TrueRank:94) | J17w: Otsuji (N:43) (TrueRank:77)
+J18e: Oshoryu (N:5) (TrueRank:95) | J18w: Asahakuryu (N:24) (TrueRank:96)
+J19e: Satorufuji (N:14) (TrueRank:97) | J19w: Kotokuzan (N:27) (TrueRank:88)
+J20e: Tochimusashi (N:9) (TrueRank:98) | J20w: Nishinoryu (N:17) (TrueRank:99)
+J21e: Inami (N:14) (TrueRank:101) | J21w: Takakento (N:21) (TrueRank:103)
+J22e: Asanoyama (N:26) (TrueRank:104) | J22w: Hananoumi (N:16) (TrueRank:106)
+J23e: Hamayutaka (N:13) (TrueRank:106) | J23w: Hokutofuji (N:0) (TrueRank:106)
+J24e: Daishoho (N:1) (TrueRank:107) | J24w: Enho (N:11) (TrueRank:108)
+J25e: Chiyomaru (N:11) (TrueRank:109) | J25w: Gojinyu (N:25) (TrueRank:112)
+J26e: Kiryuko (N:0) (TrueRank:112) | J26w: Toseiryu (N:18) (TrueRank:113)
+J27e: Nobehara (N:10) (TrueRank:113) | J27w: Narutaki (N:13) (TrueRank:114)
+J28e: Tochimaru (N:0) (TrueRank:114) | J28w: Chiyotora (N:10) (TrueRank:115)
+J29e: Tendozan (N:4) (TrueRank:116) | J29w: Okaryu (N:18) (TrueRank:118)
+J30e: Hokutomaru (N:0) (TrueRank:119) | J30w: Kamito (N:24) (TrueRank:120)
+J31e: Anosho (N:31) (TrueRank:121) | J31w: Kazuto (N:21) (TrueRank:121)
+J32e: Fujinoyama (N:15) (TrueRank:121) | J32w: Kitaharima (N:9) (TrueRank:121)
+J33e: Matsui (N:17) (TrueRank:122) | J33w: Kaiseijo (N:4) (TrueRank:122)
+J34e: Nagamura (N:13) (TrueRank:123) | J34w: Kazenoumi (N:27) (TrueRank:124)
+J35e: Obara (N:5) (TrueRank:127) | J35w: Kawazoe (N:1) (TrueRank:127)
+J36e: Goshima (N:31) (TrueRank:131) | J36w: Tenshoho (N:17) (TrueRank:131)
+J37e: Kaisho (N:12) (TrueRank:131) | J37w: Asakoki (N:2) (TrueRank:132)
+J38e: Fukai (N:15) (TrueRank:134) | J38w: Yuma (N:5) (TrueRank:134)
+J39e: Tanji (N:16) (TrueRank:138) | J39w: Hinataryu (N:5) (TrueRank:138)
+J40e: Asonoyama (N:12) (TrueRank:139) | J40w: Seihakuho (N:19) (TrueRank:140)
+J41e: Tsushimanada (N:9) (TrueRank:140) | J41w: Awanokuni (N:6) (TrueRank:140)
+J42e: Asashiyu (N:9) (TrueRank:141) | J42w: Oyamatoumi (N:3) (TrueRank:141)
+J43e: Mikazuchiyama (N:16) (TrueRank:143) | J43w: Toshunryu (N:17) (TrueRank:144)
+J44e: Daikosho (N:25) (TrueRank:145) | J44w: Haruyama (N:11) (TrueRank:145)
+J45e: Yoshii (N:21) (TrueRank:146) | J45w: Tosamidori (N:10) (TrueRank:149)
+J46e: Daiyusho (N:10) (TrueRank:150) | J46w: Aratakayama (N:5) (TrueRank:150)
+J47e: Kitadaichi (N:21) (TrueRank:152) | J47w: Fujitoshi (N:24) (TrueRank:153)
+J48e: Fukuzaki (N:30) (TrueRank:154) | J48w: Daishomaru (N:20) (TrueRank:155)
+J49e: Daishoryu (N:4) (TrueRank:155) | J49w: Higonoumi (N:8) (TrueRank:156)
+J50e: Hokutenkai (N:12) (TrueRank:157) | J50w: Sengaku (N:7) (TrueRank:158)
+J51e: Mishima (N:7) (TrueRank:159) | J51w: Shohoryu (N:13) (TrueRank:160)
+J52e: Kurohimeyama (N:25) (TrueRank:162) | J52w: Hayatefuji (N:13) (TrueRank:162)
+J53e: Osanai (N:23) (TrueRank:163) | J53w: Oyamada (N:10) (TrueRank:163)
+J54e: Noda (N:13) (TrueRank:164) | J54w: Kotodaigo (N:0) (TrueRank:164)
+J55e: Chiyooga (N:21) (TrueRank:165) | J55w: Shiroma (N:22) (TrueRank:168)
+J56e: Tokitenran (N:15) (TrueRank:168) | J56w: Shimazuumi (N:17) (TrueRank:170)
+J57e: Kotokenryu (N:26) (TrueRank:172) | J57w: Kotodaishin (N:3) (TrueRank:173)
+J58e: Shunrai (N:5) (TrueRank:175) | J58w: Ikarigata (N:12) (TrueRank:177)
+J59e: Tochikodai (N:12) (TrueRank:177) | J59w: Goseizan (N:10) (TrueRank:179)
+J60e: Daishinkai (N:5) (TrueRank:179) | J60w: Chiyonoo (N:20) (TrueRank:180)
+J61e: Ryusei (N:16) (TrueRank:182) | J61w: Bushozan (N:6) (TrueRank:182)
+J62e: Yoshiyasu (N:15) (TrueRank:183) | J62w: Wakamiyabi (N:23) (TrueRank:184)
+J63e: Shuji (N:6) (TrueRank:184) | J63w: Asagyokusei (N:11) (TrueRank:185)
+J64e: Suzaki (N:0) (TrueRank:185) | J64w: Yago (N:17) (TrueRank:186)
+J65e: Ienoshima (N:13) (TrueRank:187) | J65w: Kototsubasa (N:17) (TrueRank:189)
+J66e: Akiyoshi (N:18) (TrueRank:190) | J66w: Daimasakari (N:13) (TrueRank:191)
+J67e: Tokunomusashi (N:9) (TrueRank:191) | J67w: Hoshuzan (N:5) (TrueRank:193)
+J68e: Aron (N:9) (TrueRank:194) | J68w: Tsurubayashi (N:0) (TrueRank:194)
+J69e: Oka (N:14) (TrueRank:195) | J69w: Dewataikai (N:17) (TrueRank:196)
+J70e: Gyotoku (N:25) (TrueRank:197) | J70w: Sazanami (N:17) (TrueRank:197)
+J71e: Nionoumi (N:10) (TrueRank:197) | J71w: Tochiseiryu (N:19) (TrueRank:202)
+J72e: Murayama (N:9) (TrueRank:203) | J72w: Kawamura (N:9) (TrueRank:204)
+J73e: Yutakasho (N:1) (TrueRank:204) | J73w: Urayama (N:6) (TrueRank:206)
+J74e: Hakuonada (N:3) (TrueRank:206) | J74w: Hanaoka (N:9) (TrueRank:207)
+J75e: Kirinryu (N:10) (TrueRank:208) | J75w: Gyokuozan (N:0) (TrueRank:209)
+J76e: Wakatakamoto (N:0) (TrueRank:219) | : (empty)
+moving up Kirishima moving down Daieisho on raw truerank
+moving up Kirishima moving down Takayasu on raw truerank
+moving up Daieisho moving down Takayasu on raw truerank
+moving up Wakatakakage moving down Daieisho on raw truerank
+moving up Wakatakakage moving down Kirishima on raw truerank
+moving up Daieisho moving down Wakamotoharu on raw truerank
+moving up Wakamotoharu moving down Takayasu on raw truerank
+moving up Daieisho moving down Oho on raw truerank
+moving up Oho moving down Wakamotoharu on fuzzy wn
+moving up Abi moving down Takayasu on fuzzy wn
+moving up Wakamotoharu moving down Abi on raw truerank
+moving up Oho moving down Gonoyama on raw truerank
+moving up Abi moving down Gonoyama on raw truerank
+moving up Takayasu moving down Gonoyama on raw truerank
+moving up Wakamotoharu moving down Tamawashi on raw truerank
+moving up Takayasu moving down Tamawashi on raw truerank
+moving up Tamawashi moving down Gonoyama on raw truerank
+moving up Wakamotoharu moving down Hiradoumi on raw truerank
+moving up Hiradoumi moving down Tamawashi on fuzzy wn
+moving up Takayasu moving down Hiradoumi on raw truerank
+moving up Abi moving down Takerufuji on raw truerank
+moving up Tamawashi moving down Takerufuji on raw truerank
+moving up Takerufuji moving down Gonoyama on raw truerank
+moving up Abi moving down Ichiyamamoto on raw truerank
+moving up Tamawashi moving down Ichiyamamoto on raw truerank
+moving up Gonoyama moving down Ichiyamamoto on fuzzy wn
+moving up Takayasu moving down Ura on raw truerank
+moving up Takerufuji moving down Ura on raw truerank
+moving up Takayasu moving down Chiyoshoma on raw truerank
+moving up Gonoyama moving down Chiyoshoma on raw truerank
+moving up Ura moving down Chiyoshoma on raw truerank
+moving up Oshoma moving down Hiradoumi on raw truerank
+moving up Oshoma moving down Oho on raw truerank
+moving up Kirishima moving down Oshoma on raw truerank
+moving up Daieisho moving down Oshoma on raw truerank
+moving up Takayasu moving down Tobizaru on raw truerank
+moving up Tobizaru moving down Gonoyama on raw truerank
+moving up Tamawashi moving down Tobizaru on raw truerank
+moving up Tobizaru moving down Takerufuji on fuzzy wn
+moving up Hakuoho moving down Hiradoumi on fuzzy wn
+moving up Oho moving down Hakuoho on raw truerank
+moving up Abi moving down Hakuoho on raw truerank
+moving up Takayasu moving down Hakuoho on raw truerank
+moving up Hakuoho moving down Churanoumi on raw truerank
+moving up Gonoyama moving down Churanoumi on raw truerank
+moving up Ura moving down Churanoumi on raw truerank
+moving up Chiyoshoma moving down Churanoumi on raw truerank
+moving up Onokatsu moving down Hiradoumi on raw truerank
+moving up Onokatsu moving down Takayasu on fuzzy wn
+moving up Onokatsu moving down Abi on fuzzy wn
+moving up Wakamotoharu moving down Onokatsu on raw truerank
+moving up Kinbozan moving down Hakuoho on raw truerank
+moving up Oho moving down Kinbozan on raw truerank
+moving up Kinbozan moving down Abi on fuzzy wn
+moving up Onokatsu moving down Kinbozan on fuzzy wn
+moving up Aonishiki moving down Hakuoho on raw truerank
+moving up Aonishiki moving down Wakamotoharu on fuzzy wn
+moving up Daieisho moving down Aonishiki on raw truerank
+moving up Aonishiki moving down Oho on fuzzy wn
+moving up Oshoma moving down Aonishiki on raw truerank
+moving up Takayasu moving down Midorifuji on raw truerank
+moving up Gonoyama moving down Midorifuji on raw truerank
+moving up Midorifuji moving down Chiyoshoma on fuzzy wn
+moving up Ura moving down Midorifuji on raw truerank
+moving up Hakuoho moving down Meisei on raw truerank
+moving up Meisei moving down Ichiyamamoto on raw truerank
+moving up Meisei moving down Tobizaru on fuzzy wn
+moving up Tamawashi moving down Meisei on raw truerank
+moving up Hakuoho moving down Shodai on raw truerank
+moving up Gonoyama moving down Shodai on raw truerank
+moving up Midorifuji moving down Shodai on raw truerank
+moving up Shodai moving down Churanoumi on raw truerank
+moving up Chiyoshoma moving down Shodai on raw truerank
+moving up Hiradoumi moving down Endo on raw truerank
+moving up Endo moving down Ichiyamamoto on raw truerank
+moving up Endo moving down Gonoyama on raw truerank
+moving up Takerufuji moving down Endo on raw truerank
+moving up Hiradoumi moving down Shishi on raw truerank
+moving up Ichiyamamoto moving down Shishi on raw truerank
+moving up Chiyoshoma moving down Shishi on raw truerank
+moving up Churanoumi moving down Shishi on raw truerank
+moving up Tamawashi moving down Atamifuji on raw truerank
+moving up Ura moving down Atamifuji on raw truerank
+moving up Atamifuji moving down Shodai on raw truerank
+moving up Atamifuji moving down Chiyoshoma on raw truerank
+moving up Atamifuji moving down Midorifuji on raw truerank
+moving up Tamawashi moving down Takanosho on raw truerank
+moving up Ura moving down Takanosho on raw truerank
+moving up Takanosho moving down Shodai on raw truerank
+moving up Takanosho moving down Midorifuji on raw truerank
+moving up Atamifuji moving down Takanosho on fuzzy wn
+moving up Meisei moving down Tokihayate on raw truerank
+moving up Atamifuji moving down Tokihayate on raw truerank
+moving up Tokihayate moving down Shodai on raw truerank
+moving up Tokihayate moving down Midorifuji on fuzzy wn
+moving up Meisei moving down Sadanoumi on raw truerank
+moving up Sadanoumi moving down Takanosho on raw truerank
+moving up Sadanoumi moving down Gonoyama on raw truerank
+moving up Takerufuji moving down Sadanoumi on raw truerank
+moving up Sadanoumi moving down Endo on fuzzy wn
+moving up Tobizaru moving down Kotoshoho on raw truerank
+moving up Takanosho moving down Kotoshoho on raw truerank
+moving up Shodai moving down Kotoshoho on raw truerank
+moving up Kotoshoho moving down Shishi on raw truerank
+moving up Churanoumi moving down Kotoshoho on raw truerank
+moving up Tobizaru moving down Roga on raw truerank
+moving up Roga moving down Takanosho on fuzzy wn
+moving up Gonoyama moving down Roga on raw truerank
+moving up Ura moving down Roga on raw truerank
+moving up Roga moving down Atamifuji on fuzzy wn
+moving up Takerufuji moving down Ryuden on raw truerank
+moving up Takanosho moving down Ryuden on raw truerank
+moving up Shodai moving down Ryuden on raw truerank
+moving up Kotoshoho moving down Ryuden on raw truerank
+moving up Shishi moving down Ryuden on raw truerank
+moving up Takerufuji moving down Shonannoumi on raw truerank
+moving up Tokihayate moving down Shonannoumi on raw truerank
+moving up Churanoumi moving down Shonannoumi on raw truerank
+moving up Shishi moving down Shonannoumi on raw truerank
+moving up Shonannoumi moving down Ryuden on fuzzy wn
+moving up Sadanoumi moving down Kayo on raw truerank
+moving up Midorifuji moving down Kayo on raw truerank
+moving up Kayo moving down Kotoshoho on fuzzy wn
+moving up Shodai moving down Kayo on raw truerank
+moving up Churanoumi moving down Kayo on raw truerank
+moving up Sadanoumi moving down Nishikigi on raw truerank
+moving up Midorifuji moving down Nishikigi on raw truerank
+moving up Kotoshoho moving down Nishikigi on raw truerank
+moving up Nishikigi moving down Shonannoumi on raw truerank
+moving up Shishi moving down Nishikigi on raw truerank
+moving up Endo moving down Tamashoho on raw truerank
+moving up Chiyoshoma moving down Tamashoho on raw truerank
+moving up Shishi moving down Tamashoho on raw truerank
+moving up Shonannoumi moving down Tamashoho on raw truerank
+moving up Ryuden moving down Tamashoho on raw truerank
+moving up Endo moving down Asakoryu on raw truerank
+moving up Asakoryu moving down Shodai on raw truerank
+moving up Atamifuji moving down Asakoryu on raw truerank
+moving up Asakoryu moving down Midorifuji on fuzzy wn
+moving up Asakoryu moving down Tokihayate on fuzzy wn
+moving up Takanosho moving down Asakoryu on raw truerank
+moving up Gonoyama moving down Tochitaikai on raw truerank
+moving up Shodai moving down Tochitaikai on raw truerank
+moving up Nishikigi moving down Tochitaikai on raw truerank
+moving up Ryuden moving down Tochitaikai on raw truerank
+moving up Tamashoho moving down Tochitaikai on raw truerank
+moving up Gonoyama moving down Mitakeumi on raw truerank
+moving up Shodai moving down Mitakeumi on raw truerank
+moving up Mitakeumi moving down Nishikigi on raw truerank
+moving up Mitakeumi moving down Kotoshoho on fuzzy wn
+moving up Mitakeumi moving down Kayo on fuzzy wn
+moving up Churanoumi moving down Mitakeumi on raw truerank
+Kusano 14 M8e Ichiyamamoto 17 M9w
+moving up Kusano moving down Ichiyamamoto on raw truerank
+Kusano 14 M8e Takayasu 4 M3e
+moving up Takayasu moving down Kusano on raw truerank
+Kusano 14 M8e Tobizaru 13 M7w
+Kusano 14 M8e Endo 14 M8e
+moving up Kusano moving down Endo on fuzzy wn
+Kusano 14 M8e Sadanoumi 15 M8w
+moving up Kusano moving down Sadanoumi on fuzzy wn
+Kusano 14 M8e Takerufuji 12 M7e
+moving up Takerufuji moving down Kusano on raw truerank
+moving up Gonoyama moving down Hidenoumi on raw truerank
+moving up Churanoumi moving down Hidenoumi on raw truerank
+moving up Hidenoumi moving down Nishikigi on raw truerank
+moving up Hidenoumi moving down Mitakeumi on raw truerank
+moving up Ichiyamamoto moving down Fujiseiun on raw truerank
+moving up Hidenoumi moving down Fujiseiun on raw truerank
+moving up Nishikigi moving down Fujiseiun on raw truerank
+moving up Tamashoho moving down Fujiseiun on raw truerank
+moving up Tochitaikai moving down Fujiseiun on raw truerank
+moving up Ichiyamamoto moving down Takarafuji on raw truerank
+moving up Hidenoumi moving down Takarafuji on raw truerank
+moving up Shonannoumi moving down Takarafuji on raw truerank
+moving up Takarafuji moving down Tochitaikai on fuzzy wn
+moving up Tamashoho moving down Takarafuji on raw truerank
+moving up Ura moving down Shirokuma on raw truerank
+moving up Mitakeumi moving down Shirokuma on raw truerank
+moving up Ryuden moving down Shirokuma on raw truerank
+moving up Shirokuma moving down Tochitaikai on raw truerank
+moving up Shirokuma moving down Takarafuji on raw truerank
+moving up Shirokuma moving down Tamashoho on fuzzy wn
+moving up Ura moving down Hakuyozan on raw truerank
+moving up Kayo moving down Hakuyozan on raw truerank
+moving up Shirokuma moving down Hakuyozan on fuzzy wn
+moving up Hakuyozan moving down Takarafuji on raw truerank
+moving up Hakuyozan moving down Tamashoho on fuzzy wn
+moving up Roga moving down Kagayaki on raw truerank
+moving up Kotoshoho moving down Kagayaki on raw truerank
+moving up Kagayaki moving down Tochitaikai on fuzzy wn
+moving up Kagayaki moving down Takarafuji on fuzzy wn
+moving up Tamashoho moving down Kagayaki on raw truerank
+moving up Roga moving down Nishikifuji on raw truerank
+moving up Kotoshoho moving down Nishikifuji on raw truerank
+moving up Hakuyozan moving down Nishikifuji on raw truerank
+moving up Takarafuji moving down Nishikifuji on raw truerank
+moving up Nishikifuji moving down Fujiseiun on fuzzy wn
+moving up Tochitaikai moving down Nishikifuji on raw truerank
+moving up Wakaikari moving down Hitoshi on raw truerank
+moving up Tomokaze moving down Daiseizan on raw truerank
+moving up Tomokaze moving down Hitoshi on raw truerank
+moving up Wakaikari moving down Tomokaze on raw truerank
+moving up Kotoeiho moving down Hitoshi on raw truerank
+moving up Kotoeiho moving down Tomokaze on raw truerank
+moving up Wakaikari moving down Kotoeiho on raw truerank
+moving up Tomokaze moving down Shimanoumi on raw truerank
+moving up Daiseizan moving down Shimanoumi on raw truerank
+moving up Hitoshi moving down Shiden on raw truerank
+moving up Shiden moving down Shimanoumi on raw truerank
+moving up Daiseizan moving down Shiden on raw truerank
+moving up Oshoumi moving down Hitoshi on raw truerank
+moving up Kotoeiho moving down Oshoumi on raw truerank
+moving up Tomokaze moving down Oshoumi on raw truerank
+moving up Hitoshi moving down Tsurugisho on raw truerank
+moving up Tsurugisho moving down Shiden on raw truerank
+moving up Daiseizan moving down Tsurugisho on raw truerank
+moving up Tohakuryu moving down Hitoshi on fuzzy wn
+moving up Tomokaze moving down Tohakuryu on raw truerank
+moving up Oshoumi moving down Tohakuryu on raw truerank
+moving up Hitoshi moving down Hatsuyama on raw truerank
+moving up Shiden moving down Hatsuyama on raw truerank
+moving up Hitoshi moving down Kazekeno on raw truerank
+moving up Kazekeno moving down Shiden on raw truerank
+moving up Kazekeno moving down Tsurugisho on raw truerank
+moving up Kazekeno moving down Daiseizan on fuzzy wn
+moving up Kazekeno moving down Wakanosho on raw truerank
+moving up Shiden moving down Wakanosho on raw truerank
+moving up Hatsuyama moving down Wakanosho on raw truerank
+moving up Kazekeno moving down Mitoryu on raw truerank
+moving up Mitoryu moving down Shimanoumi on raw truerank
+moving up Daiseizan moving down Nabatame on raw truerank
+moving up Nabatame moving down Shimanoumi on raw truerank
+moving up Nabatame moving down Shiden on fuzzy wn
+moving up Daiseizan moving down Miyanokaze on raw truerank
+moving up Shiden moving down Miyanokaze on raw truerank
+moving up Hatsuyama moving down Miyanokaze on raw truerank
+moving up Miyanokaze moving down Wakanosho on raw truerank
+moving up Tsurugisho moving down Daiamami on raw truerank
+moving up Shimanoumi moving down Daiamami on raw truerank
+moving up Daiamami moving down Miyanokaze on raw truerank
+moving up Hatsuyama moving down Daiamami on raw truerank
+moving up Tsurugisho moving down Mita on raw truerank
+moving up Shiden moving down Mita on raw truerank
+moving up Mita moving down Shimanoumi on fuzzy wn
+moving up Mitoryu moving down Mudoho on raw truerank
+moving up Hatsuyama moving down Mudoho on raw truerank
+moving up Miyanokaze moving down Mudoho on raw truerank
+moving up Mudoho moving down Wakanosho on raw truerank
+moving up Mitoryu moving down Kitanowaka on raw truerank
+moving up Hatsuyama moving down Kitanowaka on raw truerank
+moving up Mudoho moving down Kitanowaka on raw truerank
+moving up Nabatame moving down Akua on raw truerank
+moving up Daiamami moving down Akua on raw truerank
+moving up Kitanowaka moving down Akua on raw truerank
+moving up Wakanosho moving down Akua on raw truerank
+moving up Nabatame moving down Oshoryu on raw truerank
+moving up Miyanokaze moving down Oshoryu on raw truerank
+moving up Wakanosho moving down Oshoryu on raw truerank
+moving up Shiden moving down Dewanoryu on raw truerank
+moving up Mudoho moving down Dewanoryu on raw truerank
+moving up Dewanoryu moving down Akua on raw truerank
+moving up Wakanosho moving down Dewanoryu on raw truerank
+moving up Shiden moving down Otsuji on raw truerank
+moving up Otsuji moving down Mudoho on raw truerank
+moving up Hatsuyama moving down Otsuji on raw truerank
+moving up Miyanokaze moving down Otsuji on raw truerank
+moving up Mita moving down Hokutofuji on raw truerank
+moving up Mudoho moving down Hokutofuji on raw truerank
+moving up Dewanoryu moving down Hokutofuji on raw truerank
+moving up Oshoryu moving down Hokutofuji on raw truerank
+moving up Mita moving down Ishizaki on raw truerank
+moving up Kitanowaka moving down Ishizaki on raw truerank
+moving up Ishizaki moving down Akua on raw truerank
+moving up Shimanoumi moving down Kotokuzan on raw truerank
+moving up Kotokuzan moving down Wakanosho on raw truerank
+moving up Otsuji moving down Kotokuzan on raw truerank
+moving up Mudoho moving down Kotokuzan on raw truerank
+moving up Shimanoumi moving down Kyokukaiyu on raw truerank
+moving up Kyokukaiyu moving down Kitanowaka on leftover wn 
+moving up Otsuji moving down Kyokukaiyu on raw truerank
+moving up Hatsuyama moving down Tochimusashi on raw truerank
+moving up Kitanowaka moving down Tochimusashi on raw truerank
+moving up Akua moving down Tochimusashi on raw truerank
+moving up Tochimusashi moving down Hokutofuji on raw truerank
+moving up Oshoryu moving down Tochimusashi on raw truerank
+moving up Hatsuyama moving down Daishoho on raw truerank
+moving up Wakanosho moving down Daishoho on raw truerank
+moving up Oshoryu moving down Daishoho on raw truerank
+moving up Daiamami moving down Kiryuko on raw truerank
+moving up Ishizaki moving down Kiryuko on raw truerank
+moving up Tochimusashi moving down Kiryuko on raw truerank
+moving up Daishoho moving down Kiryuko on raw truerank
+moving up Daiamami moving down Satorufuji on raw truerank
+moving up Ishizaki moving down Satorufuji on raw truerank
+moving up Akua moving down Satorufuji on raw truerank
+moving up Oshoryu moving down Satorufuji on raw truerank
+moving up Miyanokaze moving down Tochimaru on raw truerank
+moving up Dewanoryu moving down Tochimaru on raw truerank
+moving up Tochimusashi moving down Tochimaru on raw truerank
+moving up Daishoho moving down Tochimaru on raw truerank
+moving up Kiryuko moving down Tochimaru on raw truerank
+moving up Miyanokaze moving down Nishinoryu on raw truerank
+moving up Akua moving down Nishinoryu on raw truerank
+moving up Nishinoryu moving down Hokutofuji on raw truerank
+moving up Satorufuji moving down Nishinoryu on raw truerank
+moving up Otsuji moving down Asahakuryu on raw truerank
+moving up Asahakuryu moving down Hokutofuji on raw truerank
+moving up Asahakuryu moving down Tochimusashi on raw truerank
+moving up Otsuji moving down Inami on raw truerank
+moving up Oshoryu moving down Inami on raw truerank
+moving up Inami moving down Hokutofuji on raw truerank
+moving up Tochimusashi moving down Inami on raw truerank
+moving up Nishinoryu moving down Inami on raw truerank
+moving up Mudoho moving down Hamayutaka on raw truerank
+moving up Asahakuryu moving down Hamayutaka on raw truerank
+moving up Hamayutaka moving down Hokutofuji on leftover wn 
+moving up Nishinoryu moving down Hamayutaka on raw truerank
+moving up Inami moving down Hamayutaka on raw truerank
+moving up Mudoho moving down Hokutomaru on raw truerank
+moving up Satorufuji moving down Hokutomaru on raw truerank
+moving up Hokutofuji moving down Hokutomaru on raw truerank
+moving up Kiryuko moving down Hokutomaru on raw truerank
+moving up Tochimaru moving down Hokutomaru on raw truerank
+moving up Kotokuzan moving down Enho on raw truerank
+moving up Tochimusashi moving down Enho on raw truerank
+moving up Enho moving down Tochimaru on raw truerank
+moving up Enho moving down Kiryuko on raw truerank
+moving up Kotokuzan moving down Chiyomaru on raw truerank
+moving up Tochimusashi moving down Chiyomaru on raw truerank
+moving up Daishoho moving down Chiyomaru on raw truerank
+moving up Chiyomaru moving down Tochimaru on raw truerank
+moving up Chiyomaru moving down Kiryuko on raw truerank
+moving up Kyokukaiyu moving down Hananoumi on raw truerank
+moving up Nishinoryu moving down Hananoumi on raw truerank
+moving up Hananoumi moving down Enho on raw truerank
+moving up Hananoumi moving down Hokutofuji on leftover wn 
+moving up Hananoumi moving down Hamayutaka on leftover wn 
+moving up Inami moving down Hananoumi on raw truerank
+moving up Kyokukaiyu moving down Takakento on raw truerank
+moving up Inami moving down Takakento on raw truerank
+moving up Takakento moving down Enho on raw truerank
+moving up Takakento moving down Hokutofuji on raw truerank
+moving up Takakento moving down Hamayutaka on raw truerank
+moving up Takakento moving down Hananoumi on raw truerank
+moving up Kitanowaka moving down Tendozan on raw truerank
+moving up Takakento moving down Tendozan on raw truerank
+moving up Enho moving down Tendozan on raw truerank
+moving up Tochimaru moving down Tendozan on raw truerank
+moving up Tendozan moving down Hokutomaru on raw truerank
+moving up Kitanowaka moving down Nobehara on raw truerank
+moving up Takakento moving down Nobehara on raw truerank
+moving up Chiyomaru moving down Nobehara on raw truerank
+moving up Nobehara moving down Tendozan on raw truerank
+moving up Wakanosho moving down Narutaki on raw truerank
+moving up Hananoumi moving down Narutaki on raw truerank
+moving up Kiryuko moving down Narutaki on raw truerank
+moving up Narutaki moving down Tendozan on raw truerank
+moving up Narutaki moving down Tochimaru on leftover wn 
+moving up Wakanosho moving down Chiyotora on raw truerank
+moving up Hamayutaka moving down Chiyotora on raw truerank
+moving up Nobehara moving down Chiyotora on raw truerank
+moving up Ishizaki moving down Asanoyama on raw truerank
+moving up Asanoyama moving down Hokutofuji on raw truerank
+moving up Tochimusashi moving down Asanoyama on raw truerank
+moving up Asanoyama moving down Hamayutaka on raw truerank
+moving up Asanoyama moving down Hananoumi on raw truerank
+moving up Ishizaki moving down Toseiryu on raw truerank
+moving up Hamayutaka moving down Toseiryu on raw truerank
+moving up Toseiryu moving down Nobehara on leftover wn 
+moving up Enho moving down Toseiryu on raw truerank
+moving up Kaiseijo moving down Kawazoe on raw truerank
+moving up Gojinyu moving down Kawazoe on raw truerank
+moving up Gojinyu moving down Kawazoe on raw truerank
+moving up Gojinyu moving down Kaiseijo on raw truerank
+moving up Gojinyu moving down Kitaharima on raw truerank
+moving up Okaryu moving down Kaiseijo on raw truerank
+moving up Okaryu moving down Kitaharima on raw truerank
+moving up Gojinyu moving down Okaryu on raw truerank
+moving up Kitaharima moving down Obara on raw truerank
+moving up Obara moving down Kawazoe on leftover wn 
+moving up Kaiseijo moving down Obara on raw truerank
+moving up Kaiseijo moving down Asakoki on raw truerank
+moving up Kawazoe moving down Asakoki on raw truerank
+moving up Okaryu moving down Fujinoyama on raw truerank
+moving up Fujinoyama moving down Kitaharima on leftover wn 
+moving up Matsui moving down Kaiseijo on leftover wn 
+moving up Nagamura moving down Kawazoe on raw truerank
+moving up Nagamura moving down Obara on raw truerank
+moving up Kamito moving down Kaiseijo on raw truerank
+moving up Okaryu moving down Kamito on raw truerank
+moving up Kazuto moving down Kitaharima on leftover wn 
+moving up Kazuto moving down Fujinoyama on leftover wn 
+moving up Matsui moving down Yuma on raw truerank
+moving up Obara moving down Yuma on raw truerank
+moving up Asakoki moving down Yuma on raw truerank
+moving up Matsui moving down Kaisho on raw truerank
+moving up Kawazoe moving down Kaisho on raw truerank
+moving up Kaisho moving down Yuma on raw truerank
+moving up Kaiseijo moving down Kazenoumi on raw truerank
+moving up Kazenoumi moving down Kaisho on raw truerank
+moving up Kazenoumi moving down Obara on raw truerank
+moving up Anosho moving down Kazuto on leftover wn 
+moving up Okaryu moving down Anosho on raw truerank
+moving up Kaiseijo moving down Hinataryu on raw truerank
+moving up Kawazoe moving down Hinataryu on raw truerank
+moving up Asakoki moving down Hinataryu on raw truerank
+moving up Yuma moving down Hinataryu on raw truerank
+moving up Kaiseijo moving down Tenshoho on raw truerank
+moving up Tenshoho moving down Kaisho on leftover wn 
+moving up Obara moving down Tenshoho on raw truerank
+moving up Kawazoe moving down Tenshoho on raw truerank
+moving up Nagamura moving down Awanokuni on raw truerank
+moving up Kaisho moving down Awanokuni on raw truerank
+moving up Yuma moving down Awanokuni on raw truerank
+moving up Hinataryu moving down Awanokuni on raw truerank
+moving up Nagamura moving down Oyamatoumi on raw truerank
+moving up Kaisho moving down Oyamatoumi on raw truerank
+moving up Hinataryu moving down Oyamatoumi on raw truerank
+moving up Kazenoumi moving down Fukai on raw truerank
+moving up Asakoki moving down Fukai on raw truerank
+moving up Fukai moving down Awanokuni on raw truerank
+moving up Fukai moving down Hinataryu on raw truerank
+moving up Fukai moving down Yuma on leftover wn 
+moving up Kazenoumi moving down Asonoyama on raw truerank
+moving up Fukai moving down Asonoyama on raw truerank
+moving up Obara moving down Tsushimanada on raw truerank
+moving up Yuma moving down Tsushimanada on raw truerank
+moving up Tsushimanada moving down Awanokuni on leftover wn 
+moving up Obara moving down Asashiyu on raw truerank
+moving up Yuma moving down Asashiyu on raw truerank
+moving up Asashiyu moving down Oyamatoumi on leftover wn 
+moving up Kawazoe moving down Tanji on raw truerank
+moving up Tanji moving down Hinataryu on leftover wn 
+moving up Asakoki moving down Tanji on raw truerank
+moving up Yuma moving down Tanji on raw truerank
+moving up Kawazoe moving down Goshima on raw truerank
+moving up Goshima moving down Hinataryu on raw truerank
+moving up Goshima moving down Fukai on raw truerank
+moving up Goshima moving down Kaisho on leftover wn 
+moving up Goshima moving down Tenshoho on leftover wn 
+moving up Goshima moving down Seihakuho on raw truerank
+moving up Hinataryu moving down Seihakuho on raw truerank
+moving up Seihakuho moving down Awanokuni on leftover wn 
+moving up Seihakuho moving down Tsushimanada on leftover wn 
+moving up Goshima moving down Haruyama on raw truerank
+moving up Hinataryu moving down Haruyama on raw truerank
+moving up Awanokuni moving down Haruyama on raw truerank
+moving up Oyamatoumi moving down Haruyama on raw truerank
+moving up Tenshoho moving down Aratakayama on raw truerank
+moving up Asonoyama moving down Aratakayama on raw truerank
+moving up Asashiyu moving down Aratakayama on raw truerank
+moving up Haruyama moving down Aratakayama on raw truerank
+moving up Tenshoho moving down Mikazuchiyama on raw truerank
+moving up Seihakuho moving down Mikazuchiyama on raw truerank
+moving up Oyamatoumi moving down Mikazuchiyama on raw truerank
+moving up Mikazuchiyama moving down Aratakayama on raw truerank
+moving up Mikazuchiyama moving down Haruyama on raw truerank
+moving up Kaisho moving down Toshunryu on raw truerank
+moving up Tsushimanada moving down Toshunryu on raw truerank
+moving up Toshunryu moving down Aratakayama on raw truerank
+moving up Kaisho moving down Tosamidori on raw truerank
+moving up Tsushimanada moving down Tosamidori on raw truerank
+moving up Mikazuchiyama moving down Tosamidori on raw truerank
+moving up Haruyama moving down Tosamidori on raw truerank
+moving up Asakoki moving down Daiyusho on raw truerank
+moving up Awanokuni moving down Daiyusho on raw truerank
+moving up Toshunryu moving down Daiyusho on raw truerank
+moving up Daiyusho moving down Aratakayama on leftover wn 
+moving up Asakoki moving down Daishoryu on raw truerank
+moving up Asashiyu moving down Daishoryu on raw truerank
+moving up Haruyama moving down Daishoryu on raw truerank
+moving up Daiyusho moving down Daishoryu on raw truerank
+moving up Aratakayama moving down Daishoryu on raw truerank
+moving up Fukai moving down Kotodaigo on raw truerank
+moving up Oyamatoumi moving down Kotodaigo on raw truerank
+moving up Tosamidori moving down Kotodaigo on raw truerank
+moving up Aratakayama moving down Kotodaigo on raw truerank
+moving up Daishoryu moving down Kotodaigo on raw truerank
+moving up Fukai moving down Daikosho on raw truerank
+moving up Oyamatoumi moving down Daikosho on raw truerank
+moving up Daikosho moving down Daiyusho on raw truerank
+moving up Daikosho moving down Haruyama on leftover wn 
+moving up Yuma moving down Yoshii on raw truerank
+moving up Mikazuchiyama moving down Yoshii on raw truerank
+moving up Yoshii moving down Daiyusho on raw truerank
+moving up Yoshii moving down Tosamidori on raw truerank
+moving up Yuma moving down Mishima on raw truerank
+moving up Toshunryu moving down Mishima on raw truerank
+moving up Daiyusho moving down Mishima on raw truerank
+moving up Daishoryu moving down Mishima on raw truerank
+moving up Mishima moving down Kotodaigo on raw truerank
+moving up Tanji moving down Higonoumi on raw truerank
+moving up Daikosho moving down Higonoumi on raw truerank
+moving up Aratakayama moving down Higonoumi on raw truerank
+moving up Higonoumi moving down Mishima on raw truerank
+moving up Tanji moving down Hokutenkai on raw truerank
+moving up Daikosho moving down Hokutenkai on raw truerank
+moving up Aratakayama moving down Hokutenkai on raw truerank
+moving up Hokutenkai moving down Mishima on raw truerank
+moving up Hinataryu moving down Sengaku on raw truerank
+moving up Haruyama moving down Sengaku on raw truerank
+moving up Daishoryu moving down Sengaku on raw truerank
+moving up Hinataryu moving down Daishomaru on raw truerank
+moving up Yoshii moving down Daishomaru on raw truerank
+moving up Aratakayama moving down Daishomaru on raw truerank
+moving up Daishomaru moving down Daishoryu on leftover wn 
+moving up Asonoyama moving down Kitadaichi on raw truerank
+moving up Tosamidori moving down Kitadaichi on raw truerank
+moving up Kitadaichi moving down Higonoumi on raw truerank
+moving up Kitadaichi moving down Daishomaru on raw truerank
+moving up Aratakayama moving down Kitadaichi on raw truerank
+moving up Asonoyama moving down Fujitoshi on raw truerank
+moving up Tosamidori moving down Fujitoshi on raw truerank
+moving up Fujitoshi moving down Higonoumi on raw truerank
+moving up Fujitoshi moving down Daishoryu on raw truerank
+moving up Fujitoshi moving down Daishomaru on raw truerank
+moving up Seihakuho moving down Hayatefuji on raw truerank
+moving up Daiyusho moving down Hayatefuji on raw truerank
+moving up Higonoumi moving down Hayatefuji on raw truerank
+moving up Mishima moving down Hayatefuji on raw truerank
+moving up Hayatefuji moving down Kotodaigo on raw truerank
+moving up Seihakuho moving down Oyamada on raw truerank
+moving up Aratakayama moving down Oyamada on raw truerank
+moving up Hokutenkai moving down Oyamada on raw truerank
+moving up Tsushimanada moving down Shohoryu on raw truerank
+moving up Kitadaichi moving down Shohoryu on raw truerank
+moving up Sengaku moving down Shohoryu on raw truerank
+moving up Shohoryu moving down Oyamada on raw truerank
+moving up Shohoryu moving down Hayatefuji on raw truerank
+moving up Tsushimanada moving down Kotodaishin on raw truerank
+moving up Kitadaichi moving down Kotodaishin on raw truerank
+moving up Sengaku moving down Kotodaishin on raw truerank
+moving up Hayatefuji moving down Kotodaishin on raw truerank
+moving up Kotodaigo moving down Kotodaishin on raw truerank
+moving up Wakatakakage moving down Wakaikari on raw truerank
+moving up Kirishima moving down Wakaikari on raw truerank
+moving up Oshoma moving down Wakaikari on raw truerank
+moving up Onokatsu moving down Wakaikari on raw truerank
+moving up Tobizaru moving down Wakaikari on raw truerank
+moving up Wakaikari moving down Churanoumi on fuzzy wn
+moving up Roga moving down Wakaikari on raw truerank
+moving up Tokihayate moving down Wakaikari on raw truerank
+moving up Chiyoshoma moving down Wakaikari on raw truerank
+moving up Fujiseiun moving down Hokutomaru on raw truerank
+moving up Fujiseiun moving down Tendozan on raw truerank
+moving up Fujiseiun moving down Tochimaru on raw truerank
+moving up Fujiseiun moving down Kiryuko on raw truerank
+moving up Fujiseiun moving down Takakento on raw truerank
+moving up Fujiseiun moving down Miyanokaze on raw truerank
+moving up Fujiseiun moving down Tsurugisho on raw truerank
+moving up Tohakuryu moving down Fujiseiun on raw truerank
+moving up Kazekeno moving down Fujiseiun on raw truerank
+moving up Daiseizan moving down Fujiseiun on raw truerank
+moving up Daiseizan moving down Nishikifuji on raw truerank
+moving up Daiseizan moving down Tochitaikai on fuzzy wn
+moving up Daiseizan moving down Takarafuji on fuzzy wn
+moving up Daiseizan moving down Kagayaki on fuzzy wn
+moving up Tamashoho moving down Daiseizan on raw truerank
+moving up Tamashoho moving down Kazekeno on raw truerank
+moving up Hitoshi moving down Tamashoho on fuzzy wn
+moving up Hitoshi moving down Hakuyozan on fuzzy wn
+moving up Hitoshi moving down Shirokuma on fuzzy wn
+moving up Ryuden moving down Hitoshi on raw truerank
+moving up Ryuden moving down Tohakuryu on raw truerank
+moving up Ryuden moving down Oshoumi on raw truerank
+moving up Tomokaze moving down Shonannoumi on raw truerank
+moving up Tomokaze moving down Nishikigi on fuzzy wn
+moving up Shishi moving down Tomokaze on raw truerank
+moving up Kotoeiho moving down Shishi on fuzzy wn
+moving up Kotoshoho moving down Kotoeiho on raw truerank
+moving up Fukuzaki moving down Shunrai on raw truerank
+moving up Noda moving down Shunrai on raw truerank
+moving up Noda moving down Shunrai on raw truerank
+moving up Fukuzaki moving down Noda on raw truerank
+moving up Chiyooga moving down Shunrai on raw truerank
+moving up Kurohimeyama moving down Chiyooga on raw truerank
+moving up Kurohimeyama moving down Noda on raw truerank
+moving up Fukuzaki moving down Kurohimeyama on raw truerank
+moving up Noda moving down Tokitenran on raw truerank
+moving up Tokitenran moving down Shunrai on raw truerank
+moving up Chiyooga moving down Tokitenran on raw truerank
+moving up Noda moving down Suzaki on raw truerank
+moving up Tokitenran moving down Suzaki on raw truerank
+moving up Shunrai moving down Suzaki on raw truerank
+moving up Chiyooga moving down Shimazuumi on raw truerank
+moving up Shimazuumi moving down Shunrai on raw truerank
+moving up Tokitenran moving down Shimazuumi on raw truerank
+moving up Chiyooga moving down Daishinkai on raw truerank
+moving up Shunrai moving down Daishinkai on raw truerank
+moving up Daishinkai moving down Suzaki on raw truerank
+moving up Shiroma moving down Tokitenran on leftover wn 
+moving up Osanai moving down Shiroma on raw truerank
+moving up Chiyooga moving down Shiroma on raw truerank
+moving up Shiroma moving down Ikarigata on raw truerank
+moving up Shunrai moving down Ikarigata on raw truerank
+moving up Ikarigata moving down Suzaki on raw truerank
+moving up Ikarigata moving down Daishinkai on raw truerank
+moving up Tokitenran moving down Bushozan on raw truerank
+moving up Ikarigata moving down Bushozan on raw truerank
+moving up Bushozan moving down Suzaki on raw truerank
+moving up Daishinkai moving down Bushozan on raw truerank
+moving up Tokitenran moving down Goseizan on raw truerank
+moving up Goseizan moving down Daishinkai on leftover wn 
+moving up Shunrai moving down Goseizan on raw truerank
+moving up Ikarigata moving down Goseizan on raw truerank
+moving up Shimazuumi moving down Shuji on raw truerank
+moving up Daishinkai moving down Shuji on raw truerank
+moving up Bushozan moving down Shuji on raw truerank
+moving up Shimazuumi moving down Tochikodai on raw truerank
+moving up Tochikodai moving down Daishinkai on raw truerank
+got to tiebreaks
+moving up Tochikodai moving down Goseizan on raw truerank
+moving up Shunrai moving down Tsurubayashi on raw truerank
+moving up Daishinkai moving down Tsurubayashi on raw truerank
+moving up Shuji moving down Tsurubayashi on raw truerank
+moving up Suzaki moving down Tsurubayashi on raw truerank
+moving up Shunrai moving down Yoshiyasu on raw truerank
+moving up Yoshiyasu moving down Suzaki on raw truerank
+moving up Kotokenryu moving down Ikarigata on raw truerank
+moving up Chiyooga moving down Kotokenryu on raw truerank
+moving up Shimazuumi moving down Kotokenryu on raw truerank
+moving up Kotokenryu moving down Shunrai on raw truerank
+moving up Shunrai moving down Asagyokusei on raw truerank
+moving up Bushozan moving down Asagyokusei on raw truerank
+moving up Asagyokusei moving down Suzaki on leftover wn 
+moving up Ikarigata moving down Ryusei on raw truerank
+moving up Daishinkai moving down Ryusei on raw truerank
+moving up Ryusei moving down Bushozan on leftover wn 
+moving up Ikarigata moving down Ienoshima on raw truerank
+moving up Yoshiyasu moving down Ienoshima on raw truerank
+moving up Suzaki moving down Ienoshima on raw truerank
+moving up Ienoshima moving down Tsurubayashi on raw truerank
+moving up Tochikodai moving down Chiyonoo on raw truerank
+moving up Chiyonoo moving down Shuji on raw truerank
+moving up Chiyonoo moving down Ryusei on raw truerank
+moving up Tochikodai moving down Hoshuzan on raw truerank
+moving up Yoshiyasu moving down Hoshuzan on raw truerank
+moving up Suzaki moving down Hoshuzan on raw truerank
+moving up Ienoshima moving down Hoshuzan on raw truerank
+moving up Goseizan moving down Yago on raw truerank
+moving up Shuji moving down Yago on raw truerank
+moving up Goseizan moving down Tokunomusashi on raw truerank
+moving up Asagyokusei moving down Tokunomusashi on raw truerank
+moving up Ienoshima moving down Tokunomusashi on raw truerank
+moving up Tokunomusashi moving down Tsurubayashi on raw truerank
+moving up Tokunomusashi moving down Hoshuzan on raw truerank
+moving up Daishinkai moving down Wakamiyabi on raw truerank
+moving up Wakamiyabi moving down Shuji on leftover wn 
+moving up Daishinkai moving down Kototsubasa on raw truerank
+moving up Asagyokusei moving down Kototsubasa on raw truerank
+moving up Kototsubasa moving down Tokunomusashi on raw truerank
+moving up Yago moving down Kototsubasa on raw truerank
+moving up Ienoshima moving down Kototsubasa on raw truerank
+moving up Chiyonoo moving down Aron on raw truerank
+moving up Suzaki moving down Aron on raw truerank
+moving up Tokunomusashi moving down Aron on raw truerank
+moving up Aron moving down Tsurubayashi on leftover wn 
+moving up Chiyonoo moving down Daimasakari on raw truerank
+moving up Yago moving down Daimasakari on raw truerank
+moving up Daimasakari moving down Hoshuzan on raw truerank
+moving up Kototsubasa moving down Daimasakari on raw truerank
+moving up Daimasakari moving down Tokunomusashi on leftover wn 
+moving up Ryusei moving down Yutakasho on raw truerank
+moving up Ienoshima moving down Yutakasho on raw truerank
+moving up Hoshuzan moving down Yutakasho on raw truerank
+moving up Tsurubayashi moving down Yutakasho on raw truerank
+moving up Ryusei moving down Nionoumi on raw truerank
+moving up Ienoshima moving down Nionoumi on raw truerank
+moving up Hoshuzan moving down Nionoumi on raw truerank
+moving up Tsurubayashi moving down Nionoumi on raw truerank
+moving up Nionoumi moving down Yutakasho on raw truerank
+moving up Bushozan moving down Akiyoshi on raw truerank
+moving up Akiyoshi moving down Aron on raw truerank
+moving up Bushozan moving down Murayama on raw truerank
+moving up Akiyoshi moving down Murayama on raw truerank
+moving up Aron moving down Murayama on raw truerank
+moving up Nionoumi moving down Murayama on raw truerank
+moving up Yoshiyasu moving down Dewataikai on raw truerank
+moving up Daimasakari moving down Dewataikai on raw truerank
+moving up Tsurubayashi moving down Dewataikai on raw truerank
+moving up Dewataikai moving down Murayama on raw truerank
+moving up Yoshiyasu moving down Sazanami on raw truerank
+moving up Daimasakari moving down Sazanami on raw truerank
+moving up Sazanami moving down Murayama on raw truerank
+moving up Sazanami moving down Nionoumi on leftover wn 
+moving up Wakamiyabi moving down Hakuonada on raw truerank
+moving up Tokunomusashi moving down Hakuonada on raw truerank
+moving up Sazanami moving down Hakuonada on raw truerank
+moving up Murayama moving down Hakuonada on raw truerank
+moving up Yutakasho moving down Hakuonada on raw truerank
+moving up Wakamiyabi moving down Oka on raw truerank
+moving up Hoshuzan moving down Oka on raw truerank
+moving up Oka moving down Nionoumi on raw truerank
+moving up Shuji moving down Kawamura on raw truerank
+moving up Aron moving down Kawamura on raw truerank
+moving up Nionoumi moving down Kawamura on raw truerank
+moving up Kawamura moving down Yutakasho on leftover wn 
+moving up Shuji moving down Gyokuozan on raw truerank
+moving up Aron moving down Gyokuozan on raw truerank
+moving up Nionoumi moving down Gyokuozan on raw truerank
+moving up Yutakasho moving down Gyokuozan on raw truerank
+moving up Hakuonada moving down Gyokuozan on raw truerank
+moving up Asagyokusei moving down Tochiseiryu on raw truerank
+moving up Tsurubayashi moving down Tochiseiryu on raw truerank
+moving up Sazanami moving down Tochiseiryu on raw truerank
+moving up Nionoumi moving down Tochiseiryu on raw truerank
+moving up Asagyokusei moving down Wakatakamoto on raw truerank
+moving up Oka moving down Wakatakamoto on raw truerank
+moving up Murayama moving down Wakatakamoto on raw truerank
+moving up Hakuonada moving down Wakatakamoto on raw truerank
+moving up Gyokuozan moving down Wakatakamoto on raw truerank
+moving up Suzaki moving down Kirinryu on raw truerank
+moving up Dewataikai moving down Kirinryu on raw truerank
+moving up Kawamura moving down Kirinryu on raw truerank
+moving up Hakuonada moving down Kirinryu on raw truerank
+moving up Suzaki moving down Gyotoku on raw truerank
+moving up Gyotoku moving down Yutakasho on raw truerank
+moving up Gyotoku moving down Tochiseiryu on raw truerank
+moving up Gyotoku moving down Nionoumi on leftover wn 
+moving up Gyotoku moving down Sazanami on leftover wn 
+moving up Yago moving down Urayama on raw truerank
+moving up Gyotoku moving down Urayama on raw truerank
+moving up Yutakasho moving down Urayama on raw truerank
+moving up Urayama moving down Gyokuozan on raw truerank
+moving up Urayama moving down Kirinryu on raw truerank
+moving up Urayama moving down Hakuonada on leftover wn 
+moving up Yago moving down Hanaoka on raw truerank
+moving up Sazanami moving down Hanaoka on raw truerank
+moving up Hanaoka moving down Gyokuozan on raw truerank
+moving up Gojinyu moving down Fukuzaki on raw truerank
+moving up Okaryu moving down Fukuzaki on raw truerank
+moving up Anosho moving down Fukuzaki on raw truerank
+moving up Matsui moving down Fukuzaki on raw truerank
+moving up Kaisho moving down Fukuzaki on raw truerank
+moving up Yoshii moving down Fukuzaki on raw truerank
+moving up Fukuzaki moving down Hokutenkai on raw truerank
+moving up Kotodaishin moving down Wakatakamoto on raw truerank
+moving up Kotodaishin moving down Gyokuozan on raw truerank
+moving up Kotodaishin moving down Hanaoka on raw truerank
+moving up Kotodaishin moving down Kawamura on raw truerank
+moving up Kotodaishin moving down Tsurubayashi on raw truerank
+moving up Kotodaishin moving down Chiyonoo on raw truerank
+moving up Shimazuumi moving down Kotodaishin on raw truerank
+moving up Kotodaishin moving down Tochikodai on raw truerank
+moving up Kotodaishin moving down Shunrai on raw truerank
+moving up Kotodaigo moving down Kotokenryu on raw truerank
+moving up Kotodaigo moving down Shimazuumi on raw truerank
+moving up Kotodaigo moving down Tokitenran on raw truerank
+moving up Kotodaigo moving down Shiroma on raw truerank
+moving up Noda moving down Kotodaigo on leftover wn 
+moving up Osanai moving down Oyamada on leftover wn 
+moving up Kurohimeyama moving down Hayatefuji on leftover wn 
+moving up Shohoryu moving down Kurohimeyama on raw truerank
+moving up Wakatakakage moving down Gojinyu on raw truerank
+moving up Kirishima moving down Gojinyu on raw truerank
+moving up Oshoma moving down Gojinyu on raw truerank
+moving up Onokatsu moving down Gojinyu on raw truerank
+moving up Tobizaru moving down Gojinyu on raw truerank
+moving up Wakaikari moving down Gojinyu on raw truerank
+moving up Daiamami moving down Gojinyu on raw truerank
+moving up Takakento moving down Gojinyu on raw truerank
+moving up Gojinyu moving down Kiryuko on leftover wn 
+moving up Hokutofuji moving down Gojinyu on raw truerank
+moving up Enho moving down Gojinyu on raw truerank
+moving up Chiyomaru moving down Gojinyu on raw truerank
+moving up Hokutomaru moving down Wakatakamoto on raw truerank
+moving up Hokutomaru moving down Gyokuozan on raw truerank
+moving up Hokutomaru moving down Hanaoka on raw truerank
+moving up Hokutomaru moving down Kawamura on raw truerank
+moving up Hokutomaru moving down Tsurubayashi on raw truerank
+moving up Hokutomaru moving down Chiyonoo on raw truerank
+moving up Hokutomaru moving down Haruyama on raw truerank
+moving up Hokutomaru moving down Kaisho on raw truerank
+moving up Hokutomaru moving down Matsui on raw truerank
+moving up Hokutomaru moving down Anosho on raw truerank
+moving up Tendozan moving down Okaryu on raw truerank
+moving up Wakatakakage moving down Kirishima on raw truerank
+moving up Kirishima moving down Daieisho on raw truerank
+S1e: Wakatakakage (N:110) (WN:128.64870000000002) (TrueRank:-11) | S1w: Kirishima (N:90) (WN:106.98700000000001) (TrueRank:-9)
+S2e: Daieisho (N:85) (WN:103.9899) (TrueRank:-6) | : (empty)
+moving up Oshoma moving down Aonishiki on raw truerank
+detected wins
+detected wins
+K1e: Oshoma (N:78) (WN:82.8075) (TrueRank:8) | K1w: Aonishiki (N:92) (WN:92.21069999999999) (TrueRank:10)
+M1e: Wakamotoharu (N:46) (WN:56.006299999999996) (TrueRank:M2e) | M1w: Onokatsu (N:84) (WN:84.4229) (TrueRank:M3e)
+M2e: Oho (N:59) (WN:74.0543) (TrueRank:M2w) | M2w: Kinbozan (N:80) (WN:80.1727) (TrueRank:M3w)
+M3e: Abi (N:61) (WN:79.1295) (TrueRank:M3e) | M3w: Takayasu (N:43) (WN:54.790000000000006) (TrueRank:M3e)
+M4e: Hakuoho (N:59) (WN:59.771699999999996) (TrueRank:M6e) | M4w: Hiradoumi (N:46) (WN:59.2176) (TrueRank:M6w)
+M5e: Tamawashi (N:43) (WN:53.63499999999999) (TrueRank:M6e) | M5w: Meisei (N:70) (WN:70.1375) (TrueRank:M7e)
+M6e: Takerufuji (N:39) (WN:43.7249) (TrueRank:M7e) | M6w: Kusano (N:116) (WN:116.00059999999999) (TrueRank:M8e)
+M7e: Tobizaru (N:47) (WN:51.092699999999994) (TrueRank:M7w) | M7w: Sadanoumi (N:75) (WN:75.0207) (TrueRank:M8w)
+M8e: Endo (N:64) (WN:64.0107) (TrueRank:M8e) | M8w: Gonoyama (N:32) (WN:39.8736) (TrueRank:M9w)
+M9e: Ichiyamamoto (N:32) (WN:34.0946) (TrueRank:M9w) | M9w: Ura (N:36) (WN:38.2899) (TrueRank:M10e)
+M10e: Roga (N:67) (WN:67.01270000000001) (TrueRank:M11w) | M10w: Atamifuji (N:61) (WN:61.011799999999994) (TrueRank:M11e)
+M11e: Takanosho (N:61) (WN:61.01079999999999) (TrueRank:M11w) | M11w: Asakoryu (N:78) (WN:78.01410000000001) (TrueRank:M12w)
+M12e: Tokihayate (N:65) (WN:65.03929999999998) (TrueRank:M12e) | M12w: Midorifuji (N:34) (WN:34.068) (TrueRank:M12w)
+M13e: Chiyoshoma (N:28) (WN:29.519099999999998) (TrueRank:M12w) | M13w: Shodai (N:37) (WN:37.009499999999996) (TrueRank:M13w)
+M14e: Wakaikari (N:101) (WN:101) (TrueRank:M14e) | M14w: Churanoumi (N:30) (WN:30.007099999999998) (TrueRank:M14w)
+M15e: Hidenoumi (N:74) (WN:74) (TrueRank:M16w) | M15w: Mitakeumi (N:63) (WN:63) (TrueRank:M17w)
+M16e: Kayo (N:59) (WN:59.00479999999999) (TrueRank:M17e) | M16w: Kotoshoho (N:37) (WN:37.0023) (TrueRank:M17e)
+M17e: Kotoeiho (N:86) (WN:86) (TrueRank:M18e) | M17w: Shishi (N:24) (WN:24.0078) (TrueRank:M18w)
+J1e: Tomokaze (N:83) (WN:83) (TrueRank:J1w) | J1w: Nishikigi (N:39) (WN:39.004) (TrueRank:J1w)
+J2e: Shonannoumi (N:34) (WN:34.0021) (TrueRank:J2w) | J2w: Ryuden (N:32) (WN:32.0043) (TrueRank:J2e)
+J3e: Oshoumi (N:81) (WN:81) (TrueRank:J3w) | J3w: Tohakuryu (N:76) (WN:76) (TrueRank:J6w)
+J4e: Shirokuma (N:41) (WN:41) (TrueRank:J6e) | J4w: Hakuyozan (N:40) (WN:40) (TrueRank:J6w)
+J5e: Tamashoho (N:34) (WN:34.0026) (TrueRank:J6e) | J5w: Kazekeno (N:60) (WN:60) (TrueRank:J7w)
+J6e: Kagayaki (N:49) (WN:49) (TrueRank:J7e) | J6w: Hitoshi (N:50) (WN:50) (TrueRank:J6w)
+J7e: Takarafuji (N:38) (WN:38) (TrueRank:J7w) | J7w: Daiseizan (N:52) (WN:52) (TrueRank:J7e)
+J8e: Tochitaikai (N:25) (WN:25.0028) (TrueRank:J7e) | J8w: Nishikifuji (N:39) (WN:39) (TrueRank:J9w)
+J9e: Fujiseiun (N:31) (WN:31) (TrueRank:J9e) | J9w: Mitoryu (N:57) (WN:57) (TrueRank:J10w)
+J10e: Nabatame (N:57) (WN:57) (TrueRank:J11e) | J10w: Tsurugisho (N:57) (WN:57) (TrueRank:J10e)
+J11e: Shiden (N:47) (WN:47) (TrueRank:J11e) | J11w: Mita (N:56) (WN:56) (TrueRank:J12w)
+J12e: Shimanoumi (N:37) (WN:37) (TrueRank:J12w) | J12w: Hatsuyama (N:37) (WN:37) (TrueRank:J13e)
+J13e: Miyanokaze (N:41) (WN:41) (TrueRank:73) | J13w: Daiamami (N:47) (WN:47) (TrueRank:J14e)
+J14e: Kyokukaiyu (N:24) (WN:24) (TrueRank:89) | J14w: Kitanowaka (N:15) (WN:15) (TrueRank:89)
+J15e: Mudoho (N:35) (WN:35) (TrueRank:80) | J15w: Wakanosho (N:9) (WN:9) (TrueRank:90)
+J16e: Ishizaki (N:14) (WN:14) (TrueRank:91) | J16w: Dewanoryu (N:10) (WN:10) (TrueRank:92)
+J17e: Akua (N:7) (WN:7) (TrueRank:94) | J17w: Otsuji (N:43) (WN:43) (TrueRank:77)
+J18e: Oshoryu (N:5) (WN:5) (TrueRank:95) | J18w: Asahakuryu (N:24) (WN:24) (TrueRank:96)
+J19e: Satorufuji (N:14) (WN:14) (TrueRank:97) | J19w: Kotokuzan (N:27) (WN:27) (TrueRank:88)
+J20e: Tochimusashi (N:9) (WN:9) (TrueRank:98) | J20w: Nishinoryu (N:17) (WN:17) (TrueRank:99)
+J21e: Inami (N:14) (WN:14) (TrueRank:101) | J21w: Takakento (N:21) (WN:21) (TrueRank:103)
+J22e: Asanoyama (N:26) (WN:26) (TrueRank:104) | J22w: Hananoumi (N:16) (WN:16) (TrueRank:106)
+J23e: Hamayutaka (N:13) (WN:13) (TrueRank:106) | J23w: Hokutofuji (N:0) (WN:0) (TrueRank:106)
+J24e: Daishoho (N:1) (WN:1) (TrueRank:107) | J24w: Enho (N:11) (WN:11) (TrueRank:108)
+J25e: Chiyomaru (N:11) (WN:11) (TrueRank:109) | J25w: Gojinyu (N:25) (WN:25) (TrueRank:112)
+J26e: Kiryuko (N:0) (WN:0) (TrueRank:112) | J26w: Toseiryu (N:18) (WN:18) (TrueRank:113)
+J27e: Nobehara (N:10) (WN:10) (TrueRank:113) | J27w: Narutaki (N:13) (WN:13) (TrueRank:114)
+J28e: Tochimaru (N:0) (WN:0) (TrueRank:114) | J28w: Chiyotora (N:10) (WN:10) (TrueRank:115)
+J29e: Tendozan (N:4) (WN:4) (TrueRank:116) | J29w: Okaryu (N:18) (WN:18) (TrueRank:118)
+J30e: Hokutomaru (N:0) (WN:0) (TrueRank:119) | J30w: Kamito (N:24) (WN:24) (TrueRank:120)
+J31e: Anosho (N:31) (WN:31) (TrueRank:121) | J31w: Kazuto (N:21) (WN:21) (TrueRank:121)
+J32e: Fujinoyama (N:15) (WN:15) (TrueRank:121) | J32w: Kitaharima (N:9) (WN:9) (TrueRank:121)
+J33e: Matsui (N:17) (WN:17) (TrueRank:122) | J33w: Kaiseijo (N:4) (WN:4) (TrueRank:122)
+J34e: Nagamura (N:13) (WN:13) (TrueRank:123) | J34w: Kazenoumi (N:27) (WN:27) (TrueRank:124)
+J35e: Obara (N:5) (WN:5) (TrueRank:127) | J35w: Kawazoe (N:1) (WN:1) (TrueRank:127)
+J36e: Goshima (N:31) (WN:31) (TrueRank:131) | J36w: Tenshoho (N:17) (WN:17) (TrueRank:131)
+J37e: Kaisho (N:12) (WN:12) (TrueRank:131) | J37w: Asakoki (N:2) (WN:2) (TrueRank:132)
+J38e: Fukai (N:15) (WN:15) (TrueRank:134) | J38w: Yuma (N:5) (WN:5) (TrueRank:134)
+J39e: Tanji (N:16) (WN:16) (TrueRank:138) | J39w: Hinataryu (N:5) (WN:5) (TrueRank:138)
+J40e: Asonoyama (N:12) (WN:12) (TrueRank:139) | J40w: Seihakuho (N:19) (WN:19) (TrueRank:140)
+J41e: Tsushimanada (N:9) (WN:9) (TrueRank:140) | J41w: Awanokuni (N:6) (WN:6) (TrueRank:140)
+J42e: Asashiyu (N:9) (WN:9) (TrueRank:141) | J42w: Oyamatoumi (N:3) (WN:3) (TrueRank:141)
+J43e: Mikazuchiyama (N:16) (WN:16) (TrueRank:143) | J43w: Toshunryu (N:17) (WN:17) (TrueRank:144)
+J44e: Daikosho (N:25) (WN:25) (TrueRank:145) | J44w: Haruyama (N:11) (WN:11) (TrueRank:145)
+J45e: Yoshii (N:21) (WN:21) (TrueRank:146) | J45w: Tosamidori (N:10) (WN:10) (TrueRank:149)
+J46e: Daiyusho (N:10) (WN:10) (TrueRank:150) | J46w: Aratakayama (N:5) (WN:5) (TrueRank:150)
+J47e: Kitadaichi (N:21) (WN:21) (TrueRank:152) | J47w: Fujitoshi (N:24) (WN:24) (TrueRank:153)
+J48e: Fukuzaki (N:30) (WN:29) (TrueRank:154) | J48w: Daishomaru (N:20) (WN:20) (TrueRank:155)
+J49e: Daishoryu (N:4) (WN:4) (TrueRank:155) | J49w: Higonoumi (N:8) (WN:8) (TrueRank:156)
+J50e: Hokutenkai (N:12) (WN:12) (TrueRank:157) | J50w: Sengaku (N:7) (WN:7) (TrueRank:158)
+J51e: Mishima (N:7) (WN:7) (TrueRank:159) | J51w: Shohoryu (N:13) (WN:13) (TrueRank:160)
+J52e: Kurohimeyama (N:25) (WN:25) (TrueRank:162) | J52w: Hayatefuji (N:13) (WN:13) (TrueRank:162)
+J53e: Osanai (N:23) (WN:23) (TrueRank:163) | J53w: Oyamada (N:10) (WN:10) (TrueRank:163)
+J54e: Noda (N:13) (WN:13) (TrueRank:164) | J54w: Kotodaigo (N:0) (WN:0) (TrueRank:164)
+J55e: Chiyooga (N:21) (WN:21) (TrueRank:165) | J55w: Shiroma (N:22) (WN:22) (TrueRank:168)
+J56e: Tokitenran (N:15) (WN:15) (TrueRank:168) | J56w: Shimazuumi (N:17) (WN:17) (TrueRank:170)
+J57e: Kotokenryu (N:26) (WN:26) (TrueRank:172) | J57w: Kotodaishin (N:3) (WN:3) (TrueRank:173)
+J58e: Shunrai (N:5) (WN:5) (TrueRank:175) | J58w: Ikarigata (N:12) (WN:12) (TrueRank:177)
+J59e: Tochikodai (N:12) (WN:12) (TrueRank:177) | J59w: Goseizan (N:10) (WN:10) (TrueRank:179)
+J60e: Daishinkai (N:5) (WN:5) (TrueRank:179) | J60w: Chiyonoo (N:20) (WN:20) (TrueRank:180)
+J61e: Ryusei (N:16) (WN:16) (TrueRank:182) | J61w: Bushozan (N:6) (WN:6) (TrueRank:182)
+J62e: Yoshiyasu (N:15) (WN:15) (TrueRank:183) | J62w: Wakamiyabi (N:23) (WN:22) (TrueRank:184)
+J63e: Shuji (N:6) (WN:6) (TrueRank:184) | J63w: Asagyokusei (N:11) (WN:11) (TrueRank:185)
+J64e: Suzaki (N:0) (WN:0) (TrueRank:185) | J64w: Yago (N:17) (WN:17) (TrueRank:186)
+J65e: Ienoshima (N:13) (WN:13) (TrueRank:187) | J65w: Kototsubasa (N:17) (WN:17) (TrueRank:189)
+J66e: Akiyoshi (N:18) (WN:17) (TrueRank:190) | J66w: Daimasakari (N:13) (WN:13) (TrueRank:191)
+J67e: Tokunomusashi (N:9) (WN:9) (TrueRank:191) | J67w: Hoshuzan (N:5) (WN:5) (TrueRank:193)
+J68e: Aron (N:9) (WN:8) (TrueRank:194) | J68w: Tsurubayashi (N:0) (WN:0) (TrueRank:194)
+J69e: Oka (N:14) (WN:9) (TrueRank:195) | J69w: Dewataikai (N:17) (WN:15) (TrueRank:196)
+J70e: Gyotoku (N:25) (WN:25) (TrueRank:197) | J70w: Sazanami (N:17) (WN:14) (TrueRank:197)
+J71e: Nionoumi (N:10) (WN:10) (TrueRank:197) | J71w: Tochiseiryu (N:19) (WN:13) (TrueRank:202)
+J72e: Murayama (N:9) (WN:8) (TrueRank:203) | J72w: Kawamura (N:9) (WN:7) (TrueRank:204)
+J73e: Yutakasho (N:1) (WN:1) (TrueRank:204) | J73w: Urayama (N:6) (WN:4) (TrueRank:206)
+J74e: Hakuonada (N:3) (WN:1) (TrueRank:206) | J74w: Hanaoka (N:9) (WN:6) (TrueRank:207)
+J75e: Kirinryu (N:10) (WN:6) (TrueRank:208) | J75w: Gyokuozan (N:0) (WN:0) (TrueRank:209)
+J76e: Wakatakamoto (N:0) (WN:0) (TrueRank:219) | : (empty)
+S1e: Wakatakakage (N:110) (WN:128.64870000000002) (TrueRank:-11) | S1w: Kirishima (N:90) (WN:106.98700000000001) (TrueRank:-9)
+S2e: Daieisho (N:85) (WN:103.9899) (TrueRank:-6) | : (empty)
+detected wins
+detected wins
+K1e: Oshoma (N:78) (WN:82.8075) (TrueRank:8) | K1w: Aonishiki (N:92) (WN:92.21069999999999) (TrueRank:10)
+M1e: Wakamotoharu (N:46) (WN:56.006299999999996) (TrueRank:M2e) | M1w: Oho (N:59) (WN:74.0543) (TrueRank:M2w)
+M2e: Onokatsu (N:84) (WN:84.4229) (TrueRank:M3e) | M2w: Abi (N:61) (WN:79.1295) (TrueRank:M3e)
+M3e: Takayasu (N:43) (WN:54.790000000000006) (TrueRank:M3e) | M3w: Kinbozan (N:80) (WN:80.1727) (TrueRank:M3w)
+M4e: Hakuoho (N:59) (WN:59.771699999999996) (TrueRank:M6e) | M4w: Tamawashi (N:43) (WN:53.63499999999999) (TrueRank:M6e)
+M5e: Hiradoumi (N:46) (WN:59.2176) (TrueRank:M6w) | M5w: Meisei (N:70) (WN:70.1375) (TrueRank:M7e)
+M6e: Takerufuji (N:39) (WN:43.7249) (TrueRank:M7e) | M6w: Tobizaru (N:47) (WN:51.092699999999994) (TrueRank:M7w)
+M7e: Kusano (N:116) (WN:116.00059999999999) (TrueRank:M8e) | M7w: Endo (N:64) (WN:64.0107) (TrueRank:M8e)
+M8e: Sadanoumi (N:75) (WN:75.0207) (TrueRank:M8w) | M8w: Gonoyama (N:32) (WN:39.8736) (TrueRank:M9w)
+M9e: Ichiyamamoto (N:32) (WN:34.0946) (TrueRank:M9w) | M9w: Ura (N:36) (WN:38.2899) (TrueRank:M10e)
+M10e: Atamifuji (N:61) (WN:61.011799999999994) (TrueRank:M11e) | M10w: Roga (N:67) (WN:67.01270000000001) (TrueRank:M11w)
+M11e: Takanosho (N:61) (WN:61.01079999999999) (TrueRank:M11w) | M11w: Tokihayate (N:65) (WN:65.03929999999998) (TrueRank:M12e)
+M12e: Asakoryu (N:78) (WN:78.01410000000001) (TrueRank:M12w) | M12w: Midorifuji (N:34) (WN:34.068) (TrueRank:M12w)
+M13e: Chiyoshoma (N:28) (WN:29.519099999999998) (TrueRank:M12w) | M13w: Shodai (N:37) (WN:37.009499999999996) (TrueRank:M13w)
+M14e: Wakaikari (N:101) (WN:101) (TrueRank:M14e) | M14w: Churanoumi (N:30) (WN:30.007099999999998) (TrueRank:M14w)
+M15e: Hidenoumi (N:74) (WN:74) (TrueRank:M16w) | M15w: Kotoshoho (N:37) (WN:37.0023) (TrueRank:M17e)
+M16e: Mitakeumi (N:63) (WN:63) (TrueRank:M17w) | M16w: Kayo (N:59) (WN:59.00479999999999) (TrueRank:M17e)
+M17e: Kotoeiho (N:86) (WN:86) (TrueRank:M18e) | M17w: Shishi (N:24) (WN:24.0078) (TrueRank:M18w)
+J1e: Tomokaze (N:83) (WN:83) (TrueRank:J1w) | J1w: Nishikigi (N:39) (WN:39.004) (TrueRank:J1w)
+J2e: Ryuden (N:32) (WN:32.0043) (TrueRank:J2e) | J2w: Shonannoumi (N:34) (WN:34.0021) (TrueRank:J2w)
+J3e: Oshoumi (N:81) (WN:81) (TrueRank:J3w) | J3w: Tamashoho (N:34) (WN:34.0026) (TrueRank:J6e)
+J4e: Tohakuryu (N:76) (WN:76) (TrueRank:J6w) | J4w: Shirokuma (N:41) (WN:41) (TrueRank:J6e)
+J5e: Hakuyozan (N:40) (WN:40) (TrueRank:J6w) | J5w: Kagayaki (N:49) (WN:49) (TrueRank:J7e)
+J6e: Tochitaikai (N:25) (WN:25.0028) (TrueRank:J7e) | J6w: Hitoshi (N:50) (WN:50) (TrueRank:J6w)
+J7e: Kazekeno (N:60) (WN:60) (TrueRank:J7w) | J7w: Daiseizan (N:52) (WN:52) (TrueRank:J7e)
+J8e: Takarafuji (N:38) (WN:38) (TrueRank:J7w) | J8w: Fujiseiun (N:31) (WN:31) (TrueRank:J9e)
+J9e: Nishikifuji (N:39) (WN:39) (TrueRank:J9w) | J9w: Mitoryu (N:57) (WN:57) (TrueRank:J10w)
+J10e: Nabatame (N:57) (WN:57) (TrueRank:J11e) | J10w: Tsurugisho (N:57) (WN:57) (TrueRank:J10e)
+J11e: Shiden (N:47) (WN:47) (TrueRank:J11e) | J11w: Mita (N:56) (WN:56) (TrueRank:J12w)
+J12e: Shimanoumi (N:37) (WN:37) (TrueRank:J12w) | J12w: Hatsuyama (N:37) (WN:37) (TrueRank:J13e)
+J13e: Miyanokaze (N:41) (WN:41) (TrueRank:73) | J13w: Daiamami (N:47) (WN:47) (TrueRank:J14e)
+J14e: Kyokukaiyu (N:24) (WN:24) (TrueRank:89) | J14w: Kitanowaka (N:15) (WN:15) (TrueRank:89)
+J15e: Mudoho (N:35) (WN:35) (TrueRank:80) | J15w: Wakanosho (N:9) (WN:9) (TrueRank:90)
+J16e: Ishizaki (N:14) (WN:14) (TrueRank:91) | J16w: Dewanoryu (N:10) (WN:10) (TrueRank:92)
+J17e: Akua (N:7) (WN:7) (TrueRank:94) | J17w: Otsuji (N:43) (WN:43) (TrueRank:77)
+J18e: Oshoryu (N:5) (WN:5) (TrueRank:95) | J18w: Asahakuryu (N:24) (WN:24) (TrueRank:96)
+J19e: Satorufuji (N:14) (WN:14) (TrueRank:97) | J19w: Kotokuzan (N:27) (WN:27) (TrueRank:88)
+J20e: Tochimusashi (N:9) (WN:9) (TrueRank:98) | J20w: Nishinoryu (N:17) (WN:17) (TrueRank:99)
+J21e: Inami (N:14) (WN:14) (TrueRank:101) | J21w: Takakento (N:21) (WN:21) (TrueRank:103)
+J22e: Asanoyama (N:26) (WN:26) (TrueRank:104) | J22w: Hananoumi (N:16) (WN:16) (TrueRank:106)
+J23e: Hamayutaka (N:13) (WN:13) (TrueRank:106) | J23w: Hokutofuji (N:0) (WN:0) (TrueRank:106)
+J24e: Daishoho (N:1) (WN:1) (TrueRank:107) | J24w: Enho (N:11) (WN:11) (TrueRank:108)
+J25e: Chiyomaru (N:11) (WN:11) (TrueRank:109) | J25w: Gojinyu (N:25) (WN:25) (TrueRank:112)
+J26e: Kiryuko (N:0) (WN:0) (TrueRank:112) | J26w: Toseiryu (N:18) (WN:18) (TrueRank:113)
+J27e: Nobehara (N:10) (WN:10) (TrueRank:113) | J27w: Narutaki (N:13) (WN:13) (TrueRank:114)
+J28e: Tochimaru (N:0) (WN:0) (TrueRank:114) | J28w: Chiyotora (N:10) (WN:10) (TrueRank:115)
+J29e: Tendozan (N:4) (WN:4) (TrueRank:116) | J29w: Okaryu (N:18) (WN:18) (TrueRank:118)
+J30e: Hokutomaru (N:0) (WN:0) (TrueRank:119) | J30w: Kamito (N:24) (WN:24) (TrueRank:120)
+J31e: Anosho (N:31) (WN:31) (TrueRank:121) | J31w: Kazuto (N:21) (WN:21) (TrueRank:121)
+J32e: Fujinoyama (N:15) (WN:15) (TrueRank:121) | J32w: Kitaharima (N:9) (WN:9) (TrueRank:121)
+J33e: Matsui (N:17) (WN:17) (TrueRank:122) | J33w: Kaiseijo (N:4) (WN:4) (TrueRank:122)
+J34e: Nagamura (N:13) (WN:13) (TrueRank:123) | J34w: Kazenoumi (N:27) (WN:27) (TrueRank:124)
+J35e: Obara (N:5) (WN:5) (TrueRank:127) | J35w: Kawazoe (N:1) (WN:1) (TrueRank:127)
+J36e: Goshima (N:31) (WN:31) (TrueRank:131) | J36w: Tenshoho (N:17) (WN:17) (TrueRank:131)
+J37e: Kaisho (N:12) (WN:12) (TrueRank:131) | J37w: Asakoki (N:2) (WN:2) (TrueRank:132)
+J38e: Fukai (N:15) (WN:15) (TrueRank:134) | J38w: Yuma (N:5) (WN:5) (TrueRank:134)
+J39e: Tanji (N:16) (WN:16) (TrueRank:138) | J39w: Hinataryu (N:5) (WN:5) (TrueRank:138)
+J40e: Asonoyama (N:12) (WN:12) (TrueRank:139) | J40w: Seihakuho (N:19) (WN:19) (TrueRank:140)
+J41e: Tsushimanada (N:9) (WN:9) (TrueRank:140) | J41w: Awanokuni (N:6) (WN:6) (TrueRank:140)
+J42e: Asashiyu (N:9) (WN:9) (TrueRank:141) | J42w: Oyamatoumi (N:3) (WN:3) (TrueRank:141)
+J43e: Mikazuchiyama (N:16) (WN:16) (TrueRank:143) | J43w: Toshunryu (N:17) (WN:17) (TrueRank:144)
+J44e: Daikosho (N:25) (WN:25) (TrueRank:145) | J44w: Haruyama (N:11) (WN:11) (TrueRank:145)
+J45e: Yoshii (N:21) (WN:21) (TrueRank:146) | J45w: Tosamidori (N:10) (WN:10) (TrueRank:149)
+J46e: Daiyusho (N:10) (WN:10) (TrueRank:150) | J46w: Aratakayama (N:5) (WN:5) (TrueRank:150)
+J47e: Kitadaichi (N:21) (WN:21) (TrueRank:152) | J47w: Fujitoshi (N:24) (WN:24) (TrueRank:153)
+J48e: Fukuzaki (N:30) (WN:29) (TrueRank:154) | J48w: Daishomaru (N:20) (WN:20) (TrueRank:155)
+J49e: Daishoryu (N:4) (WN:4) (TrueRank:155) | J49w: Higonoumi (N:8) (WN:8) (TrueRank:156)
+J50e: Hokutenkai (N:12) (WN:12) (TrueRank:157) | J50w: Sengaku (N:7) (WN:7) (TrueRank:158)
+J51e: Mishima (N:7) (WN:7) (TrueRank:159) | J51w: Shohoryu (N:13) (WN:13) (TrueRank:160)
+J52e: Kurohimeyama (N:25) (WN:25) (TrueRank:162) | J52w: Hayatefuji (N:13) (WN:13) (TrueRank:162)
+J53e: Osanai (N:23) (WN:23) (TrueRank:163) | J53w: Oyamada (N:10) (WN:10) (TrueRank:163)
+J54e: Noda (N:13) (WN:13) (TrueRank:164) | J54w: Kotodaigo (N:0) (WN:0) (TrueRank:164)
+J55e: Chiyooga (N:21) (WN:21) (TrueRank:165) | J55w: Shiroma (N:22) (WN:22) (TrueRank:168)
+J56e: Tokitenran (N:15) (WN:15) (TrueRank:168) | J56w: Shimazuumi (N:17) (WN:17) (TrueRank:170)
+J57e: Kotokenryu (N:26) (WN:26) (TrueRank:172) | J57w: Kotodaishin (N:3) (WN:3) (TrueRank:173)
+J58e: Shunrai (N:5) (WN:5) (TrueRank:175) | J58w: Ikarigata (N:12) (WN:12) (TrueRank:177)
+J59e: Tochikodai (N:12) (WN:12) (TrueRank:177) | J59w: Goseizan (N:10) (WN:10) (TrueRank:179)
+J60e: Daishinkai (N:5) (WN:5) (TrueRank:179) | J60w: Chiyonoo (N:20) (WN:20) (TrueRank:180)
+J61e: Ryusei (N:16) (WN:16) (TrueRank:182) | J61w: Bushozan (N:6) (WN:6) (TrueRank:182)
+J62e: Yoshiyasu (N:15) (WN:15) (TrueRank:183) | J62w: Wakamiyabi (N:23) (WN:22) (TrueRank:184)
+J63e: Shuji (N:6) (WN:6) (TrueRank:184) | J63w: Asagyokusei (N:11) (WN:11) (TrueRank:185)
+J64e: Suzaki (N:0) (WN:0) (TrueRank:185) | J64w: Yago (N:17) (WN:17) (TrueRank:186)
+J65e: Ienoshima (N:13) (WN:13) (TrueRank:187) | J65w: Kototsubasa (N:17) (WN:17) (TrueRank:189)
+J66e: Akiyoshi (N:18) (WN:17) (TrueRank:190) | J66w: Daimasakari (N:13) (WN:13) (TrueRank:191)
+J67e: Tokunomusashi (N:9) (WN:9) (TrueRank:191) | J67w: Hoshuzan (N:5) (WN:5) (TrueRank:193)
+J68e: Aron (N:9) (WN:8) (TrueRank:194) | J68w: Tsurubayashi (N:0) (WN:0) (TrueRank:194)
+J69e: Oka (N:14) (WN:9) (TrueRank:195) | J69w: Dewataikai (N:17) (WN:15) (TrueRank:196)
+J70e: Gyotoku (N:25) (WN:25) (TrueRank:197) | J70w: Sazanami (N:17) (WN:14) (TrueRank:197)
+J71e: Nionoumi (N:10) (WN:10) (TrueRank:197) | J71w: Tochiseiryu (N:19) (WN:13) (TrueRank:202)
+J72e: Murayama (N:9) (WN:8) (TrueRank:203) | J72w: Kawamura (N:9) (WN:7) (TrueRank:204)
+J73e: Yutakasho (N:1) (WN:1) (TrueRank:204) | J73w: Urayama (N:6) (WN:4) (TrueRank:206)
+J74e: Hakuonada (N:3) (WN:1) (TrueRank:206) | J74w: Hanaoka (N:9) (WN:6) (TrueRank:207)
+J75e: Kirinryu (N:10) (WN:6) (TrueRank:208) | J75w: Gyokuozan (N:0) (WN:0) (TrueRank:209)
+J76e: Wakatakamoto (N:0) (WN:0) (TrueRank:219) | : (empty)

@@ -1,0 +1,10 @@
+How do I interpret it?
+
+    signed_diff > 0 (positive):
+    Wrestler was over-promoted (placed higher than expected) or under-demoted (not demoted as far as expected).
+
+    signed_diff < 0 (negative):
+    Wrestler was under-promoted (placed lower than expected) or over-demoted (demoted more than expected).
+
+    signed_diff = 0:
+    Wrestler was placed exactly at the “bullseye” spot predicted by a win-loss based algorithm.

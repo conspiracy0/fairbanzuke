@@ -26,43 +26,123 @@ class Rikishi:
 import csv
 
 sanyakutitles = {
-    "Yokozuna 1 East": "Y1e",
-    "Yokozuna 1 West": "Y1w",
-    "Ozeki 1 East": "O1e",
-    "Ozeki 1 West": "O1w",
-    "Ozeki 2 East": "O2e",
-    "Ozeki 2 West": "O2w",
-    "Ozeki 3 East": "O3e",
-    "Ozeki 3 West": "O3w",
-    "Sekiwake 1 East": "S1e",
-    "Sekiwake 1 West": "S1w",
-    "Sekiwake 2 East": "S2e",
-    "Sekiwake 2 West": "S2w",
-    "Komusubi 1 East": "K1e",
-    "Komusubi 1 West": "K1w",
-    "Komusubi 2 East": "K2e",
-    "Komusubi 2 West": "K2w",
+    "Yokozuna 1 East":	"Y1e",
+	"Yokozuna 1 West":	"Y1w",
+	"Yokozuna 2 East":	"Y2e",
+	"Yokozuna 2 West":	"Y2w",
+	"Yokozuna 3 East":	"Y3e",
+	"Yokozuna 3 West":	"Y3w",
+
+	"Ozeki 1 East":	"O1e",
+	"Ozeki 1 West":	"O1w",
+	"Ozeki 2 East":	"O2e",
+	"Ozeki 2 West":	"O2w",
+	"Ozeki 3 East":	"O3e",
+	"Ozeki 3 West":	"O3w",
+
+	"Sekiwake 1 East":	"S1e",
+	"Sekiwake 1 West":	"S1w",
+	"Sekiwake 2 East":	"S2e",
+	"Sekiwake 2 West":	"S2w",
+	"Sekiwake 3 East":	"S3e",
+	"Sekiwake 3 West":	"S3w",
+
+	"Komusubi 1 East":	"K1e",
+	"Komusubi 1 West":	"K1w",
+	"Komusubi 2 East":	"K2e",
+	"Komusubi 2 West":	"K2w",
+	"Komusubi 3 East":	"K3e",
+	"Komusubi 3 West":	"K3w",
+
+	# Haridashi (overflow) mapping
+	"Yokozuna 1 East Haridashi":	"Y1e",
+	"Yokozuna 1 West Haridashi":	"Y1w",
+	"Yokozuna 2 East Haridashi":	"Y2e",
+	"Yokozuna 2 West Haridashi":	"Y2w",
+	"Yokozuna 3 East Haridashi":	"Y3e",
+	"Yokozuna 3 West Haridashi":	"Y3w",
+
+	"Ozeki 1 East Haridashi":	"O1e",
+	"Ozeki 1 West Haridashi":	"O1w",
+	"Ozeki 2 East Haridashi":	"O2e",
+	"Ozeki 2 West Haridashi":	"O2w",
+	"Ozeki 3 East Haridashi":	"O3e",
+	"Ozeki 3 West Haridashi":	"O3w",
+
+	"Sekiwake 1 East Haridashi":	"S1e",
+	"Sekiwake 1 West Haridashi":	"S1w",
+	"Sekiwake 2 East Haridashi":	"S2e",
+	"Sekiwake 2 West Haridashi":	"S2w",
+	"Sekiwake 3 East Haridashi":	"S3e",
+	"Sekiwake 3 West Haridashi":	"S3w",
+
+	"Komusubi 1 East Haridashi":	"K1e",
+	"Komusubi 1 West Haridashi":	"K1w",
+	"Komusubi 2 East Haridashi":	"K2e",
+	"Komusubi 2 West Haridashi":	"K2w",
+	"Komusubi 3 East Haridashi":	"K3e",
+	"Komusubi 3 West Haridashi":	"K3w",
 }
 
 
 from collections import defaultdict
 all_titles = defaultdict(lambda:"N/A",{
-    "Yokozuna 1 East" : "Y1e",
-    "Yokozuna 1 West": "Y1w",
-    "Ozeki 1 East": "O1e",
-    "Ozeki 1 West": "O1w",
-    "Ozeki 2 East": "O2e",
-    "Ozeki 2 West": "O2w",
-    "Ozeki 3 East": "O3e",
-    "Ozeki 3 West": "O3w",
-    "Sekiwake 1 East": "S1e",
-    "Sekiwake 1 West": "S1w",
-    "Sekiwake 2 East": "S2e",
-    "Sekiwake 2 West": "S2w",
-    "Komusubi 1 East": "K1e",
-    "Komusubi 1 West": "K1w",
-    "Komusubi 2 East": "K2e",
-    "Komusubi 2 West": "K2w",
+    "Yokozuna 1 East":	"Y1e",
+	"Yokozuna 1 West":	"Y1w",
+	"Yokozuna 2 East":	"Y2e",
+	"Yokozuna 2 West":	"Y2w",
+	"Yokozuna 3 East":	"Y3e",
+	"Yokozuna 3 West":	"Y3w",
+
+	"Ozeki 1 East":	"O1e",
+	"Ozeki 1 West":	"O1w",
+	"Ozeki 2 East":	"O2e",
+	"Ozeki 2 West":	"O2w",
+	"Ozeki 3 East":	"O3e",
+	"Ozeki 3 West":	"O3w",
+
+	"Sekiwake 1 East":	"S1e",
+	"Sekiwake 1 West":	"S1w",
+	"Sekiwake 2 East":	"S2e",
+	"Sekiwake 2 West":	"S2w",
+	"Sekiwake 3 East":	"S3e",
+	"Sekiwake 3 West":	"S3w",
+
+	"Komusubi 1 East":	"K1e",
+	"Komusubi 1 West":	"K1w",
+	"Komusubi 2 East":	"K2e",
+	"Komusubi 2 West":	"K2w",
+	"Komusubi 3 East":	"K3e",
+	"Komusubi 3 West":	"K3w",
+
+	# Haridashi (overflow) mapping
+	"Yokozuna 1 East Haridashi":	"Y1e",
+	"Yokozuna 1 West Haridashi":	"Y1w",
+	"Yokozuna 2 East Haridashi":	"Y2e",
+	"Yokozuna 2 West Haridashi":	"Y2w",
+	"Yokozuna 3 East Haridashi":	"Y3e",
+	"Yokozuna 3 West Haridashi":	"Y3w",
+
+	"Ozeki 1 East Haridashi":	"O1e",
+	"Ozeki 1 West Haridashi":	"O1w",
+	"Ozeki 2 East Haridashi":	"O2e",
+	"Ozeki 2 West Haridashi":	"O2w",
+	"Ozeki 3 East Haridashi":	"O3e",
+	"Ozeki 3 West Haridashi":	"O3w",
+
+	"Sekiwake 1 East Haridashi":	"S1e",
+	"Sekiwake 1 West Haridashi":	"S1w",
+	"Sekiwake 2 East Haridashi":	"S2e",
+	"Sekiwake 2 West Haridashi":	"S2w",
+	"Sekiwake 3 East Haridashi":	"S3e",
+	"Sekiwake 3 West Haridashi":	"S3w",
+
+	"Komusubi 1 East Haridashi":	"K1e",
+	"Komusubi 1 West Haridashi":	"K1w",
+	"Komusubi 2 East Haridashi":	"K2e",
+	"Komusubi 2 West Haridashi":	"K2w",
+	"Komusubi 3 East Haridashi":	"K3e",
+	"Komusubi 3 West Haridashi":	"K3w",
 	"Maegashira 1 East": "M1e",
 	"Maegashira 1 West": "M1w",
 	"Maegashira 2 East": "M2e",
@@ -99,6 +179,34 @@ all_titles = defaultdict(lambda:"N/A",{
 	"Maegashira 17 West": "M17w",
 	"Maegashira 18 East": "M18e",
 	"Maegashira 18 West": "M18w",
+	"Juryo 1 East":	"J1e",
+    "Juryo 1 West":	"J1w",
+    "Juryo 2 East":	"J2e",
+    "Juryo 2 West":	"J2w",
+    "Juryo 3 East":	"J3e",
+    "Juryo 3 West":	"J3w",
+    "Juryo 4 East":	"J4e",
+    "Juryo 4 West":	"J4w",
+    "Juryo 5 East":	"J5e",
+    "Juryo 5 West":	"J5w",
+    "Juryo 6 East":	"J6e",
+    "Juryo 6 West":	"J6w",
+    "Juryo 7 East":	"J7e",
+    "Juryo 7 West":	"J7w",
+    "Juryo 8 East":	"J8e",
+    "Juryo 8 West":	"J8w",
+    "Juryo 9 East":	"J9e",
+    "Juryo 9 West":	"J9w",
+    "Juryo 10 East":	"J10e",
+    "Juryo 10 West":	"J10w",
+    "Juryo 11 East":	"J11e",
+    "Juryo 11 West":	"J11w",
+    "Juryo 12 East":	"J12e",
+    "Juryo 12 West":	"J12w",
+    "Juryo 13 East":	"J13e",
+    "Juryo 13 West":	"J13w",
+    "Juryo 14 East":	"J14e",
+    "Juryo 14 West":	"J14w",
 })
 rank_weights = defaultdict(lambda: 1, {
 	'y1': 3.79,
@@ -210,7 +318,7 @@ def export_rikishi_to_csv(rikishi_list, filename="rikishi_results.csv"):
                 rikishi.weight if rikishi.weight is not None else "",
                 rikishi.sanyaku,
                 rikishi.starting_rank,
-                ";".join([rikishi.name for rikishi in rikishi.beats]),  # Joins opponents by semicolon
+                ";".join([rikishi_obj.name for rikishi_obj in rikishi.beats]),  # Joins opponents by semicolon
             ])
             # except Exception as e:
             #     print("Got an error writing", e)
@@ -239,7 +347,119 @@ def import_rikishi_from_csv(filename="rikishi_results.csv"):
             rikishi_list.append(rikishi)
     return rikishi_list
 
+def scrapesumostats(suffix, csvname):
+    BASE_URL = "https://sumodb.sumogames.de/"
+    TARGET_URL = f"{BASE_URL}{suffix}"
 
+    # Get the main page
+    response = requests.get(TARGET_URL)
+    soup = BeautifulSoup(response.content, "html.parser")
+
+
+    # Locate the "Makuuchi Banzuke" table
+    # tables = soup.find_all("table")
+    tables = soup.find_all("table", class_="banzuke")
+
+    rikishi_list = []
+    rank_counter = 0
+
+
+    for table in tables:
+
+        # if not "Makuuchi" in table.get_text():
+        #     break
+        if "Sandanme" in table.get_text():
+            # makuuchi_table = table
+            break
+    #
+    # if makuuchi_table is None:
+    #     print("Makuuchi Banzuke table not found.")
+    #     exit()rikishi.inverse_rank/len(rikishi_list)
+
+        rows = table.find_all("tr")
+        header_cells = [cell.get_text(strip=True) for cell in rows[0].find_all(['th'])]
+
+        # result_index = header_cells.index("Result")
+        result_indices = [i for i, cell in enumerate(header_cells) if cell == "Result"]
+        # print(result_index)
+        # print(header_cells)
+
+
+        for row in rows[1:]:
+            while True:
+                try:
+                    cells = row.find_all("td")
+                    print("#####row#####")
+                    print(result_indices)
+                    for idx in result_indices:
+                        print("#####idx######")
+                        print(idx)
+                        if len(cells) > idx:
+
+
+                            # print("cell ", str(idx), ": ", cells[idx])
+                            if idx == 0:
+                                #fix break if there is no east side
+                                if cells[1].find("a" )== None:
+                                    continue
+                                name = cells[1].find("a").get_text(strip=True)
+                            else:
+                                name = cells[3].find("a").get_text(strip=True)
+                            print(name)
+                            result_cell = cells[idx]
+                            link_tag = result_cell.find("a")
+                            opp_beat = []
+                            rank = ""
+                            if link_tag and 'href' in link_tag.attrs:
+                                #get beats info
+                                url = f"{BASE_URL}{link_tag['href']}"
+                                wrestler_page = requests.get(url)
+                                wrestler_soup = BeautifulSoup(wrestler_page.content, "html.parser")
+                                titlerank = wrestler_soup.find("td", class_="rb_topleft").contents[0]
+
+                                results_table = wrestler_soup.find("table", class_="rb_torikumi")
+
+                                wrestler_rows = results_table.find_all("tr")
+                                for wrestler_row in wrestler_rows:
+                                    wrestler_cells = wrestler_row.find_all("td")
+
+                                    img = wrestler_cells[1].find('img')['src']
+                                    if "shiro" in img or "fusensho" in img:
+                                        opp_beat.append(wrestler_cells[3].find("a").get_text(strip=True).split()[1])
+
+                                rikishi_obj = Rikishi(name, opp_beat)
+                                if titlerank in sanyakutitles.keys():
+                                    rikishi_obj.sanyaku = sanyakutitles[titlerank]
+                                rikishi_obj.starting_rank = all_titles[titlerank]
+                                print(rikishi_obj.starting_rank)
+                                print(rank_weights[rikishi_obj.starting_rank[:-1].lower()])
+                                rikishi_obj.rank = rank_counter
+                                rank_counter += 1
+
+                                rikishi_list.append(rikishi_obj)
+                                if rank_counter % 10 == 0:
+                                    print("sleeping to avoid rate timeout")
+                                    time.sleep(10)
+                                    # rikishi_list = fill_in_rikishi_list_data(rikishi_list)
+                                    # export_rikishi_to_csv(rikishi_list, csvname)
+                                    # return
+
+                            else:
+                                print("failed somehow due to link fucking up")
+
+                        print("#####end idx######")
+                    print
+                    break
+                except (AttributeError, TypeError, ConnectionError) as e:
+                    print("sleeping on normal fetch section", e)
+                    time.sleep(10)
+
+
+    rikishi_list = fill_in_rikishi_list_data(rikishi_list)
+    for rikishi in rikishi_list:
+        print(rikishi.name, ", ", rikishi.inverse_rank, ", ", rikishi.rank, ", ", rikishi.weight, ", ", rikishi.beats, rikishi.starting_rank, rikishi.weight)
+
+    export_rikishi_to_csv(rikishi_list, csvname)
 def scrape_sumodb(suffix, csvname):
     BASE_URL = "https://sumodb.sumogames.de/"
     TARGET_URL = f"{BASE_URL}{suffix}"
@@ -279,67 +499,105 @@ def scrape_sumodb(suffix, csvname):
 
 
         for row in rows[1:]:
-            cells = row.find_all("td")
-            print("#####row#####")
-            print(result_indices)
-            for idx in result_indices:
-                print("#####idx######")
-                print(idx)
-                if len(cells) > idx:
+            # last_short_rank = ""
+            while True:
+                try:
+                    cells = row.find_all("td")
+                    print("#####row#####")
+                    print(result_indices)
+                    print(cells)
+                    print(cells[0].get_text())
+                    for idx in result_indices:
+                        print("#####idx######")
+                        print(idx)
+
+                        if len(cells) > idx or cells[1].get_text() == "HD":
 
 
-                    # print("cell ", str(idx), ": ", cells[idx])
-                    if idx == 0:
-                        #fix break if there is no east side
-                        if cells[1].find("a" )== None:
-                            continue
-                        name = cells[1].find("a").get_text(strip=True)
-                    else:
-                        name = cells[3].find("a").get_text(strip=True)
-                    print(name)
-                    result_cell = cells[idx]
-                    link_tag = result_cell.find("a")
-                    opp_beat = []
-                    rank = ""
-                    if link_tag and 'href' in link_tag.attrs:
-                        #get beats info
-                        url = f"{BASE_URL}{link_tag['href']}"
-                        wrestler_page = requests.get(url)
-                        wrestler_soup = BeautifulSoup(wrestler_page.content, "html.parser")
-                        titlerank = wrestler_soup.find("td", class_="rb_topleft").contents[0]
+                            result_cell = None
+                            # print("cell ", str(idx), ": ", cells[idx])
+                            if idx == 0:
+                                #fix break if there is no east side
+                                if cells[1].find("a" )== None:
+                                    continue
+                                name = cells[1].find("a").get_text(strip=True)
+                            else:
+                                name = cells[3].find("a").get_text(strip=True)
 
-                        results_table = wrestler_soup.find("table", class_="rb_torikumi")
+                            if cells[1].get_text() == "HD":
+                                #handle weird old banzuke edge cases
+                                name = cells[2].find("a").get_text(strip=True)
+                                result_cell = cells[3]
+                            else:
+                                result_cell = cells[idx]
+                            print("name=", name)
 
-                        wrestler_rows = results_table.find_all("tr")
-                        for wrestler_row in wrestler_rows:
-                            wrestler_cells = wrestler_row.find_all("td")
+                            #attempt short circuit
+                            short_rank = row.find("td", class_="short_rank").get_text()
+                            print("short_rank", short_rank)
+                            gigabreak = False
+                            if "Ms" in short_rank:
+                                for rikishi in rikishi_list:
+                                    if name in rikishi.beats:
+                                        print("Found")
+                                        break
+                                gigabreak = True
+                            if gigabreak:
+                                break
+                            # last_short_rank =
 
-                            img = wrestler_cells[1].find('img')['src']
-                            if "shiro" in img or "fusensho" in img:
-                                opp_beat.append(wrestler_cells[3].find("a").get_text(strip=True).split()[1])
 
-                        rikishi_obj = Rikishi(name, opp_beat)
-                        if titlerank in sanyakutitles.keys():
-                            rikishi_obj.sanyaku = sanyakutitles[titlerank]
-                        rikishi_obj.starting_rank = all_titles[titlerank]
-                        print(rikishi_obj.starting_rank)
-                        print(rank_weights[rikishi_obj.starting_rank[:-1].lower()])
-                        rikishi_obj.rank = rank_counter
-                        rank_counter += 1
+                            link_tag = result_cell.find("a")
+                            opp_beat = []
+                            rank = ""
+                            if link_tag and 'href' in link_tag.attrs:
+                                #get beats info
+                                url = f"{BASE_URL}{link_tag['href']}"
+                                wrestler_page = requests.get(url)
+                                wrestler_soup = BeautifulSoup(wrestler_page.content, "html.parser")
+                                titlerank = wrestler_soup.find("td", class_="rb_topleft").contents[0]
 
-                        rikishi_list.append(rikishi_obj)
-                        if rank_counter % 10 == 0:
-                            print("sleeping to avoid rate timeout")
-                            time.sleep(10)
-                            # rikishi_list = fill_in_rikishi_list_data(rikishi_list)
-                            # export_rikishi_to_csv(rikishi_list, csvname)
-                            # return
+                                results_table = wrestler_soup.find("table", class_="rb_torikumi")
 
-                    else:
-                        print("failed somehow due to link fucking up")
+                                wrestler_rows = results_table.find_all("tr")
+                                for wrestler_row in wrestler_rows:
+                                    wrestler_cells = wrestler_row.find_all("td")
 
-                print("#####end idx######")
-            print("####end row###")
+                                    img = wrestler_cells[1].find('img')['src']
+                                    if "shiro" in img or "fusensho" in img:
+                                        opp_beat.append(wrestler_cells[3].find("a").get_text(strip=True).split()[1])
+
+                                rikishi_obj = Rikishi(name, opp_beat)
+
+                                print(rikishi_obj.beats)
+                                print( ";".join([rikishi for rikishi in rikishi_obj.beats]))
+
+                                if titlerank in sanyakutitles.keys():
+                                    rikishi_obj.sanyaku = sanyakutitles[titlerank]
+                                rikishi_obj.starting_rank = all_titles[titlerank]
+                                print(rikishi_obj.starting_rank)
+                                print(rank_weights[rikishi_obj.starting_rank[:-1].lower()])
+                                rikishi_obj.rank = rank_counter
+                                rank_counter += 1
+
+                                rikishi_list.append(rikishi_obj)
+                                if rank_counter % 10 == 0:
+                                    print("sleeping to avoid rate timeout")
+                                    time.sleep(10)
+                                    # rikishi_list = fill_in_rikishi_list_data(rikishi_list)
+                                    # export_rikishi_to_csv(rikishi_list, csvname)
+                                    # return
+
+                            else:
+                                print("failed somehow due to link fucking up")
+
+                        print("#####end idx######")
+                    print
+                    break
+                except (AttributeError, TypeError, ConnectionError) as e:
+                    print("sleeping on normal fetch section", e)
+                    time.sleep(10)
+
 
     rikishi_list = fill_in_rikishi_list_data(rikishi_list)
     for rikishi in rikishi_list:
@@ -351,6 +609,7 @@ def scrape_sumodb(suffix, csvname):
 def fill_in_rikishi_list_data(rikishi_list, use_linear_weights=False):
     # create a dictionary to map names to Rikishi objects for quick lookup
     rikishi_dict = {rikishi.name: rikishi for rikishi in rikishi_list}
+    print(rikishi_dict)
     for rikishi in rikishi_list:
         rikishi.beats = [rikishi_dict[opponent] for opponent in rikishi.beats if opponent in rikishi_dict]
         rikishi.inverse_rank = len(rikishi_list)-rikishi.rank-1
@@ -637,6 +896,19 @@ def print_row(row, east, west, rlistlen, should_print_wn=False, is_maegashira_of
                 f"{row[3]}: (empty)"
             )
 
+def write_ozeki_yoko_ranks(writer, rikishi_sorted, abbrev):
+	# iterate by pairs
+	for i in range(0, len(rikishi_sorted), 2):
+		row = []
+		# first slot (East)
+		if i < len(rikishi_sorted):
+			row.append(rikishi_sorted[i].name)
+			row.append(f"{abbrev}{i//2+1}e")
+		# second slot (West)
+		if i + 1 < len(rikishi_sorted):
+			row.append(rikishi_sorted[i+1].name)
+			row.append(f"{abbrev}{i//2+1}w")
+		writer.writerow(row)
 #sanyaku heuristics:
 #0 = no heuristics, will not attempt to determine sekiwakes etc
 #1 = fair, simple heuristics
@@ -662,7 +934,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
             if rikishi.sanyaku in ['O1e', 'O1w', 'O2e', 'O2w', 'O3e', 'O3w']:
                 ozeki_list.append(rikishi)
                 rikishi_list.remove(rikishi)
-            elif rikishi.sanyaku in ['S1e', 'S1w', 'S2e', 'S2w']:
+            elif rikishi.sanyaku in ['S1e', 'S1w', 'S2e', 'S2w', "S3w", "S3e"]:
                 sekiwake_list.append(rikishi)
                 # rikishi_list.remove(rikishi)
             elif rikishi.sanyaku in ['Y1e', 'Y1w', "Y2e", "Y2w"]:
@@ -680,16 +952,8 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
         yokozuna_sorted = sorted(yokozuna_list, key=lambda x: x.record, reverse=True)
         ozeki_sorted = sorted(ozeki_list, key=lambda x: x.record, reverse=True)
 
-        #TODO make this fit more yokozuna and ozeki
-        #TODO handle kadoban
-        writer.writerow(
-            [item for i, rikishi in enumerate(yokozuna_sorted)
-                for item in (rikishi.name, "Y1e" if i == 0 else "Y1w")]
-        )
-        writer.writerow(
-            [item for i, rikishi in enumerate(ozeki_sorted)
-                for item in (rikishi.name, "O1e" if i == 0 else "O1w")]
-        )
+        write_ozeki_yoko_ranks(writer, yokozuna_sorted, "Y")
+        write_ozeki_yoko_ranks(writer, ozeki_sorted, "O")
 
 
         #TODO handle ozeki promotion criteria
@@ -848,10 +1112,12 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
                         # print("###")
                         # print(final_list[current_pos].name)
                         swap_index = current_pos+1
-
+                        if swap_index > len(final_list)-1:
+                            break #we're done if theyre literally at the bottom of the list
                         # if
                         # while (final_list[swap_index] in finalized_list):
                         #     swap_index += 1
+                        # print(swap_index, current_pos, final_list[current_pos].name,)
                         final_list[current_pos], final_list[swap_index] = (
                             final_list[swap_index],
                             final_list[current_pos],
@@ -876,17 +1142,18 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
 
 
             east = final_list[i]
+
+            print(current_rank_position, i, east.name)
+
             # Short circuit if this rank crosses the makuuchi boundary
             if rank_prefix == "M" and current_rank_position + 1 >= makuuchi_limit:
-                print("hit shortcirc")
-                rank_prefix = "J"
-                rank_number = 1
+                print("hit shortcirc", east.name, current_rank_position)
                 row = [east.name, f"{rank_prefix}{rank_number}e", "", ""]
                 writer.writerow(row)
                 # print(f"{row[1]}: {row[0]} ({east.weighted_neustadl}) ({east.inverse_rank+east.record}) | {row[3]}: (empty)")
                 print(f"{row[1]}: {row[0]} ({east.neustadl}) ({east.inverse_rank+east.record}) | {row[3]}: (empty)")
-
-                rank_number += 1
+                rank_prefix = "J"
+                rank_number = 1
                 continue
 
             west = final_list[i + 1] if i + 1 < len(final_list) else None
@@ -906,13 +1173,23 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
 
 
 
-
+# basho_months = ["01", "03", "05", "07", "09", "11"]
+# for year in range(2014, 2026):
+#     for month in basho_months:
+#         if year == 2014 and month in ["01", "03", "05"]:
+#             print("skipping 01 03 05 2014")
+#             continue
+#         if year > 2025 or (year == 2025 and int(month) > 5):
+#             break
+#         basho_code = f"{year}{month}"
+#         csv_name = f"bashoresults/{basho_code}.csv"
+#         scrape_sumodb(f'Banzuke.aspx?b={basho_code}', csv_name)
 
 # "Banzuke.aspx?b=202503"
-scrape_sumodb('Banzuke.aspx?b=202401', "bashoresults/Hatsu2024.csv")
-# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))
+# scrape_sumodb('Banzuke.aspx?b=202401', "bashoresults/Hatsu2024.csv")
+rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("bashoresults/195805.csv"))
 # #make fuzzy
-# make_banzuke(rlist, "testoutnatsufuzzy.csv", 2, 2)
+make_banzuke(rlist, "testoutuneven.csv", 2, 1)
 # rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))
 # make_banzuke(rlist, "testoutnatsunormal.csv", 2, 0)
 # rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))

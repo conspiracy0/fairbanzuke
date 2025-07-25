@@ -225,8 +225,10 @@ rank_weights = defaultdict(lambda: 1, {
 	'o3': 2.2896,
 	's1': 1.5961,
 	's2': 1.5961,
+	's3': 1.5961,
 	'k1': 1.2755,
 	'k2': 1.2755,
+	'k3': 1.2755,
 	'm1': 1.1274,
 	'm2': 1.0589,
 	'm3': 1.0272,
@@ -351,7 +353,7 @@ def import_rikishi_from_csv(filename="rikishi_results.csv"):
             rikishi.sanyaku = row["Sanyaku"]
             rikishi.starting_rank = row["Starting Rank"]
             # print(row)
-
+            # print(rikishi.beats)
             rikishi_list.append(rikishi)
     return rikishi_list
 
@@ -414,7 +416,7 @@ def scrape_sumodb(suffix, csvname):
                         short_rank = row.find("td", class_="short_rank").get_text()
                         print("short_rank", short_rank)
                         gigabreak = False
-                        if "Ms" in short_rank or "OB" in short_rank:
+                        if "Ms" in short_rank or "OB" in short_rank or "TD" in short_rank:
                             for rikishi in rikishi_list:
                                 if name in rikishi.beats:
                                     print("Found")
@@ -560,6 +562,7 @@ def fill_in_rikishi_list_data(rikishi_list, use_linear_weights=False):
     #assign weighted records to all rikishi
     for rikishi in rikishi_list:
         for opponent in rikishi.beats:
+            # print(rikishi.name, opponent.name)
             #final score is all the weights of opponents you beat, and the weights of all the opponents
             #your opponent beat
             rikishi.weighted_neustadl += opponent.weighted_raw_record
@@ -744,7 +747,6 @@ global_hack_var = None
 def sort_non_ozeki_raw(rlist, rating_options):
     global global_hack_var
     global_hack_var = len(rlist) - 5
-    # print("ghv", global_hack_var)
     match rating_options:
         case 0:
             return sorted(rlist, key=cmp_to_key(sort_non_ozeki_raw_compare))
@@ -756,57 +758,22 @@ def sort_non_ozeki_raw(rlist, rating_options):
             return sorted(rlist, key=cmp_to_key(sort_non_ozeki_weighted_fuzzy))
 
 
-#prevent downranking if the rikishi has a kk after raw weighted neustadl evaluation
-#p
+#ensure the rikishi is promoted if the rikishi has a kk after raw weighted neustadl evaluation
+#note this will only be done during evaluation for komusubi and below, so it should never break on sekiwake being capped at sekiwake
 def prevent_down_or_equal_rank_with_kk(sorted_rikishi, offset):
     #offset is the index offset from the first rank to the first index of the list we are given
+    #basically, its the amount of previous sanyaku, so we can figure out where someones actual rank position is even after we've pruned the sorted_rikishi list
     final_ranking = sorted_rikishi.copy()
 
-    ever_detected = False
-    # any_detected = False
-    # for i, rikishi in enumerate(sorted_rikishi):
-    #     # Only proceed if rikishi had at least 8 wins
-    #     if rikishi.wins >= 8 and offset+i >= rikishi.rank:
-    #         any_detected = True
-    #         print("detected spurious downrank/equal", rikishi.name, rikishi.wins, rikishi.rank, i)
-    #         current_pos = offset+i
-    #         # Check if their new rank is worse (numerically higher) than their
-    #
-    #         while current_pos >= rikishi.rank:
-    #             actual_pos = current_pos-offset
-    #             swap_index = actual_pos-1
-    #             if swap_index < 0:
-    #                 break #we reached the top of the list
-    #
-    #             final_ranking[actual_pos], final_ranking[swap_index] = (
-    #                 final_ranking[swap_index],
-    #                 final_ranking[actual_pos],
-    #             )
-    #
-    #             current_pos -= 1
-    #
-    # if any_detected:
-    #     time.sleep(1)
-    #     any_detected = False
-    # for i, rikishi in enumerate(final_ranking):
-    #     # Only proceed if rikishi had at least 8 wins
-    #     if rikishi.wins >= 8 and offset+i >= rikishi.rank:
-    #         print("!!!!")
-    #         print("detected still low", rikishi.name, rikishi.wins, rikishi.rank, i)
-    #         any_detected = True
-    # if any_detected:
-    #     time.sleep(1)
     while True:
         any_detected = False
         for i, rikishi in enumerate(final_ranking.copy()):
-            # Only proceed if rikishi had at least 8 wins
+
             if rikishi.wins >= 8 and offset+i >= rikishi.rank:
                 any_detected = True
-                ever_detected = True
                 print("detected spurious dowmrank", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
                 current_pos = offset+i
                 while current_pos >= rikishi.rank:
-
                     actual_pos = current_pos-offset
                     print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos+1, 'actual_pos', actual_pos)
                     swap_index = actual_pos-1
@@ -822,64 +789,32 @@ def prevent_down_or_equal_rank_with_kk(sorted_rikishi, offset):
 
         if not any_detected:
             break
-    # if ever_detected:
-    #     # time.sleep(1)
-    #     ever_detected = False
+
     for i, rikishi in enumerate(final_ranking):
-        # Only proceed if rikishi had at least 8 wins
         if rikishi.wins >= 8 and offset+i >= rikishi.rank:
             print("!!!!")
             print("detected still low", rikishi.name, rikishi.wins, rikishi.rank, i)
-            ever_detected = True
             time.sleep(1)
 
-    # if ever_detected:
-    #     time.sleep(1)
     return final_ranking
-#
+
+#ensure that someone does not go up in rank on a makekoshi
+#note this is only performed on komusubi and below, so there is never, for example, ozeki getting "promoted" because another ozeki moved to yokozuna
 def prevent_uprank_with_mk(sorted_rikishi, offset):
-#     #offset is the index offset from the first rank to the first index of the list we are given
+    #offset is the index offset from the first rank to the first index of the list we are given
+    #basically, the amount of previous sanyaku, so we can figure out where someones actual rank position is even after we've pruned the sorted_rikishi list
     final_ranking = sorted_rikishi.copy()
-#
-    print(offset, len(sorted_rikishi))
-    ever_detected = False
-    # for i, rikishi in enumerate(sorted_rikishi):
-    #     # Only proceed if rikishi had at least 8 wins
-    #     if rikishi.wins < 8 and offset+i < rikishi.rank:
-    #         any_detected = True
-    #         print("detected spurious uprank", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
-    #         current_pos = offset+i
-    #         # Check if their new rank is worse (numerically higher) than their
-    #         #
-    #
-    #         while current_pos < rikishi.rank:
-    #
-    #             actual_pos = current_pos-offset
-    #             print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos+1, 'actual_pos', actual_pos)
-    #             swap_index = actual_pos+1
-    #             if swap_index > len(sorted_rikishi)-1:
-    #                 break #we reached the top of the list
-    #
-    #             final_ranking[actual_pos], final_ranking[swap_index] = (
-    #                 final_ranking[swap_index],
-    #                 final_ranking[actual_pos],
-    #             )
-    #
-    #             current_pos += 1
+
     while True:
         any_detected = False
         for i, rikishi in enumerate(final_ranking.copy()):
             # Only proceed if rikishi had at least 8 wins
             if rikishi.wins < 8 and offset+i < rikishi.rank:
                 any_detected = True
-                ever_detected = True
                 print("detected spurious uprank", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
+
                 current_pos = offset+i
-                # Check if their new rank is worse (numerically higher) than their
-                #
-
                 while current_pos < rikishi.rank:
-
                     actual_pos = current_pos-offset
                     print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos+1, 'actual_pos', actual_pos)
                     swap_index = actual_pos+1
@@ -892,25 +827,15 @@ def prevent_uprank_with_mk(sorted_rikishi, offset):
                     )
 
                     current_pos += 1
-                    # break # after swap, break and recheck list from top
-                # if any_detected:
-                #     break
+
         if not any_detected:
             break
-    # if ever_detected:
-    #     time.sleep(1)
-    #     ever_detected = False
 
     for i, rikishi in enumerate(final_ranking):
-        # Only proceed if rikishi had at least 8 wins
         if rikishi.wins < 8 and offset+i < rikishi.rank:
             print("!!!!")
             print("detected still high", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
-            ever_detected = True
             time.sleep(1)
-    #
-    # if ever_detected:
-    #     time.sleep(1)
 
     return final_ranking
 
@@ -963,20 +888,10 @@ def print_row(row, east, west, rlistlen, should_print_wn=False, is_maegashira_of
 
 def write_ranks(writer, printing_list, sanyaku_num):
     writer.writerow([
-            "Name", "Old Rank Title", "New Rank Title", '"True Rank" Title', "Old Rank", "New Rank","True Rank", "Wins", "Signed Diff", "Weighted Neustadl",
+            "Name", "Old Rank Title", "New Rank Title", '"True Rank" Title', "Old Rank", "New Rank","True Rank", "Wins", "Signed Diff", "Weighted Neustadl", "Sanyaku Defeated Score Raw","Sanyaku Defeated Score Weighted",
         ])
     for i in range(0, len(printing_list)):
         rik = printing_list[i]
-         # compute expected index
-        # expected_delta = (2 * rik.wins) - 15
-        # expected_idx = i - expected_delta
-        # if expected_idx < 0:
-        # 	expected_idx = 0
-        # elif expected_idx >= len(printing_list):
-        # 	expected_idx = len(printing_list) - 1
-        #
-        # signed_diff = i - expected_idx
-
         row = []
 
         row.append(rik.name)
@@ -990,6 +905,16 @@ def write_ranks(writer, printing_list, sanyaku_num):
         row.append(rik.wins)
         row.append(truerank-i)
         row.append(rik.weighted_neustadl)
+
+
+        raw_score = 0
+        weighted_score = 0
+        for beatr in rik.beats:
+            if beatr.sanyaku:
+                raw_score += 1
+                weighted_score += rank_weights[beatr.sanyaku.lower()[:2]]
+        row.append(raw_score)
+        row.append(weighted_score)
         print(row)
         writer.writerow(row)
 
@@ -1179,25 +1104,31 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
 
 
 
-basho_months = ["01", "03", "05", "07", "09", "11"]
-for year in range(1961, 2026):
-    for month in basho_months:
-        if year == 1960 and month in ["01", "03", "05", "07","09", ]:
-        #     print("skipping 01 03 05 2014")
-            continue
-        if year > 2025 or (year == 2025 and int(month) > 5):
-            break
-        basho_code = f"{year}{month}"
-        csv_name = f"bashoresultsv2/{basho_code}.csv"
-        scrape_sumodb(f'Banzuke.aspx?b={basho_code}', csv_name)
-
-"Banzuke.aspx?b=202503"
-scrape_sumodb('Banzuke.aspx?b=202305', "bashoresults/202305.csv")
-# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("bashoresults/202305.csv"))
-# #
-# make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)
-# #
+# basho_months = ["01", "03", "05", "07", "09", "11"]
+# for year in range(1970, 2026):
+#     for month in basho_months:
+#         if year == 1964 and month in ["01",]:
+#         #     print("skipping 01 03 05 2014")
+#             continue
+#         if year > 2025 or (year == 2025 and int(month) > 5):
+#             break
+#         basho_code = f"{year}{month}"
+#         csv_name = f"bashoresultsv2/{basho_code}.csv"
+#         scrape_sumodb(f'Banzuke.aspx?b={basho_code}', csv_name)
 #
+#
+
+# "Banzuke.aspx?b=202503"
+# scrape_sumodb('Banzuke.aspx?b=202305', "bashoresults/202305.csv")
+rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("bashoresults/201701.csv"))
+#
+
+
+make_banzuke(rlist, "testoutnewsystem.csv", 2, 1)
+# #
+
+# make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)
+
 # import os
 #
 # input_folder = "bashoresults"

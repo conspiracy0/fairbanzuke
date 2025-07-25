@@ -27,9 +27,13 @@ import csv
 
 sanyakutitles = {
     "Yokozuna 1 East":	"Y1e",
+    "Yokozuna 1 East Yokozuna-Ozeki": "Y1e",
 	"Yokozuna 1 West":	"Y1w",
+	"Yokozuna 1 West Yokozuna-Ozeki": "Y1w",
 	"Yokozuna 2 East":	"Y2e",
+	"Yokozuna 2 East Yokozuna-Ozeki": "Y2e",
 	"Yokozuna 2 West":	"Y2w",
+	"Yokozuna 2 West Yokozuna-Ozeki": "Y2w",
 	"Yokozuna 3 East":	"Y3e",
 	"Yokozuna 3 West":	"Y3w",
 
@@ -88,9 +92,13 @@ sanyakutitles = {
 from collections import defaultdict
 all_titles = defaultdict(lambda:"N/A",{
     "Yokozuna 1 East":	"Y1e",
+    "Yokozuna 1 East Yokozuna-Ozeki": "Y1e",
 	"Yokozuna 1 West":	"Y1w",
+	"Yokozuna 1 West Yokozuna-Ozeki": "Y1w",
 	"Yokozuna 2 East":	"Y2e",
+	"Yokozuna 2 East Yokozuna-Ozeki": "Y2e",
 	"Yokozuna 2 West":	"Y2w",
+	"Yokozuna 2 West Yokozuna-Ozeki": "Y2w",
 	"Yokozuna 3 East":	"Y3e",
 	"Yokozuna 3 West":	"Y3w",
 
@@ -347,119 +355,7 @@ def import_rikishi_from_csv(filename="rikishi_results.csv"):
             rikishi_list.append(rikishi)
     return rikishi_list
 
-def scrapesumostats(suffix, csvname):
-    BASE_URL = "https://sumodb.sumogames.de/"
-    TARGET_URL = f"{BASE_URL}{suffix}"
 
-    # Get the main page
-    response = requests.get(TARGET_URL)
-    soup = BeautifulSoup(response.content, "html.parser")
-
-
-    # Locate the "Makuuchi Banzuke" table
-    # tables = soup.find_all("table")
-    tables = soup.find_all("table", class_="banzuke")
-
-    rikishi_list = []
-    rank_counter = 0
-
-
-    for table in tables:
-
-        # if not "Makuuchi" in table.get_text():
-        #     break
-        if "Sandanme" in table.get_text():
-            # makuuchi_table = table
-            break
-    #
-    # if makuuchi_table is None:
-    #     print("Makuuchi Banzuke table not found.")
-    #     exit()rikishi.inverse_rank/len(rikishi_list)
-
-        rows = table.find_all("tr")
-        header_cells = [cell.get_text(strip=True) for cell in rows[0].find_all(['th'])]
-
-        # result_index = header_cells.index("Result")
-        result_indices = [i for i, cell in enumerate(header_cells) if cell == "Result"]
-        # print(result_index)
-        # print(header_cells)
-
-
-        for row in rows[1:]:
-            while True:
-                try:
-                    cells = row.find_all("td")
-                    print("#####row#####")
-                    print(result_indices)
-                    for idx in result_indices:
-                        print("#####idx######")
-                        print(idx)
-                        if len(cells) > idx:
-
-
-                            # print("cell ", str(idx), ": ", cells[idx])
-                            if idx == 0:
-                                #fix break if there is no east side
-                                if cells[1].find("a" )== None:
-                                    continue
-                                name = cells[1].find("a").get_text(strip=True)
-                            else:
-                                name = cells[3].find("a").get_text(strip=True)
-                            print(name)
-                            result_cell = cells[idx]
-                            link_tag = result_cell.find("a")
-                            opp_beat = []
-                            rank = ""
-                            if link_tag and 'href' in link_tag.attrs:
-                                #get beats info
-                                url = f"{BASE_URL}{link_tag['href']}"
-                                wrestler_page = requests.get(url)
-                                wrestler_soup = BeautifulSoup(wrestler_page.content, "html.parser")
-                                titlerank = wrestler_soup.find("td", class_="rb_topleft").contents[0]
-
-                                results_table = wrestler_soup.find("table", class_="rb_torikumi")
-
-                                wrestler_rows = results_table.find_all("tr")
-                                for wrestler_row in wrestler_rows:
-                                    wrestler_cells = wrestler_row.find_all("td")
-
-                                    img = wrestler_cells[1].find('img')['src']
-                                    if "shiro" in img or "fusensho" in img:
-                                        opp_beat.append(wrestler_cells[3].find("a").get_text(strip=True).split()[1])
-
-                                rikishi_obj = Rikishi(name, opp_beat)
-                                if titlerank in sanyakutitles.keys():
-                                    rikishi_obj.sanyaku = sanyakutitles[titlerank]
-                                rikishi_obj.starting_rank = all_titles[titlerank]
-                                print(rikishi_obj.starting_rank)
-                                print(rank_weights[rikishi_obj.starting_rank[:-1].lower()])
-                                rikishi_obj.rank = rank_counter
-                                rank_counter += 1
-
-                                rikishi_list.append(rikishi_obj)
-                                if rank_counter % 10 == 0:
-                                    print("sleeping to avoid rate timeout")
-                                    time.sleep(10)
-                                    # rikishi_list = fill_in_rikishi_list_data(rikishi_list)
-                                    # export_rikishi_to_csv(rikishi_list, csvname)
-                                    # return
-
-                            else:
-                                print("failed somehow due to link fucking up")
-
-                        print("#####end idx######")
-                    print
-                    break
-                except (AttributeError, TypeError, ConnectionError) as e:
-                    print("sleeping on normal fetch section", e)
-                    time.sleep(10)
-
-
-    rikishi_list = fill_in_rikishi_list_data(rikishi_list)
-    for rikishi in rikishi_list:
-        print(rikishi.name, ", ", rikishi.inverse_rank, ", ", rikishi.rank, ", ", rikishi.weight, ", ", rikishi.beats, rikishi.starting_rank, rikishi.weight)
-
-    export_rikishi_to_csv(rikishi_list, csvname)
 def scrape_sumodb(suffix, csvname):
     BASE_URL = "https://sumodb.sumogames.de/"
     TARGET_URL = f"{BASE_URL}{suffix}"
@@ -504,17 +400,64 @@ def scrape_sumodb(suffix, csvname):
                 try:
                     cells = row.find_all("td")
                     print("#####row#####")
-                    print(result_indices)
-                    print(cells)
-                    print(cells[0].get_text())
+                    # print(result_indices)
+                    # print(cells)
+                    print(row.find("td", class_="shikona"))
+                    # print(cells[0].get_text())
+                    # print("cell print", row.find_all("td", class_="emptycell"))
                     for idx in result_indices:
                         print("#####idx######")
-                        print(idx)
-
-                        if len(cells) > idx or cells[1].get_text() == "HD":
+                        print
 
 
-                            result_cell = None
+                        #attempt short circuit
+                        short_rank = row.find("td", class_="short_rank").get_text()
+                        print("short_rank", short_rank)
+                        gigabreak = False
+                        if "Ms" in short_rank or "OB" in short_rank:
+                            for rikishi in rikishi_list:
+                                if name in rikishi.beats:
+                                    print("Found")
+                                    break
+                            gigabreak = True
+                        if gigabreak:
+                            print("gigabreaking")
+                            break
+
+                        result_cell = None
+                        # if row.find("td", class_="emptycell"):
+                        #     #handle weird old banzuke edge cases
+                        #     searcher = row.find("td", class_="shikona")
+                        #     if searcher == None:
+                        #         searcher = row.find("td", class_="debut")
+                        #         if searcher == None:
+                        #             searcher = row.find("td", class_="retired")
+                        #             if searcher == None:
+                        #                 searcher = row.find("td", class_="promotion")
+                        #     searched_idx = cells.index(searcher)
+                        #     if searched_idx > 1:
+                        #         name = cells[2].find("a").get_text(strip=True)
+                        #         result_cell = cells[3]
+                        #     else:
+                        #         name = cells[1].find("a").get_text(strip=True)
+                        #         result_cell = cells[0]
+                        if row.find("td", class_="emptycell"):
+                            # handle weird old banzuke edge cases
+                            searcher = None
+                            for cls in ["shikona", "debut", "retired", "promotion"]:
+                                searcher = row.find("td", class_=cls)
+                                if searcher is not None:
+                                    break
+                            if searcher is not None:
+                                searched_idx = cells.index(searcher)
+                                if searched_idx > 1:
+                                    name = cells[2].find("a").get_text(strip=True)
+                                    result_cell = cells[3]
+                                else:
+                                    name = cells[1].find("a").get_text(strip=True)
+                                    result_cell = cells[0]
+                        else:
+                            result_cell = cells[idx]
                             # print("cell ", str(idx), ": ", cells[idx])
                             if idx == 0:
                                 #fix break if there is no east side
@@ -524,79 +467,64 @@ def scrape_sumodb(suffix, csvname):
                             else:
                                 name = cells[3].find("a").get_text(strip=True)
 
-                            if cells[1].get_text() == "HD":
-                                #handle weird old banzuke edge cases
-                                name = cells[2].find("a").get_text(strip=True)
-                                result_cell = cells[3]
-                            else:
-                                result_cell = cells[idx]
-                            print("name=", name)
+                        print("name=", name)
 
-                            #attempt short circuit
-                            short_rank = row.find("td", class_="short_rank").get_text()
-                            print("short_rank", short_rank)
-                            gigabreak = False
-                            if "Ms" in short_rank:
-                                for rikishi in rikishi_list:
-                                    if name in rikishi.beats:
-                                        print("Found")
-                                        break
-                                gigabreak = True
-                            if gigabreak:
+
+
+
+
+                        link_tag = result_cell.find("a")
+                        opp_beat = []
+                        rank = ""
+                        if link_tag and 'href' in link_tag.attrs:
+                            #get beats info
+                            url = f"{BASE_URL}{link_tag['href']}"
+                            wrestler_page = requests.get(url)
+                            wrestler_soup = BeautifulSoup(wrestler_page.content, "html.parser")
+                            titlerank = wrestler_soup.find("td", class_="rb_topleft").contents[0]
+
+                            results_table = wrestler_soup.find("table", class_="rb_torikumi")
+
+                            wrestler_rows = results_table.find_all("tr")
+                            for wrestler_row in wrestler_rows:
+                                wrestler_cells = wrestler_row.find_all("td")
+
+                                img = wrestler_cells[1].find('img')['src']
+                                if "shiro" in img or "fusensho" in img:
+                                    opp_beat.append(wrestler_cells[3].find("a").get_text(strip=True).split()[1])
+
+                            rikishi_obj = Rikishi(name, opp_beat)
+
+                            print(rikishi_obj.beats)
+                            print( ";".join([rikishi for rikishi in rikishi_obj.beats]))
+
+                            if titlerank in sanyakutitles.keys():
+                                rikishi_obj.sanyaku = sanyakutitles[titlerank]
+                            #todo fix yokozuna-ozeki thing
+
+                            rikishi_obj.starting_rank = all_titles[titlerank]
+                            print("startingrank =", rikishi_obj.starting_rank)
+                            print(rank_weights[rikishi_obj.starting_rank[:-1].lower()])
+                            rikishi_obj.rank = rank_counter
+                            rank_counter += 1
+
+                            rikishi_list.append(rikishi_obj)
+                            if rank_counter % 10 == 0:
+                                print("sleeping to avoid rate timeout")
+                                time.sleep(4)
+                                # rikishi_list = fill_in_rikishi_list_data(rikishi_list)
+                                # export_rikishi_to_csv(rikishi_list, csvname)
+                                # return
+                            if row.find("td", class_="emptycell"):
                                 break
-                            # last_short_rank =
-
-
-                            link_tag = result_cell.find("a")
-                            opp_beat = []
-                            rank = ""
-                            if link_tag and 'href' in link_tag.attrs:
-                                #get beats info
-                                url = f"{BASE_URL}{link_tag['href']}"
-                                wrestler_page = requests.get(url)
-                                wrestler_soup = BeautifulSoup(wrestler_page.content, "html.parser")
-                                titlerank = wrestler_soup.find("td", class_="rb_topleft").contents[0]
-
-                                results_table = wrestler_soup.find("table", class_="rb_torikumi")
-
-                                wrestler_rows = results_table.find_all("tr")
-                                for wrestler_row in wrestler_rows:
-                                    wrestler_cells = wrestler_row.find_all("td")
-
-                                    img = wrestler_cells[1].find('img')['src']
-                                    if "shiro" in img or "fusensho" in img:
-                                        opp_beat.append(wrestler_cells[3].find("a").get_text(strip=True).split()[1])
-
-                                rikishi_obj = Rikishi(name, opp_beat)
-
-                                print(rikishi_obj.beats)
-                                print( ";".join([rikishi for rikishi in rikishi_obj.beats]))
-
-                                if titlerank in sanyakutitles.keys():
-                                    rikishi_obj.sanyaku = sanyakutitles[titlerank]
-                                rikishi_obj.starting_rank = all_titles[titlerank]
-                                print(rikishi_obj.starting_rank)
-                                print(rank_weights[rikishi_obj.starting_rank[:-1].lower()])
-                                rikishi_obj.rank = rank_counter
-                                rank_counter += 1
-
-                                rikishi_list.append(rikishi_obj)
-                                if rank_counter % 10 == 0:
-                                    print("sleeping to avoid rate timeout")
-                                    time.sleep(10)
-                                    # rikishi_list = fill_in_rikishi_list_data(rikishi_list)
-                                    # export_rikishi_to_csv(rikishi_list, csvname)
-                                    # return
-
-                            else:
-                                print("failed somehow due to link fucking up")
+                        else:
+                            print("failed somehow due to link fucking up")
 
                         print("#####end idx######")
-                    print
                     break
                 except (AttributeError, TypeError, ConnectionError) as e:
                     print("sleeping on normal fetch section", e)
-                    time.sleep(10)
+                    time.sleep(1)
 
 
     rikishi_list = fill_in_rikishi_list_data(rikishi_list)
@@ -609,7 +537,7 @@ def scrape_sumodb(suffix, csvname):
 def fill_in_rikishi_list_data(rikishi_list, use_linear_weights=False):
     # create a dictionary to map names to Rikishi objects for quick lookup
     rikishi_dict = {rikishi.name: rikishi for rikishi in rikishi_list}
-    print(rikishi_dict)
+    # print(rikishi_dict)
     for rikishi in rikishi_list:
         rikishi.beats = [rikishi_dict[opponent] for opponent in rikishi.beats if opponent in rikishi_dict]
         rikishi.inverse_rank = len(rikishi_list)-rikishi.rank-1
@@ -829,21 +757,160 @@ def sort_non_ozeki_raw(rlist, rating_options):
 
 
 #prevent downranking if the rikishi has a kk after raw weighted neustadl evaluation
-def prevent_downrank_with_kk(sorted_rikishi, offset):
+#p
+def prevent_down_or_equal_rank_with_kk(sorted_rikishi, offset):
     #offset is the index offset from the first rank to the first index of the list we are given
     final_ranking = sorted_rikishi.copy()
 
-    for i, rikishi in enumerate(sorted_rikishi):
+    ever_detected = False
+    # any_detected = False
+    # for i, rikishi in enumerate(sorted_rikishi):
+    #     # Only proceed if rikishi had at least 8 wins
+    #     if rikishi.wins >= 8 and offset+i >= rikishi.rank:
+    #         any_detected = True
+    #         print("detected spurious downrank/equal", rikishi.name, rikishi.wins, rikishi.rank, i)
+    #         current_pos = offset+i
+    #         # Check if their new rank is worse (numerically higher) than their
+    #
+    #         while current_pos >= rikishi.rank:
+    #             actual_pos = current_pos-offset
+    #             swap_index = actual_pos-1
+    #             if swap_index < 0:
+    #                 break #we reached the top of the list
+    #
+    #             final_ranking[actual_pos], final_ranking[swap_index] = (
+    #                 final_ranking[swap_index],
+    #                 final_ranking[actual_pos],
+    #             )
+    #
+    #             current_pos -= 1
+    #
+    # if any_detected:
+    #     time.sleep(1)
+    #     any_detected = False
+    # for i, rikishi in enumerate(final_ranking):
+    #     # Only proceed if rikishi had at least 8 wins
+    #     if rikishi.wins >= 8 and offset+i >= rikishi.rank:
+    #         print("!!!!")
+    #         print("detected still low", rikishi.name, rikishi.wins, rikishi.rank, i)
+    #         any_detected = True
+    # if any_detected:
+    #     time.sleep(1)
+    while True:
+        any_detected = False
+        for i, rikishi in enumerate(final_ranking.copy()):
+            # Only proceed if rikishi had at least 8 wins
+            if rikishi.wins >= 8 and offset+i >= rikishi.rank:
+                any_detected = True
+                ever_detected = True
+                print("detected spurious dowmrank", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
+                current_pos = offset+i
+                while current_pos >= rikishi.rank:
+
+                    actual_pos = current_pos-offset
+                    print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos+1, 'actual_pos', actual_pos)
+                    swap_index = actual_pos-1
+                    if swap_index <0:
+                        break #we reached the top of the list
+
+                    final_ranking[actual_pos], final_ranking[swap_index] = (
+                        final_ranking[swap_index],
+                        final_ranking[actual_pos],
+                    )
+
+                    current_pos -= 1
+
+        if not any_detected:
+            break
+    # if ever_detected:
+    #     # time.sleep(1)
+    #     ever_detected = False
+    for i, rikishi in enumerate(final_ranking):
         # Only proceed if rikishi had at least 8 wins
-        if rikishi.wins >= 8:
-            print("detected wins")
-            # Check if their new rank is worse (numerically higher) than their original
-            if (i + offset) > rikishi.rank:
-                # Move rikishi up to their original rank
-                print("detected spurious downrank @ ", rikishi.name, rikishi.rank)
-                final_ranking.pop(i)
-                print(rikishi.rank - offset)
-                final_ranking.insert(rikishi.rank - offset, rikishi)
+        if rikishi.wins >= 8 and offset+i >= rikishi.rank:
+            print("!!!!")
+            print("detected still low", rikishi.name, rikishi.wins, rikishi.rank, i)
+            ever_detected = True
+            time.sleep(1)
+
+    # if ever_detected:
+    #     time.sleep(1)
+    return final_ranking
+#
+def prevent_uprank_with_mk(sorted_rikishi, offset):
+#     #offset is the index offset from the first rank to the first index of the list we are given
+    final_ranking = sorted_rikishi.copy()
+#
+    print(offset, len(sorted_rikishi))
+    ever_detected = False
+    # for i, rikishi in enumerate(sorted_rikishi):
+    #     # Only proceed if rikishi had at least 8 wins
+    #     if rikishi.wins < 8 and offset+i < rikishi.rank:
+    #         any_detected = True
+    #         print("detected spurious uprank", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
+    #         current_pos = offset+i
+    #         # Check if their new rank is worse (numerically higher) than their
+    #         #
+    #
+    #         while current_pos < rikishi.rank:
+    #
+    #             actual_pos = current_pos-offset
+    #             print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos+1, 'actual_pos', actual_pos)
+    #             swap_index = actual_pos+1
+    #             if swap_index > len(sorted_rikishi)-1:
+    #                 break #we reached the top of the list
+    #
+    #             final_ranking[actual_pos], final_ranking[swap_index] = (
+    #                 final_ranking[swap_index],
+    #                 final_ranking[actual_pos],
+    #             )
+    #
+    #             current_pos += 1
+    while True:
+        any_detected = False
+        for i, rikishi in enumerate(final_ranking.copy()):
+            # Only proceed if rikishi had at least 8 wins
+            if rikishi.wins < 8 and offset+i < rikishi.rank:
+                any_detected = True
+                ever_detected = True
+                print("detected spurious uprank", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
+                current_pos = offset+i
+                # Check if their new rank is worse (numerically higher) than their
+                #
+
+                while current_pos < rikishi.rank:
+
+                    actual_pos = current_pos-offset
+                    print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos+1, 'actual_pos', actual_pos)
+                    swap_index = actual_pos+1
+                    if swap_index > len(sorted_rikishi)-1:
+                        break #we reached the top of the list
+
+                    final_ranking[actual_pos], final_ranking[swap_index] = (
+                        final_ranking[swap_index],
+                        final_ranking[actual_pos],
+                    )
+
+                    current_pos += 1
+                    # break # after swap, break and recheck list from top
+                # if any_detected:
+                #     break
+        if not any_detected:
+            break
+    # if ever_detected:
+    #     time.sleep(1)
+    #     ever_detected = False
+
+    for i, rikishi in enumerate(final_ranking):
+        # Only proceed if rikishi had at least 8 wins
+        if rikishi.wins < 8 and offset+i < rikishi.rank:
+            print("!!!!")
+            print("detected still high", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
+            ever_detected = True
+            time.sleep(1)
+    #
+    # if ever_detected:
+    #     time.sleep(1)
 
     return final_ranking
 
@@ -1019,6 +1086,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
                 #if a komusubi gets at least 11 wins, move him to sekiwake
                 if rikishi in komusubi_list and rikishi.wins >= 11:
                     final_sekiwake_out.append(rikishi)
+                    komusubi_list.remove(rikishi)
                     sorted_list.remove(rikishi)
                     continue
 
@@ -1058,116 +1126,96 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
                     sorted_list.remove(rikishi)
                     continue
 
-            # print("ks ranks", len(final_komusubi_out))
+            sorted_list = prevent_down_or_equal_rank_with_kk(sorted_list, len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out))
             previous_ranks_offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out) + len(final_komusubi_out)
-            for rikishi in sorted_list[:]:
-                truerank = rikishi.inverse_rank+rikishi.record
-                komusubi_threshold = len(sorted_list)
-                #for every individual who WOULD have made it past the threshold for komusubi with their true rank, simply put them in as new slots
-                if truerank >= komusubi_threshold:
-                    # print(rikishi.name, truerank)
-                    final_komusubi_out.append(rikishi)
-                    sorted_list.remove(rikishi)
+            #the threshold for making it to komusubi no matter what. This is the
+            komusubi_threshold = len(sorted_list) + len(final_sekiwake_out) + 2
 
             #If we don't have enough komusubi after checking for existing komusubi, and people who under normal circumstances would made it to komusubi even with 2 slots filled,
             #Then fill the slots with the next highest sorted wrestler.
             while len(final_komusubi_out) < 2 and sorted_list:
                 final_komusubi_out.append(sorted_list.pop(0))
 
-            #prevent downranks and upranks
-            final_komusubi_out = sort_non_ozeki_raw(final_komusubi_out, ranking_options)
-            if use_sanyaku_heuristics == 2:
-                offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out)
+            #for every individual who WOULD have made it past the threshold for a SEKIWAKE with their true rank, and isn't already a komusubi, simply put them in as new slots
+            for rikishi in sorted_list[:]:
+                truerank = rikishi.inverse_rank+rikishi.record
 
-                #TODO IMPORTANT: check this works right
-                final_komusubi_out = prevent_downrank_with_kk(final_komusubi_out, offset)
-                # final_komusubi_out = prevent_uprank_with_mk(final_komusubi_out, offset)
+                if truerank > komusubi_threshold:
+                    print(truerank, rikishi.name, rikishi.record)
+                    # print(rikishi.name, truerank)
+                    final_komusubi_out.append(rikishi)
+                    sorted_list.remove(rikishi)
+
+            #finally, if someone is m1e, and posted a kachikoshi, make them a komusubi
+            for rikishi in sorted_list[:]:
+                if rikishi.starting_rank == "M1e" and rikishi.wins >= 8:
+                    # print("found")
+                    final_komusubi_out.append(rikishi)
+                    sorted_list.remove(rikishi)
+                    break
+
+            #sort our komusubi appropriately by our ranking algorithm
+            final_komusubi_out = sort_non_ozeki_raw(final_komusubi_out, ranking_options)
+
 
             assign_rank_titles(final_komusubi_out, "K")
             final_rlist += final_komusubi_out
 
 
+
         #now, finally handle maegashira
         offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out) + len(final_komusubi_out)
 
-        fixed_uprank_list = sorted_list.copy()
-        if use_sanyaku_heuristics == 2:
-            trouble_list = []
-            for i in range(len(sorted_list)):
-                rikishi = sorted_list[i]
-                # print(rikishi.name, i+offset, rikishi.rank)
-                if (i+offset <= 70 and rikishi.wins < 8 and i+offset <= rikishi.rank):
-                    trouble_list.append(rikishi)
-
-            # finalized_list = []
-
-            for i in range(len(sorted_list)):
-                rikishi = sorted_list[i]
-
-                if rikishi in trouble_list:
-                    # Wrestler must not move above their original position
-                    original_pos = rikishi.rank-offset+1
-
-                    current_pos = 0
-                    for i in range(len(fixed_uprank_list)):
-                        if fixed_uprank_list[i] == rikishi:
-                            current_pos = i
-                            break
-
-
-                    # If they're ranked better now (lower index) than their original rank, move them down
-                    while current_pos <= original_pos:
-                        # print("found", rikishi.name)
-                        # print(current_pos, original_pos)
-                        # Swap downward with wrestler below
-                        # if current_pos+1> len(sorted_list):
-                        #     finalized_list.append(rikishi)
-                        #     break
-                        # print("###")
-                        # print(fixed_uprank_list[current_pos].name)
-                        swap_index = current_pos+1
-                        if swap_index > len(fixed_uprank_list)-1:
-                            break #we're done if theyre literally at the bottom of the list
-                        # if
-                        # while (fixed_uprank_list[swap_index] in finalized_list):
-                        #     swap_index += 1
-                        # print(swap_index, current_pos, fixed_uprank_list[current_pos].name,)
-                        fixed_uprank_list[current_pos], fixed_uprank_list[swap_index] = (
-                            fixed_uprank_list[swap_index],
-                            fixed_uprank_list[current_pos],
-                        )
-                        # print(fixed_uprank_list[current_pos].name)
-
-                        current_pos += 1
-                    # finalized_list.append(rikishi)
+        #handle spurious upranks on makekoshi, remove
+        sorted_list = prevent_uprank_with_mk(sorted_list, offset)
 
         sanyaku_num = len(final_rlist)
-        assign_maegashira_juryo(fixed_uprank_list, sanyaku_num)
+        assign_maegashira_juryo(sorted_list, sanyaku_num)
 
-        final_rlist += fixed_uprank_list
-        for r in final_rlist:
-            print(r.name, r.new_rank_title)
+        final_rlist += sorted_list
+        # for r in final_rlist:
+        #     print(r.name, r.new_rank_title)
         write_ranks(writer, final_rlist, sanyaku_num)
 
 
 
-# basho_months = ["01", "03", "05", "07", "09", "11"]
-# for year in range(2014, 2026):
-#     for month in basho_months:
-#         if year == 2014 and month in ["01", "03", "05"]:
-#             print("skipping 01 03 05 2014")
-#             continue
-#         if year > 2025 or (year == 2025 and int(month) > 5):
-#             break
-#         basho_code = f"{year}{month}"
-#         csv_name = f"bashoresults/{basho_code}.csv"
-#         scrape_sumodb(f'Banzuke.aspx?b={basho_code}', csv_name)
+basho_months = ["01", "03", "05", "07", "09", "11"]
+for year in range(1961, 2026):
+    for month in basho_months:
+        if year == 1960 and month in ["01", "03", "05", "07","09", ]:
+        #     print("skipping 01 03 05 2014")
+            continue
+        if year > 2025 or (year == 2025 and int(month) > 5):
+            break
+        basho_code = f"{year}{month}"
+        csv_name = f"bashoresultsv2/{basho_code}.csv"
+        scrape_sumodb(f'Banzuke.aspx?b={basho_code}', csv_name)
 
-# "Banzuke.aspx?b=202503"
-# scrape_sumodb('Banzuke.aspx?b=202401', "bashoresults/Hatsu2024.csv")
-rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("bashoresults/195805.csv"))
-# #make fuzzy
-make_banzuke(rlist, "testoutnewsystem2.csv", 2, 1)
+"Banzuke.aspx?b=202503"
+scrape_sumodb('Banzuke.aspx?b=202305', "bashoresults/202305.csv")
+# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("bashoresults/202305.csv"))
+# #
+# make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)
+# #
+#
+# import os
+#
+# input_folder = "bashoresults"
+# output_folder = "fairbanzukeoutput"
+#
+# os.makedirs(output_folder, exist_ok=True)
+#
+# for fname in os.listdir(input_folder):
+# 	if not fname.endswith(".csv"):
+# 		continue
+# 	basho_code = fname[:-4]  # removes '.csv'
+# 	in_path = os.path.join(input_folder, fname)
+# 	out_path = os.path.join(output_folder, f"{basho_code}banzuke.csv")
+#
+# 	rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
+# 	make_banzuke(rlist, out_path, 2, 1)
+#
+
 # rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))
 # make_banzuke(rlist, "testoutnatsunormal.csv", 2, 0)
 # rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("Natsu2025weights.csv"))

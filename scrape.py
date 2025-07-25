@@ -1,4 +1,4 @@
-import requests
+import requests, os
 from bs4 import BeautifulSoup
 import time
 import csv
@@ -356,6 +356,34 @@ def import_rikishi_from_csv(filename="rikishi_results.csv"):
             # print(rikishi.beats)
             rikishi_list.append(rikishi)
     return rikishi_list
+
+#used to get data from previous basho for ozeki promotion criteria
+def import_single_rikishi_from_csv(target_name, filename="rikishi_results.csv"):
+    rikishi_list = []
+    with open(filename, mode='r', newline='', encoding='utf-8') as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            if row["Name"] != target_name:
+                continue
+            name = row["Name"]
+            beats = row["Beats"].split(';') if row["Beats"] else []
+            rikishi = Rikishi(name, beats)
+            rikishi.record = int(row["Record"])
+            # rikishi.neustadl = row["Neustadl"]
+            rikishi.wins = int(row["Wins"])
+            rikishi.losses = int(row["Losses"])
+            rikishi.weighted_neustadl = float(row["Weighted Neustadl"]) if row["Weighted Neustadl"] else None
+            rikishi.rank = int(row["Rank"])
+            rikishi.inverse_rank = int(row["Inverse Rank"])
+            rikishi.weight = float(row["Weight"]) if row["Weight"] else None
+            # print(rikishi.weight)
+            rikishi.sanyaku = row["Sanyaku"]
+            rikishi.starting_rank = row["Starting Rank"]
+            # print(row)
+            # print(rikishi.beats)
+            return rikishi
+
+    print("didn't find", target_name, "in ", filename)
 
 
 def scrape_sumodb(suffix, csvname):
@@ -941,6 +969,30 @@ def assign_maegashira_juryo(maegashira_and_juryo, sanyaku_num):
 			side = 'e' if juryo_idx % 2 == 0 else 'w'
 			rikishi.new_rank_title = f"J{slot}{side}"
 
+
+def get_prev_bashos(basho_code, folder="bashoresults"):
+    basho_months = ["01", "03", "05", "07", "09", "11"]
+    year = int(basho_code[:4])
+    month = basho_code[4:]
+
+    idx = basho_months.index(month)
+    prev_bashos = []
+    lookback_idx = idx - 1
+    lookback_year = year
+
+    while len(prev_bashos) < 2:
+        if lookback_idx < 0:
+            lookback_year -= 1
+            lookback_idx = len(basho_months) - 1
+        prev_code = f"{lookback_year}{basho_months[lookback_idx]}"
+        csv_path = os.path.join(folder, f"{prev_code}.csv")
+        if os.path.isfile(csv_path):
+            prev_bashos.append(prev_code)
+        lookback_idx -= 1
+        if lookback_year < 1958:
+            break
+    return prev_bashos
+
 #sanyaku heuristics:
 #0 = no heuristics, will not attempt to determine sekiwakes etc
 #1 = fair, simple heuristics
@@ -959,7 +1011,8 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
         komusubi_list = []
         sekiwake_list = []
 
-        #make lambda print
+        final_sekiwake_out = []
+        final_komusubi_out = []
         rlistlen = len(rikishi_list)
 
         for rikishi in rikishi_list[:]:  # Iterate over a shallow copy
@@ -982,24 +1035,60 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
         #TODO prio1 make this change with use_sanyaku_heuristics
         #TODO handle ties in record
         yokozuna_sorted = sorted(yokozuna_list, key=lambda x: x.record, reverse=True)
-        ozeki_sorted = sorted(ozeki_list, key=lambda x: x.record, reverse=True)
-
         assign_rank_titles(yokozuna_sorted, "Y")
-        assign_rank_titles(ozeki_sorted, "O")
-
-#
         #create and update the final banzuke list
-        final_rlist = yokozuna_sorted + ozeki_sorted
+        final_rlist = yokozuna_sorted
 
 
-        #TODO handle ozeki promotion/demotion criteria
+        #handle ozeki promotion check
+        prevcodes = get_prev_bashos(banzukecode, bashofolder) #bashofolder/banzukecode are global defs, sue me
+        #TODO handle sanyaku heuristics correctly here
+        for rikishi in sekiwake_list[:]:
+            cum_wins = rikishi.wins
+            gigabreak = False
+            for i, code in enumerate(prevcodes):
+
+                bashostring = bashofolder+"/"+code+".csv"
+                prev_result = import_single_rikishi_from_csv(rikishi.name, bashostring)
+                cum_wins += prev_result.wins
+                if i == 0:
+                    #if the previous tournament, this person was ozeki, and they get ten wins, return them to ozeki
+                    if "O" in prev_result.sanyaku and rikishi.wins >= 10:
+                        ozeki_list.append(rikishi)
+                        rikishi_list.remove(rikishi)
+                        sekiwake_list.remove(rikishi)
+                        gigabreak = True
+                        break
+                if gigabreak:
+                    break
+
+            #if the sekiwake has had at least 33 wins over the last 3 basho, he is now an ozeki
+            #33.32 wins is the average number of wins for promotion to ozeki on an ozeki run, so that is the basis.
+            if cum_wins > 33:
+                ozeki_list.append(rikishi)
+                rikishi_list.remove(rikishi)
+                sekiwake_list.remove(rikishi)
+
+        #handle ozeki demotion
+        for rikishi in ozeki_list[:]:
+            bashostring = bashofolder+"/"+prevcodes[0]+".csv"
+            prev_result = import_single_rikishi_from_csv(rikishi.name, bashostring)
+            if prev_result.wins < 8 and rikishi.wins < 8:
+                ozeki_list.remove(rikishi)
+                #failing kadoban ozeki will ALWAYS go to sekiwake.
+                final_sekiwake_out.append(rikishi)
+                # rikishi_list.remove(rikishi)
+
+        ozeki_sorted = sorted(ozeki_list, key=lambda x: x.record, reverse=True)
+        assign_rank_titles(ozeki_sorted, "O")
+        final_rlist += ozeki_sorted
+
+
 
         sorted_list = sort_non_ozeki_raw(rikishi_list, ranking_options)
 
-        final_sekiwake_out = []
-        final_komusubi_out = []
+
         #do heuristics to determine who gets the sekiwake slots
-        # print("pop " , sorted_list.pop(0).name)
         if use_sanyaku_heuristics > 0:
             for rikishi in sorted_list[:]:
                 #first, if someone was already a sekiwake, and posted a kachikoshi, they are a sekiwake
@@ -1053,31 +1142,32 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
 
             sorted_list = prevent_down_or_equal_rank_with_kk(sorted_list, len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out))
             previous_ranks_offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out) + len(final_komusubi_out)
-            #the threshold for making it to komusubi no matter what. This is the
-            komusubi_threshold = len(sorted_list) + len(final_sekiwake_out) + 2
+
+            #the threshold for making it to komusubi no matter what. This is the number of people remaining + the number of sekiwake + komusubi_force_offset, which is the "true rank" necessary to justify promotion to Komusubi even without a free slot
+            #If you achieved a winning record that would put you ahead of S1e+ a constant ranks, basically, you will be put into Komusubi no matter what, even if there is not a slot for you.
+            komusubi_threshold = len(sorted_list) + len(final_sekiwake_out) + komusubi_force_offset
 
             #If we don't have enough komusubi after checking for existing komusubi, and people who under normal circumstances would made it to komusubi even with 2 slots filled,
             #Then fill the slots with the next highest sorted wrestler.
             while len(final_komusubi_out) < 2 and sorted_list:
                 final_komusubi_out.append(sorted_list.pop(0))
 
-            #for every individual who WOULD have made it past the threshold for a SEKIWAKE with their true rank, and isn't already a komusubi, simply put them in as new slots
+            #handle forced promotions to komusubi, even with no slots available
             for rikishi in sorted_list[:]:
+                #finally, if someone is m1e, and posted a kachikoshi, make them a komusubi
+                if rikishi.starting_rank == "M1e" and rikishi.wins >= 8:
+                    final_komusubi_out.append(rikishi)
+                    sorted_list.remove(rikishi)
+                    continue
+
+                #for every individual who WOULD have made it past the threshold for a SEKIWAKE with their true rank, and isn't already a komusubi, simply put them in as new slots
                 truerank = rikishi.inverse_rank+rikishi.record
 
                 if truerank > komusubi_threshold:
-                    print(truerank, rikishi.name, rikishi.record)
+                    print("hit over komusubi threshold", truerank, rikishi.name, rikishi.record)
                     # print(rikishi.name, truerank)
                     final_komusubi_out.append(rikishi)
                     sorted_list.remove(rikishi)
-
-            #finally, if someone is m1e, and posted a kachikoshi, make them a komusubi
-            for rikishi in sorted_list[:]:
-                if rikishi.starting_rank == "M1e" and rikishi.wins >= 8:
-                    # print("found")
-                    final_komusubi_out.append(rikishi)
-                    sorted_list.remove(rikishi)
-                    break
 
             #sort our komusubi appropriately by our ranking algorithm
             final_komusubi_out = sort_non_ozeki_raw(final_komusubi_out, ranking_options)
@@ -1104,6 +1194,7 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
 
 
 
+
 # basho_months = ["01", "03", "05", "07", "09", "11"]
 # for year in range(1970, 2026):
 #     for month in basho_months:
@@ -1120,11 +1211,14 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
 
 # "Banzuke.aspx?b=202503"
 # scrape_sumodb('Banzuke.aspx?b=202305', "bashoresults/202305.csv")
-rlist = fill_in_rikishi_list_data(import_rikishi_from_csv("bashoresults/201701.csv"))
-#
 
+komusubi_force_offset = 2
 
-make_banzuke(rlist, "testoutnewsystem.csv", 2, 1)
+banzukecode = "201911"
+bashofolder = "bashoresults"
+rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
+
+make_banzuke(rlist, "testoutnewsystem.csv", 2, 1 )
 # #
 
 # make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)

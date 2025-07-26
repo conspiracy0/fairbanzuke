@@ -1,3 +1,10 @@
-todo for sumo
+TODO:
+    Add options for putting Sanyaku ranks by newcomers in sanyaku heuristics (putting S2w etc)
 
-make the sorts for the initial sort of the rlist in make_banzuke simple based on true rank, then when its just the maegashira left, resort with the fuzzy
+
+    Run the first basho results and find out the ozeki changed name stuff
+
+
+    Create the "true banzuke" by running only sims on our made up banzukes
+
+    Make the compare banzuke work with name changes?

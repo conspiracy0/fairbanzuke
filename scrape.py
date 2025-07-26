@@ -383,8 +383,8 @@ def import_single_rikishi_from_csv(target_name, filename="rikishi_results.csv"):
             # print(rikishi.beats)
             return rikishi
 
-    print("didn't find", target_name, "in ", filename)
-
+    print("!!! didn't find previous guy", target_name, "in ", filename)
+    time.sleep(4)
 
 def scrape_sumodb(suffix, csvname):
     BASE_URL = "https://sumodb.sumogames.de/"
@@ -914,10 +914,13 @@ def print_row(row, east, west, rlistlen, should_print_wn=False, is_maegashira_of
                 f"{row[3]}: (empty)"
             )
 
-def write_ranks(writer, printing_list, sanyaku_num):
+def write_ranks(writer, printing_list, old_sanyaku_num, sanyaku_num):
     writer.writerow([
             "Name", "Old Rank Title", "New Rank Title", '"True Rank" Title', "Old Rank", "New Rank","True Rank", "Wins", "Signed Diff", "Weighted Neustadl", "Sanyaku Defeated Score Raw","Sanyaku Defeated Score Weighted",
         ])
+
+    # print(, old_sanyaku_num, sanyaku_num)
+    sanyaku_diff = old_sanyaku_num-sanyaku_num
     for i in range(0, len(printing_list)):
         rik = printing_list[i]
         row = []
@@ -925,13 +928,28 @@ def write_ranks(writer, printing_list, sanyaku_num):
         row.append(rik.name)
         row.append(rik.starting_rank)
         row.append(rik.new_rank_title)
-        truerank = len(printing_list) - (rik.inverse_rank + rik.record)
-        row.append(rank_list_print[truerank-sanyaku_num] if truerank-sanyaku_num >= 0 and truerank-sanyaku_num < len(rank_list_print) else "N/A" )
+
+        # truerank = len(printing_list) - (rik.inverse_rank + rik.record)
+        truerank = rik.rank - rik.record
+        # print(len(printing_list), rik.rank, rik.inverse_rank, rik.record, sanyaku_num)
+        # print(rik.name, len(printing_list) - (rik.inverse_rank + rik.record), truerank, sanyaku_num, old_sanyaku_num)
+        # truerank + sanyaku_diff - sanyaku_num
+        # (old_sanyaku_num - sanyaku_num)
+        #16 is actual old rank
+        #-2 is record
+        # old rank is 16, and his old title would be at idx 5 on rank_list_print, which is old rank - old sanyaku num
+        #then, his old true rank would be old rank - record,
+        #
+
+        adjusted_tr = truerank-old_sanyaku_num
+        adjusted_i = i+(old_sanyaku_num-sanyaku_num)
+        row.append(rank_list_print[adjusted_tr] if adjusted_tr >= 0 and adjusted_tr < len(rank_list_print) else "N/A" )
         row.append(rik.rank) #previous rank
-        row.append(i) #new rank
+        row.append(adjusted_i) #new rank
         row.append(truerank)
         row.append(rik.wins)
-        row.append(truerank-i)
+        # row.append(adjusted_tr-rank_list_print.index(rik.new_rank_title) if adjusted_tr >= 0 and ("J" in rik.new_rank_title or "M" in rik.new_rank_title) else "N/A")
+        row.append(truerank-adjusted_i)
         row.append(rik.weighted_neustadl)
 
 
@@ -943,7 +961,7 @@ def write_ranks(writer, printing_list, sanyaku_num):
                 weighted_score += rank_weights[beatr.sanyaku.lower()[:2]]
         row.append(raw_score)
         row.append(weighted_score)
-        print(row)
+        # print(truerank-sanyaku_num, row)
         writer.writerow(row)
 
 
@@ -993,16 +1011,28 @@ def get_prev_bashos(basho_code, folder="bashoresults"):
             break
     return prev_bashos
 
-#sanyaku heuristics:
-#0 = no heuristics, will not attempt to determine sekiwakes etc
-#1 = fair, simple heuristics
-#2 = prevent downranking
+#
+# heuristics:
+# All:
+#
+#     Will track and handle Ozeki promotion(33 wins, based on average promotion wins of 33.32) and demotion, and repromotion from kadoban (10 wins)
+#     Will handle the opening of additional sekiwake and komusubi slots
+#     Will always promote M1e to Komusubi at all times
+#     Will not demote komusubi or Sekiwake with a kachikoshi FROM the ranks, but they can be downranked inside the rank.
+#
+# 0:
+#     For all non-sanyaku wrestlers, will rank wrestlers simply on performance. Wrestlers with better performances than other wrestlers, with a makekoshi, can be promoted on a losing record, and wrestlers with worse performances can be demoted on a kachikoshi
+#
+# 1:
+#     For all non-sanyaku wrestlers, prevent downranking or staying at the same rank if you scored a kachikoshi, and prevent going up on a makekoshi
+#     TODO Newly promoted wrestlers will start lower than others (check this is real)
+#
 #ranking system:
 #0 = Truerank strict, regular neustadl
 #1 = Truerank strict, weighted neustadl
 #2 = Truerank fuzzy, regular Neustadl
 #3 = Truerank fuzzy, weighted  neustadl
-def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_options=0):
+def make_banzuke(rikishi_list,filename, heuristic_set=1, ranking_options=0):
     with open(filename, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
 
@@ -1030,10 +1060,14 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
                 komusubi_list.append(rikishi)
                 # rikishi_list.remove(rikishi)
 
-
+        old_ozeki_len = len(ozeki_list)
+        old_yokozuna_len = len(yokozuna_list)
+        old_sekiwake_len = len(sekiwake_list)
+        old_komusubi_len = len(komusubi_list)
+        old_sanyaku_num = old_ozeki_len + old_komusubi_len + old_sekiwake_len + old_yokozuna_len
         #first, handle yokozuna and ozeki, which are simply based on who has the best record
-        #TODO prio1 make this change with use_sanyaku_heuristics
-        #TODO handle ties in record
+        #TODO prio1 make this change with heuristic_set
+
         yokozuna_sorted = sorted(yokozuna_list, key=lambda x: x.record, reverse=True)
         assign_rank_titles(yokozuna_sorted, "Y")
         #create and update the final banzuke list
@@ -1084,121 +1118,135 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
         final_rlist += ozeki_sorted
 
 
-
+        #create and handle the tentative pick list of the remaining wrestlers
         sorted_list = sort_non_ozeki_raw(rikishi_list, ranking_options)
 
 
-        #do heuristics to determine who gets the sekiwake slots
-        if use_sanyaku_heuristics > 0:
-            for rikishi in sorted_list[:]:
-                #first, if someone was already a sekiwake, and posted a kachikoshi, they are a sekiwake
-                if rikishi in sekiwake_list and rikishi.record > 0:
-                    final_sekiwake_out.append(rikishi)
-                    sorted_list.remove(rikishi)
-                    continue
+        for rikishi in sorted_list[:]:
+            #first, if someone was already a sekiwake, and posted a kachikoshi, they are still a sekiwake
+            if rikishi in sekiwake_list and rikishi.record > 0:
+                final_sekiwake_out.append(rikishi)
+                sorted_list.remove(rikishi)
+                continue
 
-                #if a komusubi gets at least 11 wins, move him to sekiwake
-                if rikishi in komusubi_list and rikishi.wins >= 11:
-                    final_sekiwake_out.append(rikishi)
-                    komusubi_list.remove(rikishi)
-                    sorted_list.remove(rikishi)
-                    continue
+            #if a komusubi gets at least 11 wins, move him to sekiwake
+            if rikishi in komusubi_list and rikishi.wins >= 11:
+                final_sekiwake_out.append(rikishi)
+                komusubi_list.remove(rikishi)
+                sorted_list.remove(rikishi)
+                continue
 
 
-            #if there are 2 sekiwake now, hooray, we are done
-            #if not, we figure out who is doing the best in terms of their true rank (true rank = rank + wins) (this will always be the first person(s) on the sorted list remaining), then add them to the sekiwake list
-            if len(final_sekiwake_out) < 2:
-                while(len(final_sekiwake_out) < 2):
-                    final_sekiwake_out.append(sorted_list.pop(0))
+        #if there are 2 sekiwake now, hooray, we are done
+        #if not, we figure out who is doing the best in terms of their true rank (true rank = rank + wins) (this will always be the first person(s) on the sorted list remaining), then add them to the sekiwake list
+        if len(final_sekiwake_out) < 2:
+            while(len(final_sekiwake_out) < 2):
+                final_sekiwake_out.append(sorted_list.pop(0))
 
 
-            #now, sort the sekiwake rankings
-            #if we are in fair mode, simply assign them based on true rank
-            #if we are using more unfair heuristics, apply them instead
+        #now, sort the sekiwake rankings
+        #if we are in fair mode, simply assign them based on true rank
+        #if we are using more unfair heuristics, apply them instead
 
 
-            #now, sort the sekiwake ranking based on true rank
-            final_sekiwake_out = sort_non_ozeki_raw(final_sekiwake_out, ranking_options)
-            if use_sanyaku_heuristics == 2:
-                offset = len(yokozuna_list) + len(ozeki_list)
-                # final_sekiwake_out = prevent_downrank_with_kk(final_sekiwake_out, offset)
-                # final_sekiwake_out = prevent_uprank_with_mk(final_sekiwake_out, offset)
+        #now, sort the sekiwake ranking based on true rank
+        final_sekiwake_out = sort_non_ozeki_raw(final_sekiwake_out, ranking_options)
 
-            assign_rank_titles(final_sekiwake_out, "S")
-            final_rlist += final_sekiwake_out
+        #assign and append titles to sekiwake list
+        assign_rank_titles(final_sekiwake_out, "S")
+        final_rlist += final_sekiwake_out
 
 
-            #TODO: make non-heuristic out for sekiwake (doable with just changing the final sorted list out)
+        #next, figure out who our komusubi are
+
+        #first, check if there are any komusubi remaining with a kachikoshi. They are still komusubi
+        for rikishi in sorted_list[:]:
+            if rikishi in komusubi_list and rikishi.record > 0:
+                final_komusubi_out.append(rikishi)
+                sorted_list.remove(rikishi)
 
 
-            #Next, figure out who our komusubi are
-
-            for rikishi in sorted_list[:]:
-                #first, check if there are any komusubi remaining with a kachikoshi. They are still komusubi
-                if rikishi in komusubi_list and rikishi.record > 0:
-                    final_komusubi_out.append(rikishi)
-                    sorted_list.remove(rikishi)
-                    continue
-
-            sorted_list = prevent_down_or_equal_rank_with_kk(sorted_list, len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out))
-            previous_ranks_offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out) + len(final_komusubi_out)
-
-            #the threshold for making it to komusubi no matter what. This is the number of people remaining + the number of sekiwake + komusubi_force_offset, which is the "true rank" necessary to justify promotion to Komusubi even without a free slot
-            #If you achieved a winning record that would put you ahead of S1e+ a constant ranks, basically, you will be put into Komusubi no matter what, even if there is not a slot for you.
-            komusubi_threshold = len(sorted_list) + len(final_sekiwake_out) + komusubi_force_offset
-
-            #If we don't have enough komusubi after checking for existing komusubi, and people who under normal circumstances would made it to komusubi even with 2 slots filled,
-            #Then fill the slots with the next highest sorted wrestler.
-            while len(final_komusubi_out) < 2 and sorted_list:
-                final_komusubi_out.append(sorted_list.pop(0))
-
-            #handle forced promotions to komusubi, even with no slots available
-            for rikishi in sorted_list[:]:
-                #finally, if someone is m1e, and posted a kachikoshi, make them a komusubi
-                if rikishi.starting_rank == "M1e" and rikishi.wins >= 8:
-                    final_komusubi_out.append(rikishi)
-                    sorted_list.remove(rikishi)
-                    continue
-
-                #for every individual who WOULD have made it past the threshold for a SEKIWAKE with their true rank, and isn't already a komusubi, simply put them in as new slots
-                truerank = rikishi.inverse_rank+rikishi.record
-
-                if truerank > komusubi_threshold:
-                    print("hit over komusubi threshold", truerank, rikishi.name, rikishi.record)
-                    # print(rikishi.name, truerank)
-                    final_komusubi_out.append(rikishi)
-                    sorted_list.remove(rikishi)
-
-            #sort our komusubi appropriately by our ranking algorithm
-            final_komusubi_out = sort_non_ozeki_raw(final_komusubi_out, ranking_options)
+        #if we have heuristic set 1, then we prevent spurious down/upranks in the remaining maegashira
+        #TODO make absolutely sure this is where we want to do these preventions
+        if heuristic_set >= 1:
+            # prev_rank_offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out)
+            print(old_sanyaku_num-old_komusubi_len-len(final_rlist))
+            #this number is the difference between the number of sanyaku without komusubi in the output banzuke, vs the prev banzuke
+            upper_san_diff = old_sanyaku_num-old_komusubi_len-len(final_rlist)
+            prev_rank_offset = old_sanyaku_num - old_komusubi_len - upper_san_diff
+            # old_sanyaku_num-old_komusubi_len-len(final_rlist)
+            sorted_list = prevent_down_or_equal_rank_with_kk(sorted_list, prev_rank_offset )
+            sorted_list = prevent_uprank_with_mk(sorted_list, prev_rank_offset)
 
 
-            assign_rank_titles(final_komusubi_out, "K")
-            final_rlist += final_komusubi_out
+        # the threshold for making it to komusubi no matter what. This is the amount of sanyaku
+        komusubi_threshold = old_sanyaku_num-old_komusubi_len-1
+
+        #If we don't have enough komusubi after checking for existing komusubi
+        #Then fill the slots with the next highest sorted wrestler.
+        while len(final_komusubi_out) < 2 and sorted_list:
+            final_komusubi_out.append(sorted_list.pop(0))
+
+        #handle forced promotions to komusubi, even with no slots available
+        for rikishi in sorted_list[:]:
+            #if someone is m1e, and posted a kachikoshi, make them a komusubi, even if no other slots
+            if rikishi.starting_rank == "M1e" and rikishi.wins >= 8:
+                final_komusubi_out.append(rikishi)
+                sorted_list.remove(rikishi)
+                continue
+
+            #if a sekiwake has exactly 7 wins, it doesn't make sense to downrank them below komusubi. So don't.
+            if "S" in rikishi.starting_rank and rikishi.wins == 7:
+                final_komusubi_out.append(rikishi)
+                sorted_list.remove(rikishi)
+                continue
+
+            #for every individual who WOULD have made it past the threshold for a Komusubi+an offset with their true rank, and isn't already a komusubi, put them in as new slots
+
+            truerank = rikishi.rank-rikishi.record
+
+            if truerank < komusubi_threshold:
+                print("hit over komusubi threshold", truerank, rikishi.name, rikishi.record)
+                time.sleep(2)
+                # print(rikishi.name, truerank)
+                final_komusubi_out.append(rikishi)
+                sorted_list.remove(rikishi)
+                continue
+
+            # if rikishi in komusubi_list and rikishi.record > 0:
+            #     final_komusubi_out.append(rikishi)
+            #     sorted_list.remove(rikishi)
+
+        #sort our komusubi appropriately by our ranking algorithm
+        final_komusubi_out = sort_non_ozeki_raw(final_komusubi_out, ranking_options)
+
+
+        assign_rank_titles(final_komusubi_out, "K")
+        final_rlist += final_komusubi_out
 
 
 
         #now, finally handle maegashira
-        offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out) + len(final_komusubi_out)
+        # offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out) + len(final_komusubi_out)
 
-        #handle spurious upranks on makekoshi, remove
-        sorted_list = prevent_uprank_with_mk(sorted_list, offset)
 
+        #TODO fix this for sanyaku downranks. It uses the NEW amount of sanyaku
         sanyaku_num = len(final_rlist)
+
         assign_maegashira_juryo(sorted_list, sanyaku_num)
 
         final_rlist += sorted_list
         # for r in final_rlist:
         #     print(r.name, r.new_rank_title)
-        write_ranks(writer, final_rlist, sanyaku_num)
+        write_ranks(writer, final_rlist, old_sanyaku_num, sanyaku_num)
 
 
 
 
 # basho_months = ["01", "03", "05", "07", "09", "11"]
-# for year in range(1970, 2026):
+# for year in range(2012, 2026):
 #     for month in basho_months:
-#         if year == 1964 and month in ["01",]:
+#         if year == 2012 and month in ["01","03", "07",]:
 #         #     print("skipping 01 03 05 2014")
 #             continue
 #         if year > 2025 or (year == 2025 and int(month) > 5):
@@ -1207,19 +1255,47 @@ def make_banzuke(rikishi_list,filename, use_sanyaku_heuristics=1, ranking_option
 #         csv_name = f"bashoresultsv2/{basho_code}.csv"
 #         scrape_sumodb(f'Banzuke.aspx?b={basho_code}', csv_name)
 #
-#
+
+basho_codes = [
+	"196103",
+	"196305",
+	"197411",
+	"197701",
+	"198109",
+	"198311",
+	"198503",
+	"198705",
+	"198907",
+	"198909",
+	"198911",
+	"200505",
+	"200601",
+	"200703",
+	"201005",
+	"201011",
+	"201103",
+	"201511",
+	"201707",
+	"202005",
+	"202201"
+]
+# for basho_code in basho_codes:
+# 	csv_name = f"bashoresultsv2/{basho_code}.csv"
+# 	scrape_sumodb(f'Banzuke.aspx?b={basho_code}', csv_name)
+# #
 
 # "Banzuke.aspx?b=202503"
 # scrape_sumodb('Banzuke.aspx?b=202305', "bashoresults/202305.csv")
 
 komusubi_force_offset = 2
 
-banzukecode = "201911"
+# banzukecode = "200803"
+banzukecode ="199605"
 bashofolder = "bashoresults"
 rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
 
 make_banzuke(rlist, "testoutnewsystem.csv", 2, 1 )
-# #
+# # #
 
 # make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)
 

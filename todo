@@ -1,10 +1,12 @@
 TODO:
     Add options for putting Sanyaku ranks by newcomers in sanyaku heuristics (putting S2w etc)
 
+    Fix the true rank title output for good with making it dependent on each basho rather than a universal print table
 
-    Run the first basho results and find out the ozeki changed name stuff
-
+    check for duplicate entries -- found for sure in 202101banzuke, ishiura
 
     Create the "true banzuke" by running only sims on our made up banzukes
 
     Make the compare banzuke work with name changes?
+
+

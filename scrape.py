@@ -772,10 +772,11 @@ def prevent_down_or_equal_rank_with_kk(sorted_rikishi, offset):
     #basically, its the amount of previous sanyaku, so we can figure out where someones actual rank position is even after we've pruned the sorted_rikishi list
     final_ranking = sorted_rikishi.copy()
 
+
     while True:
         any_detected = False
         for i, rikishi in enumerate(final_ranking.copy()):
-
+            print(rikishi.name,  offset+i, rikishi.rank)
             if rikishi.wins >= 8 and offset+i >= rikishi.rank:
                 any_detected = True
                 print("detected spurious downrank", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
@@ -1275,33 +1276,32 @@ changed_names = {
 komusubi_force_offset = 2
 komusubi_threshold_list = []
 # banzukecode = "200803"
-# banzukecode ="200609"
-# bashofolder = "bashoresultsv2"
-# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
-#
-# make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
+banzukecode ="201807"
+bashofolder = "bashoresultsv2"
+rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
+make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
 # # # #
 
 # make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)
 
 # import os
-
-input_folder = "bashoresultsv2"
-output_folder = "fairbanzukeoutput"
-
-os.makedirs(output_folder, exist_ok=True)
-
-for fname in os.listdir(input_folder):
-    if not fname.endswith(".csv"):
-        continue
-    basho_code = fname[:-4]  # removes '.csv'
-    if basho_code in prestandard_codes:
-        continue
-    in_path = os.path.join(input_folder, fname)
-    out_path = os.path.join(output_folder, f"{basho_code}banzuke.csv")
-
-    rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
-    make_banzuke(rlist, out_path, basho_code, input_folder, 2, 1)
+#
+# input_folder = "bashoresultsv2"
+# output_folder = "fairbanzukeoutput"
+#
+# os.makedirs(output_folder, exist_ok=True)
+#
+# for fname in os.listdir(input_folder):
+#     if not fname.endswith(".csv"):
+#         continue
+#     basho_code = fname[:-4]  # removes '.csv'
+#     if basho_code in prestandard_codes:
+#         continue
+#     in_path = os.path.join(input_folder, fname)
+#     out_path = os.path.join(output_folder, f"{basho_code}banzuke.csv")
+#
+#     rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
+#     make_banzuke(rlist, out_path, basho_code, input_folder, 2, 1)
 
 for n in komusubi_threshold_list:
     print(n)

@@ -1153,8 +1153,19 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
         #if there are 2 sekiwake now, hooray, we are done
         #if not, we figure out who is doing the best in terms of their true rank (true rank = rank + wins) (this will always be the first person(s) on the sorted list remaining), then add them to the sekiwake list
         if len(final_sekiwake_out) < 2:
+            sthresh = old_sanyaku_num-old_komusubi_len-old_sekiwake_len
+            print(sthresh, "sthresh")
             while(len(final_sekiwake_out) < 2):
-                final_sekiwake_out.append(sorted_list.pop(0))
+                if heuristic_set >= 1:
+                    #if we are not doing raw ranks, we have to find the first eligible rikishi and use them
+                    for i, obj in enumerate(sorted_list):
+                        if (obj.sanyaku and (obj.wins > 7 or obj.rank <= sthresh+len(final_sekiwake_out))) or obj.wins > 7:
+                            print(obj.name, obj.rank, i, sthresh+len(final_sekiwake_out))
+                            final_sekiwake_out.append(obj)
+                            del sorted_list[i]
+                            break
+                else:
+                    final_sekiwake_out.append(sorted_list.pop(0))
 
 
         #now, add the demoted ozeki
@@ -1167,8 +1178,8 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
         #now, sort the sekiwake ranking based on true rank
         final_sekiwake_out = sort_non_ozeki_raw(final_sekiwake_out, ranking_options)
 
-        print([r.name for r in final_sekiwake_out])
-        print(old_sanyaku_num)
+        # print([r.name for r in final_sekiwake_out])
+        # print(old_sanyaku_num)
         #assign and append titles to sekiwake list
         assign_rank_titles(final_sekiwake_out, "S")
         final_rlist += final_sekiwake_out
@@ -1176,24 +1187,34 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
 
         #next, figure out who our komusubi are
 
-        #first, check if there are any komusubi remaining with a kachikoshi. They are still komusubi
-        for rikishi in sorted_list[:]:
-            if rikishi in komusubi_list and rikishi.record > 0:
-                final_komusubi_out.append(rikishi)
-                sorted_list.remove(rikishi)
-
-
 
         # the threshold for making it to komusubi no matter what. This is the amount of sanyaku
         komusubi_threshold = old_sanyaku_num-old_komusubi_len-komusubi_force_offset
 
         #If we don't have enough komusubi after checking for existing komusubi
         #Then fill the slots with the next highest sorted wrestler.
+        # print(old_sanyaku_num-old_komusubi_len, len(final_komusubi_out))
         while len(final_komusubi_out) < 2 and sorted_list:
-            final_komusubi_out.append(sorted_list.pop(0))
+            if heuristic_set >= 1:
+                #if we are not doing raw ranks, we have to find the first eligible komusubi, and use them
+                for i, obj in enumerate(sorted_list):
+                    if (obj.sanyaku and (obj.wins > 7 or obj.rank <= old_sanyaku_num-old_komusubi_len+len(final_komusubi_out))) or obj.wins > 7:
+                        print(obj.name, obj.rank, i, old_sanyaku_num-old_komusubi_len+len(final_komusubi_out))
+                        final_komusubi_out.append(obj)
+                        del sorted_list[i]
+                        break
+            else:
+                final_komusubi_out.append(sorted_list.pop(0))
 
         #handle forced promotions to komusubi, even with no slots available
         for rikishi in sorted_list[:]:
+            #check if there are any komusubi remaining with a kachikoshi. They are still
+            #notably, this only triggers if they weren't already selected in the ranked choice earlier
+            if rikishi in komusubi_list and rikishi.record > 0:
+                final_komusubi_out.append(rikishi)
+                sorted_list.remove(rikishi)
+                continue
+
             #if someone is m1e, and posted a kachikoshi, make them a komusubi, even if no other slots. This is the current reigning heuristic.
             if rikishi.starting_rank == "M1e" and rikishi.wins >= 8:
                 final_komusubi_out.append(rikishi)
@@ -1211,19 +1232,10 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
 
             if truerank < komusubi_threshold:
                 print("!!!!!!!!!!hit over komusubi threshold", truerank, rikishi.name, rikishi.record)
-                # time.sleep(2)
-                # print(rikishi.name, truerank)
                 komusubi_threshold_list.append(f"In {bcode}, {rikishi.name} was put to Komusubi.")
                 final_komusubi_out.append(rikishi)
                 sorted_list.remove(rikishi)
                 continue
-
-            # if rikishi in komusubi_list and rikishi.record > 0:
-            #     final_komusubi_out.append(rikishi)
-            #     sorted_list.remove(rikishi)
-
-        #sort our komusubi appropriately by our ranking algorithm
-        final_komusubi_out = sort_non_ozeki_raw(final_komusubi_out, ranking_options)
 
 
         assign_rank_titles(final_komusubi_out, "K")
@@ -1256,8 +1268,8 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
 
         # add juryo ranks as before
         rank_list_print += [f"J{i}{side}" for i in range(1, 15) for side in ("e", "w")]
-        for n in rank_list_print:
-            print(n)
+        # for n in rank_list_print:
+        #     print(n)
         assign_maegashira_juryo(sorted_list, sanyaku_num)
 
         final_rlist += sorted_list
@@ -1306,19 +1318,19 @@ komusubi_force_offset = 2
 komusubi_threshold_list = []
 # banzukecode = "200803"
 # banzukecode ="197111"
-# banzukecode = "199703"
-# bashofolder = "bashoresultsv2"
-# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
-# make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
-# # # # #
+banzukecode = "198403"
+bashofolder = "bashoresultsv2"
+rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
+make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
+# # # # # #
 
 # make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)
 
 # import os
 
 input_folder = "bashoresultsv2"
-output_folder = "fairbanzukeoutputnofixes"
-
+# output_folder = "fairbanzukeoutputnofixes"
+output_folder = "fairbanzukeoutput"
 os.makedirs(output_folder, exist_ok=True)
 
 for fname in os.listdir(input_folder):

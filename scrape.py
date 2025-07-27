@@ -771,22 +771,34 @@ def prevent_down_or_equal_rank_with_kk(sorted_rikishi, offset):
     #offset is the index offset from the first rank to the first index of the list we are given
     #basically, its the amount of previous sanyaku, so we can figure out where someones actual rank position is even after we've pruned the sorted_rikishi list
     final_ranking = sorted_rikishi.copy()
-
-
+    for i, rikishi in enumerate(final_ranking.copy()):
+        print(rikishi.name,  offset+i, rikishi.rank)
+    success_list = []
+    removal_offset = 0
     while True:
         any_detected = False
-        for i, rikishi in enumerate(final_ranking.copy()):
-            print(rikishi.name,  offset+i, rikishi.rank)
-            if rikishi.wins >= 8 and offset+i >= rikishi.rank:
+        iteratelist = final_ranking.copy()
+        for i, rikishi in enumerate(iteratelist):
+            # print(rikishi.name,  offset+i, rikishi.rank)
+            if rikishi.wins >= 8 and offset+i >= rikishi.rank + removal_offset:
                 any_detected = True
                 print("detected spurious downrank", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
                 current_pos = offset+i
-                while current_pos >= rikishi.rank:
+                while current_pos >= rikishi.rank + removal_offset:
                     actual_pos = current_pos-offset
-                    print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos+1, 'actual_pos', actual_pos)
+                    print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos-1, 'actual_pos', actual_pos)
+                    if actual_pos >= len(iteratelist)-1:
+                        print("broke here")
+                        time.sleep(5)
+                        break
                     swap_index = actual_pos-1
                     if swap_index <0:
+                        print("removing too successful")
+                        success_list.append(rikishi)
+                        final_ranking.remove(rikishi)
+                        removal_offset -= 1
                         break #we reached the top of the list
+
 
                     final_ranking[actual_pos], final_ranking[swap_index] = (
                         final_ranking[swap_index],
@@ -798,10 +810,12 @@ def prevent_down_or_equal_rank_with_kk(sorted_rikishi, offset):
         if not any_detected:
             break
 
+    final_ranking = success_list + final_ranking
     for i, rikishi in enumerate(final_ranking):
-        if rikishi.wins >= 8 and offset+i >= rikishi.rank:
+        print(rikishi.name,  offset+i, rikishi.rank)
+        if rikishi.wins >= 8 and offset+i >= rikishi.rank and rikishi not in success_list:
             print("!!!!")
-            print("detected still low(spurious downrank)", rikishi.name, rikishi.wins, rikishi.rank, i)
+            print("detected still low(spurious downrank)", rikishi.name, rikishi.wins, rikishi.rank, i+offset)
             time.sleep(10)
 
     return final_ranking
@@ -1169,7 +1183,7 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
 
             #this number is the difference between the number of sanyaku without komusubi in the output banzuke, vs the prev banzuke
             upper_san_diff = old_sanyaku_num-old_komusubi_len-len(final_rlist)
-            prev_rank_offset = old_sanyaku_num - old_komusubi_len - upper_san_diff
+            prev_rank_offset = old_sanyaku_num - old_komusubi_len +len(final_komusubi_out)- upper_san_diff
             # old_sanyaku_num-old_komusubi_len-len(final_rlist)
             sorted_list = prevent_down_or_equal_rank_with_kk(sorted_list, prev_rank_offset )
             sorted_list = prevent_uprank_with_mk(sorted_list, prev_rank_offset)
@@ -1276,32 +1290,32 @@ changed_names = {
 komusubi_force_offset = 2
 komusubi_threshold_list = []
 # banzukecode = "200803"
-banzukecode ="201807"
-bashofolder = "bashoresultsv2"
-rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
-make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
-# # # #
+# banzukecode ="201807"
+# bashofolder = "bashoresultsv2"
+# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
+# make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
+# # # # #
 
 # make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)
 
 # import os
 #
-# input_folder = "bashoresultsv2"
-# output_folder = "fairbanzukeoutput"
-#
-# os.makedirs(output_folder, exist_ok=True)
-#
-# for fname in os.listdir(input_folder):
-#     if not fname.endswith(".csv"):
-#         continue
-#     basho_code = fname[:-4]  # removes '.csv'
-#     if basho_code in prestandard_codes:
-#         continue
-#     in_path = os.path.join(input_folder, fname)
-#     out_path = os.path.join(output_folder, f"{basho_code}banzuke.csv")
-#
-#     rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
-#     make_banzuke(rlist, out_path, basho_code, input_folder, 2, 1)
+input_folder = "bashoresultsv2"
+output_folder = "fairbanzukeoutput"
+
+os.makedirs(output_folder, exist_ok=True)
+
+for fname in os.listdir(input_folder):
+    if not fname.endswith(".csv"):
+        continue
+    basho_code = fname[:-4]  # removes '.csv'
+    if basho_code in prestandard_codes:
+        continue
+    in_path = os.path.join(input_folder, fname)
+    out_path = os.path.join(output_folder, f"{basho_code}banzuke.csv")
+
+    rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
+    make_banzuke(rlist, out_path, basho_code, input_folder, 2, 1)
 
 for n in komusubi_threshold_list:
     print(n)

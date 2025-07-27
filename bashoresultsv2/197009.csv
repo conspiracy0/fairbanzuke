@@ -54,9 +54,8 @@ Nagahama,9,6,6,83,75,51,9,1,,J9w,Fujizakura;Kaigo;Hakuryo;Hananishiki;Asaarashi;
 Maruyama,9,6,6,63,55,52,8,1,,J10e,Kaigo;Asaarashi;Hakuryo;Edohibiki;Fujizakura;Kitaseumi;Arashiyama;Asanobori;Taikan
 Oshio,8,7,2,41,39,53,7,1,,J10w,Edohibiki;Arashiyama;Asanobori;Ryoga;Taikan;Kitaseumi;Asakaze
 Fujizakura,9,6,6,82,79.0003,54,6,1,,J11e,Kaigo;Futatsuryu;Edohibiki;Ryoga;Wajima;Oshio;Daimonji;Hananishiki;Ryuo
-Fujizakura,9,6,6,82,79.0003,55,5,1,,J11e,Kaigo;Futatsuryu;Edohibiki;Ryoga;Wajima;Oshio;Daimonji;Hananishiki;Ryuo
-Kaigo,9,6,6,61,57,56,4,1,,J11w,Edohibiki;Kitaseumi;Taikan;Asanobori;Arashiyama;Ryoga;Asaarashi;Dairyugawa;Daimonji
-Hakuryo,7,8,-2,27,19,57,3,1,,J12e,Oshio;Asaarashi;Arashiyama
-Edohibiki,1,14,-26,1,0,58,2,1,,J12w,
-Hananishiki,11,4,14,82,75,59,1,1,,J13e,Edohibiki;Maruyama;Oshio;Manazuru;Hakuryo;Asakaze;Daimonji;Masuiyama;Shiratayama;Kaigo
-Asaarashi,9,6,6,44,40,60,0,1,,J13w,Oshio;Manazuru;Asanobori;Arashiyama;Taikan;Dairyugawa
+Kaigo,9,6,6,61,57,55,4,1,,J11w,Edohibiki;Kitaseumi;Taikan;Asanobori;Arashiyama;Ryoga;Asaarashi;Dairyugawa;Daimonji
+Hakuryo,7,8,-2,27,19,56,3,1,,J12e,Oshio;Asaarashi;Arashiyama
+Edohibiki,1,14,-26,1,0,57,2,1,,J12w,
+Hananishiki,11,4,14,82,75,58,1,1,,J13e,Edohibiki;Maruyama;Oshio;Manazuru;Hakuryo;Asakaze;Daimonji;Masuiyama;Shiratayama;Kaigo
+Asaarashi,9,6,6,44,40,59,0,1,,J13w,Oshio;Manazuru;Asanobori;Arashiyama;Taikan;Dairyugawa

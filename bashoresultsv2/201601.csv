@@ -64,9 +64,8 @@ Asahisho,8,7,2,63,61,61,9,1,,J10w,Ishiura;Azumaryu;Asabenkei;Chiyomaru;Dewahayat
 Asabenkei,7,8,-2,59,52,62,8,1,,J11e,Chiyoshoma;Amakaze;Dewahayate;Onosho;Ishiura;Kagamio;Sadanofuji
 Azumaryu,9,6,6,79,74,63,7,1,,J11w,Asabenkei;Chiyoshoma;Chiyoo;Asasekiryu;Onosho;Dewahayate;Nishikigi;Hidenoumi;Kitaharima
 Tsurugisho,8,7,2,72,70,64,6,1,,J12e,Onosho;Chiyonokuni;Azumaryu;Chiyoo;Ishiura;Asahisho;Asabenkei;Akiseyama
-Tsurugisho,8,7,2,72,70,65,5,1,,J12e,Onosho;Chiyonokuni;Azumaryu;Chiyoo;Ishiura;Asahisho;Asabenkei;Akiseyama
-Chiyoshoma,8,7,2,59,56,66,4,1,,J12w,Tsurugisho;Dewahayate;Kyokutaisei;Daishomaru;Arawashi;Kitaharima;Daieisho
-Amakaze,7,8,-2,47,44,67,3,1,,J13e,Chiyoshoma;Azumaryu;Ishiura;Kyokutaisei;Daishomaru
-Chiyonokuni,10,5,10,91,87,68,2,1,,J13w,Amakaze;Asasekiryu;Asabenkei;Azumaryu;Akiseyama;Tenkaiho;Onosho;Hidenoumi;Satoyama;Nishikigi
-Onosho,8,7,2,51,46,69,1,1,,J14e,Amakaze;Kyokutaisei;Chiyoshoma;Asahisho;Tenkaiho;Daishomaru
-Dewahayate,8,7,2,54,48,70,0,1,,J14w,Onosho;Chiyonokuni;Amakaze;Tsurugisho;Kyokutaisei;Akiseyama
+Chiyoshoma,8,7,2,59,56,65,4,1,,J12w,Tsurugisho;Dewahayate;Kyokutaisei;Daishomaru;Arawashi;Kitaharima;Daieisho
+Amakaze,7,8,-2,47,44,66,3,1,,J13e,Chiyoshoma;Azumaryu;Ishiura;Kyokutaisei;Daishomaru
+Chiyonokuni,10,5,10,91,87,67,2,1,,J13w,Amakaze;Asasekiryu;Asabenkei;Azumaryu;Akiseyama;Tenkaiho;Onosho;Hidenoumi;Satoyama;Nishikigi
+Onosho,8,7,2,51,46,68,1,1,,J14e,Amakaze;Kyokutaisei;Chiyoshoma;Asahisho;Tenkaiho;Daishomaru
+Dewahayate,8,7,2,54,48,69,0,1,,J14w,Onosho;Chiyonokuni;Amakaze;Tsurugisho;Kyokutaisei;Akiseyama

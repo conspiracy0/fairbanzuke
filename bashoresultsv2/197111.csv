@@ -54,9 +54,8 @@ Aobajo,7,8,-2,54,54,51,9,1,,J9w,Tochizakura;Masuiyama;Tochifuji;Futatsuryu;Daise
 Tochizakura,8,7,2,67,66,52,8,1,,J10e,Arashiyama;Tamakiyama;Masuiyama;Futatsuryu;Taikan;Wakajishi;Fujinokawa;Asaarashi
 Byakuhoyama,7,8,-2,50,44,53,7,1,,J10w,Ryoga;Hakuryo;Wakanoumi;Daimonji;Arashiyama;Tamakiyama
 Asaarashi,8,7,2,70,65,54,6,1,,J11e,Arashiyama;Iwatora;Asanobori;Daisetsu;Tochifuji;Kitaseumi;Ryoga;Kitanoumi
-Asaarashi,8,7,2,70,65,55,5,1,,J11e,Arashiyama;Iwatora;Asanobori;Daisetsu;Tochifuji;Kitaseumi;Ryoga;Kitanoumi
-Wakanoumi,9,6,6,63,62,56,4,1,,J11w,Taikan;Asanobori;Kitanoumi;Masuiyama;Fujinokawa;Daimonji;Owashi;Daisetsu
-Hakuryo,9,6,6,60,56,57,3,1,,J12e,Wakanoumi;Kitaseumi;Aobajo;Tochifuji;Dairyugawa;Kitanoumi
-Arashiyama,8,7,2,56,50,58,2,1,,J12w,Iwatora;Wakanoumi;Masuiyama;Katsuhikari;Fujinokawa;Tochifuji;Daimonji
-Taikan,8,7,2,70,61,59,1,1,,J13e,Iwatora;Byakuhoyama;Hakuryo;Arashiyama;Tochifuji;Daisetsu;Futatsuryu;Wakajishi
-Iwatora,9,6,6,43,35,60,0,1,,J13w,Byakuhoyama;Fujinokawa;Tamakiyama;Hakuryo;Aobajo
+Wakanoumi,9,6,6,63,62,55,4,1,,J11w,Taikan;Asanobori;Kitanoumi;Masuiyama;Fujinokawa;Daimonji;Owashi;Daisetsu
+Hakuryo,9,6,6,60,56,56,3,1,,J12e,Wakanoumi;Kitaseumi;Aobajo;Tochifuji;Dairyugawa;Kitanoumi
+Arashiyama,8,7,2,56,50,57,2,1,,J12w,Iwatora;Wakanoumi;Masuiyama;Katsuhikari;Fujinokawa;Tochifuji;Daimonji
+Taikan,8,7,2,70,61,58,1,1,,J13e,Iwatora;Byakuhoyama;Hakuryo;Arashiyama;Tochifuji;Daisetsu;Futatsuryu;Wakajishi
+Iwatora,9,6,6,43,35,59,0,1,,J13w,Byakuhoyama;Fujinokawa;Tamakiyama;Hakuryo;Aobajo

@@ -1329,8 +1329,8 @@ make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
 # import os
 
 input_folder = "bashoresultsv2"
-# output_folder = "fairbanzukeoutputnofixes"
-output_folder = "fairbanzukeoutput"
+output_folder = "fairbanzukeoutputnofixes"
+# output_folder = "fairbanzukeoutput"
 os.makedirs(output_folder, exist_ok=True)
 
 for fname in os.listdir(input_folder):
@@ -1343,7 +1343,7 @@ for fname in os.listdir(input_folder):
     out_path = os.path.join(output_folder, f"{basho_code}banzuke.csv")
 
     rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
-    make_banzuke(rlist, out_path, basho_code, input_folder, 2, 1)
+    make_banzuke(rlist, out_path, basho_code, input_folder, 0, 1)
 #
 for n in komusubi_threshold_list:
     print(n)

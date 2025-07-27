@@ -771,14 +771,7 @@ def prevent_down_or_equal_rank_with_kk(sorted_rikishi, offset, sanyaku_adj):
     #offset is the index offset from the first rank to the first index of the list we are given
     #basically, its the amount of previous sanyaku, so we can figure out where someones actual rank position is even after we've pruned the sorted_rikishi list
     final_ranking = sorted_rikishi.copy()
-    # for i, rikishi in enumerate(final_ranking.copy()):
-    #     print(rikishi.name,  offset+i, rikishi.rank)
 
-
-    #OLD SANYAKU NUM = 9 ON test
-    # testsanyakuoffset = 9
-    # success_list = []
-    # removal_offset = 0
     while True:
         any_detected = False
         iteratelist = final_ranking.copy()
@@ -794,19 +787,12 @@ def prevent_down_or_equal_rank_with_kk(sorted_rikishi, offset, sanyaku_adj):
 
                 current_pos = offset+i
                 while current_pos >= adj_rank:
-                # while current_pos >= rikishi.rank + removal_offset:
+
                     actual_pos = current_pos-offset
                     print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos-1, 'actual_pos', actual_pos)
-                    # if actual_pos >= len(iteratelist)-1:
-                    #     print("broke here")
-                    #     time.sleep(5)
-                    #     break
+
                     swap_index = actual_pos-1
                     if swap_index <0:
-                        # print("removing too successful")
-                        # success_list.append(rikishi)
-                        # final_ranking.remove(rikishi)
-                        # removal_offset -= 1
                         print("!!! HIT SWAP_INDEX CEILING")
                         break #we reached the top of the list
 
@@ -821,10 +807,8 @@ def prevent_down_or_equal_rank_with_kk(sorted_rikishi, offset, sanyaku_adj):
         if not any_detected:
             break
 
-    # final_ranking = success_list + final_ranking
     for i, rikishi in enumerate(final_ranking):
-        # print(rikishi.name,  offset+i, rikishi.rank)
-        # if rikishi.wins >= 8 and offset+i >= rikishi.rank and rikishi not in success_list:
+
         if rikishi.wins >= 8 and offset+i >= rikishi.rank - sanyaku_adj:
             print("!!!!")
             print("detected still low(spurious downrank)", rikishi.name, rikishi.wins, rikishi.rank, i+offset)
@@ -862,7 +846,6 @@ def prevent_uprank_with_mk(sorted_rikishi, offset, sanyaku_adj):
                     print("detected spurious uprank", rikishi.name, rikishi.wins, i, offset+i, adj_rank, rikishi.rank, sanyaku_adj)
 
                     current_pos = offset+i
-                    # while current_pos < rikishi.rank:
                     while current_pos < adj_rank:
                         actual_pos = current_pos-offset
                         print('rank=', rikishi.rank, 'curr_pos', current_pos, 'finish_pos', current_pos+1, 'actual_pos', actual_pos)
@@ -892,10 +875,6 @@ def prevent_uprank_with_mk(sorted_rikishi, offset, sanyaku_adj):
         if rikishi.wins < 8 and offset+i < rikishi.rank - sanyaku_adj and rikishi not in failure_list:
             print("!!!!")
             print("detected still high(spurious uprank)", rikishi.name, rikishi.wins, rikishi.rank, i, offset+i)
-            # print()
-            # print([r.name for r in failure_list])
-            # for i, rikishi in enumerate(final_ranking.copy()):
-            #     print(i, rikishi.name)
             time.sleep(5)
 
     return final_ranking
@@ -954,6 +933,7 @@ def write_ranks(writer, printing_list, old_sanyaku_num, sanyaku_num, rank_list_p
 
     # print(, old_sanyaku_num, sanyaku_num)
     sanyaku_diff = old_sanyaku_num-sanyaku_num
+    # print(rank_list_print)
     for i in range(0, len(printing_list)):
         rik = printing_list[i]
         row = []
@@ -970,8 +950,10 @@ def write_ranks(writer, printing_list, old_sanyaku_num, sanyaku_num, rank_list_p
         oldrank_adj = rik.rank-sanyaku_adj
         adjusted_tr = truerank - sanyaku_adj
         # adjusted_i = i+sanyaku_adj
-        print(sanyaku_adj, "sa")
-        row.append(rank_list_print[adjusted_tr] if adjusted_tr >= 0 and adjusted_tr < len(rank_list_print) else "N/A" )
+        # print(sanyaku_adj, "sa")
+        rank_print = adjusted_tr-sanyaku_num
+        # print(rank_print, rik.name, rank_list_print[rank_print] )
+        row.append(rank_list_print[rank_print] if rank_print >= 0 and rank_print < len(rank_list_print) else "N/A" )
         row.append(rik.rank) #previous rank
         row.append(rik.rank-sanyaku_adj) #oldrank adj
         row.append(i) #new rank
@@ -1249,8 +1231,7 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
 
 
 
-         #if we have heuristic set 1, then we prevent spurious down/upranks in the remaining maegashira
-        #TODO make absolutely sure this is where we want to do these preventions
+        #if we have heuristic set 1, then we prevent spurious down/upranks in the remaining maegashira
         if heuristic_set >= 1:
 
             #this number is the difference between the number of sanyaku without komusubi in the output banzuke, vs the prev banzuke
@@ -1263,10 +1244,7 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
 
 
         #now, finally handle maegashira
-        # offset = len(yokozuna_list) + len(ozeki_list) + len(final_sekiwake_out) + len(final_komusubi_out)
 
-
-        #TODO fix this for sanyaku downranks. It uses the NEW amount of sanyaku
         sanyaku_num = len(final_rlist)
         maegashira_slots = 42 - sanyaku_num
 
@@ -1327,8 +1305,8 @@ changed_names = {
 komusubi_force_offset = 2
 komusubi_threshold_list = []
 # banzukecode = "200803"
-# # banzukecode ="197111"
-# # banzukecode = "199511"
+# banzukecode ="197111"
+# banzukecode = "199703"
 # bashofolder = "bashoresultsv2"
 # rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
 # make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
@@ -1339,7 +1317,7 @@ komusubi_threshold_list = []
 # import os
 
 input_folder = "bashoresultsv2"
-output_folder = "fairbanzukeoutput"
+output_folder = "fairbanzukeoutputnofixes"
 
 os.makedirs(output_folder, exist_ok=True)
 
@@ -1354,7 +1332,7 @@ for fname in os.listdir(input_folder):
 
     rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
     make_banzuke(rlist, out_path, basho_code, input_folder, 2, 1)
-
+#
 for n in komusubi_threshold_list:
     print(n)
 

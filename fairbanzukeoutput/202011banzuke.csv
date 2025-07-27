@@ -1,10 +1,10 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
 Hakuho,Y1e,Y1e,M16w,0,1,0,31,0,31,0,0,0
 Kakuryu,Y1w,Y1w,J1e,1,2,1,32,0,31,0,0,0
-Takakeisho,O1e,O1e,N/A,2,3,2,-23,14,-25,141.4812,3,4.1471
+Takakeisho,O1e,O1e,N/A,2,3,2,-23,13,-25,123.6312,2,2.8716
 Shodai,O2e,O1w,M12w,4,5,3,23,3,20,24.891,1,1.2755
 Asanoyama,O1w,O2e,M16e,3,4,4,30,1,26,4.7242,0,0
-Terunofuji,K1e,S1e,N/A,7,8,5,-14,13,-19,119.1489,3,6.1753
+Terunofuji,K1e,S1e,N/A,7,8,5,-14,13,-19,117.8734,3,6.1753
 Takanosho,S1w,S1w,M3w,6,7,6,5,8,-1,75.06559999999999,2,2.8716
 Hokutofuji,M4e,K1e,M2e,15,16,7,2,11,-5,105.54990000000001,1,1.2755
 Daieisho,M2w,K1w,M2w,12,13,8,3,10,-5,96.79329999999999,4,6.7573
@@ -20,7 +20,7 @@ Endo,M7w,M4w,M11w,22,23,17,21,8,4,66.89099999999999,0,0
 Okinoumi,M3w,M5e,M11w,14,15,18,21,6,3,48.4709,2,2.8716
 Ryuden,M10e,M5w,M12e,27,28,19,22,9,3,72.95749999999998,0,0
 Meisei,M10w,M6e,M12w,28,29,20,23,9,3,75.0571,0,0
-Tobizaru,M4w,M6w,M12w,16,17,21,23,6,2,59.8686,3,5.1612
+Tobizaru,M4w,M6w,M12w,16,17,21,23,6,2,58.59310000000001,3,5.1612
 Tokushoryu,M9e,M7e,M13e,25,26,22,24,8,2,67.8124,0,0
 Kagayaki,M3e,M7w,M13e,13,14,23,24,5,1,40.7943,1,1.5961
 Chiyonokuni,M14e,M8e,M14e,35,36,24,26,10,2,73.25880000000001,0,0

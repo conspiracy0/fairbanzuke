@@ -1,5 +1,5 @@
 Name,Wins,Losses,Record,Neustadl,Weighted Neustadl,Rank,Inverse Rank,Weight,Sanyaku,Starting Rank,Beats
-Terunofuji,14,1,26,130,151.48369999999997,0,69,3.79,Y1e,Y1e,Ura;Abi;Gonoyama;Hokutofuji;Tobizaru;Ryuden;Nishikigi;Kinbozan;Onosho;Onosato;Kotonowaka;Hoshoryu;Kirishima;Kotonowaka
+Terunofuji,13,2,26,116,134.16000000000003,0,69,3.79,Y1e,Y1e,Ura;Abi;Gonoyama;Hokutofuji;Tobizaru;Ryuden;Nishikigi;Kinbozan;Onosho;Onosato;Hoshoryu;Kirishima;Kotonowaka
 Kirishima,11,4,14,87,105.0193,1,68,2.2896,O1e,O1e,Wakamotoharu;Takayasu;Atamifuji;Abi;Gonoyama;Hokutofuji;Shodai;Onosho;Daieisho;Tamawashi;Hoshoryu
 Hoshoryu,10,5,10,81,94.30179999999999,2,67,2.2896,O1w,O1w,Atamifuji;Midorifuji;Ura;Wakamotoharu;Tobizaru;Hokutofuji;Ryuden;Daieisho;Onosato;Takanosho
 Takakeisho,2,13,-22,13,15.494499999999999,3,66,2.2896,O2w,O2w,Midorifuji;Atamifuji
@@ -7,14 +7,14 @@ Kotonowaka,13,2,22,106,120.7063,4,65,1.5961,S1e,S1e,Abi;Gonoyama;Midorifuji;Atam
 Daieisho,9,6,6,66,81.4334,5,64,1.5961,S1w,S1w,Gonoyama;Abi;Shodai;Wakamotoharu;Ura;Midorifuji;Ryuden;Kinbozan;Asanoyama
 Takayasu,2,13,-22,12,14.767299999999999,6,63,1.2755,K1e,K1e,Hokutofuji;Ura
 Ura,6,9,-6,33,41.2181,7,62,1.2755,K1w,K1w,Takakeisho;Atamifuji;Gonoyama;Tobizaru;Shodai;Ryuden
-Wakamotoharu,10,5,10,88,104.6508,8,61,1.1274,,M1e,Terunofuji;Takakeisho;Kotonowaka;Takayasu;Ura;Midorifuji;Oho;Tamawashi;Onosho;Nishikigi
+Wakamotoharu,10,5,10,87,103.05470000000001,8,61,1.1274,,M1e,Terunofuji;Takakeisho;Kotonowaka;Takayasu;Ura;Midorifuji;Oho;Tamawashi;Onosho;Nishikigi
 Atamifuji,6,9,-6,46,54.99680000000001,9,60,1.1274,,M1w,Tobizaru;Daieisho;Abi;Gonoyama;Shodai;Kinbozan
 Midorifuji,5,10,-10,35,42.2048,10,59,1.0589,,M2e,Kirishima;Gonoyama;Ura;Myogiryu;Ryuden
 Abi,8,7,2,56,71.85600000000001,11,58,1.0589,,M2w,Hoshoryu;Shodai;Gonoyama;Ryuden;Ura;Midorifuji;Ichiyamamoto;Wakamotoharu
 Gonoyama,5,10,-10,29,34.9904,12,57,1.0272,,M3e,Takayasu;Hoshoryu;Shodai;Ryuden;Myogiryu
 Hokutofuji,4,11,-14,32,38.4311,13,56,1.0272,,M3w,Ura;Daieisho;Abi;Midorifuji
 Tobizaru,7,8,-2,50,57.35620000000001,14,55,1.0126,,M4e,Nishikigi;Ryuden;Kinbozan;Kirishima;Hokutofuji;Midorifuji;Ichiyamamoto
-Shodai,4,11,-14,33,43.0482,15,54,1.0126,,M4w,Tobizaru;Ryuden;Midorifuji;Terunofuji
+Shodai,4,11,-14,32,41.4521,15,54,1.0126,,M4w,Tobizaru;Ryuden;Midorifuji;Terunofuji
 Ryuden,3,12,-18,17,17.0905,16,53,1.0058,,M5e,Ichiyamamoto;Kinbozan;Hokuseiho
 Nishikigi,8,7,2,57,62.32459999999999,17,52,1.0058,,M5w,Ryuden;Shodai;Shonannoumi;Kinbozan;Hiradoumi;Atamifuji;Daieisho;Tamawashi
 Kinbozan,7,8,-2,44,48.7758,18,51,1.0027,,M6e,Shonannoumi;Ichiyamamoto;Shodai;Mitakeumi;Hiradoumi;Myogiryu;Midorifuji
@@ -64,8 +64,8 @@ Hakuyozan,10,5,10,69,65,61,8,1,,J10w,Chiyosakae;Tenshoho;Oshoumi;Yuma;Tochimusas
 Akua,6,9,-6,41,38,62,7,1,,J11e,Chiyomaru;Yuma;Chiyosakae;Tochimusashi;Chiyoshoma;Mitoryu
 Hidenoumi,10,5,10,88,87,63,6,1,,J11w,Akua;Chiyomaru;Hakuyozan;Chiyosakae;Tokihayate;Tenshoho;Oshoma;Daishoho;Kagayaki;Kitanowaka
 Chiyomaru,5,10,-10,36,33,64,5,1,,J12e,Yuma;Oshoumi;Tochimusashi;Shiden;Shishi
-Tenshoho,5,10,-10,27,25,65,4,1,,J12w,Chiyomaru;Akua;Tochimusashi;Shimanoumi
-Yuma,5,10,-10,29,27,66,3,1,,J13e,Oshoumi;Hidenoumi;Shiden
+Tenshoho,5,10,-10,26,25,65,4,1,,J12w,Chiyomaru;Akua;Tochimusashi;Shimanoumi
+Yuma,5,10,-10,27,27,66,3,1,,J13e,Oshoumi;Hidenoumi;Shiden
 Oshoumi,8,7,2,64,62,67,2,1,,J13w,Tochimusashi;Tenshoho;Hidenoumi;Shimanoumi;Shiden;Daishoho;Asakoryu;Chiyoshoma
 Chiyosakae,6,9,-6,42,39,68,1,1,,J14e,Oshoumi;Tenshoho;Yuma;Shishi;Asakoryu;Kotoeko
-Tochimusashi,5,10,-10,30,27,69,0,1,,J14w,Chiyosakae;Yuma;Hidenoumi;Tamashoho
+Tochimusashi,5,10,-10,29,27,69,0,1,,J14w,Chiyosakae;Yuma;Hidenoumi;Tamashoho

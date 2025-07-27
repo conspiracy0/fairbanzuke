@@ -1,5 +1,5 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
-Harumafuji,Y1w,Y1e,N/A,1,1,0,-17,12,-17,120.9341,6,10.3224
+Harumafuji,Y1w,Y1e,N/A,1,1,0,-21,11,-21,105.59559999999999,5,8.0328
 Hakuho,Y1e,Y1w,M16e,0,0,1,30,0,29,0,0,0
 Kisenosato,Y2e,Y2e,J1w,2,2,2,32,0,30,0,0,0
 Kakuryu,Y2w,Y2w,J2e,3,3,3,33,0,30,0,0,0
@@ -8,13 +8,13 @@ Takayasu,O1e,O1w,M16e,4,4,5,30,1,25,5.4646,0,0
 Mitakeumi,S1e,S1e,M3w,7,7,6,5,8,-1,85.4553,2,2.8716
 Yoshikaze,S1w,S1w,M4e,8,8,7,6,8,-1,77.89089999999999,2,2.551
 Terunofuji,O2e,S2e,J1w,6,6,8,32,1,24,5.4646,0,0
-Kotoshogiku,M1w,K1e,M2e,12,12,9,2,10,-7,115.53820000000002,4,9.9653
-Onosho,M3e,K1w,M3w,15,15,10,5,10,-5,105.39159999999998,5,10.5473
+Kotoshogiku,M1w,K1e,M2e,12,12,9,2,10,-7,113.24860000000001,4,9.9653
+Onosho,M3e,K1w,M3w,15,15,10,5,10,-5,103.102,5,10.5473
 Tamawashi,K1e,M1e,M6w,9,9,11,11,7,0,69.6718,2,3.8857
-Takakeisho,M5w,M1w,M8e,20,20,12,14,9,2,91.9242,3,7.3551
+Takakeisho,M5w,M1w,M8e,20,20,12,14,9,2,89.63459999999999,3,7.3551
 Chiyotairyu,M3w,M2e,M8e,16,16,13,14,8,1,86.6115,3,4.467700000000001
 Shohozan,M4e,M2w,M8w,17,17,14,15,8,1,75.56609999999999,4,7.1302
-Hokutofuji,M2e,M3e,M8w,13,13,15,15,7,0,60.2639,4,9.9653
+Hokutofuji,M2e,M3e,M8w,13,13,15,15,7,0,57.97429999999999,4,9.9653
 Tochiozan,K1w,M3w,M9e,10,10,16,16,6,0,82.05199999999999,1,1.2755
 Chiyonokuni,M7e,M4e,M9w,23,23,17,17,9,0,83.8164,1,1.2755
 Ichinojo,M6e,M4w,M10w,21,21,18,19,8,1,59.888400000000004,0,0

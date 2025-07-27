@@ -1,12 +1,12 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
 Terunofuji,Y1e,Y1e,M15w,0,-1,0,29,0,29,0,0,0
 Takakeisho,O1w,O1e,M10e,1,0,1,18,3,17,21.8889,0,0
-Kiribayama,S2e,S1e,N/A,4,3,2,-19,13,-21,127.60480000000001,6,8.2942
+Kiribayama,S2e,S1e,N/A,4,3,2,-21,12,-23,113.0099,5,7.0187
 Daieisho,K2e,S1w,N/A,7,6,3,-12,12,-15,109.41579999999999,2,2.8716
 Wakamotoharu,K1e,S2e,N/A,5,4,4,-10,11,-14,101.4053,3,3.8265000000000002
 Hoshoryu,S1w,S2w,N/A,3,2,5,-8,10,-13,91.1192,4,5.102
-Shodai,M1w,K1e,N/A,10,9,6,-1,10,-7,102.94530000000002,5,7.339300000000001
-Kotonowaka,K1w,K1w,N/A,6,5,7,-1,9,-8,83.3032,2,2.8716
+Shodai,M1w,K1e,N/A,10,9,6,-1,10,-7,101.66980000000002,5,7.339300000000001
+Kotonowaka,K1w,K1w,N/A,6,5,7,-1,9,-8,82.02770000000001,2,2.8716
 Wakatakakage,S1e,M1e,M2w,2,1,8,3,7,-5,56.0009,2,2.551
 Abi,M2e,M1w,M3e,11,10,9,4,9,-5,77.3502,4,6.7573
 Midorifuji,M5w,M2e,M4w,18,17,10,7,10,-3,83.1429,1,1.2755
@@ -27,7 +27,7 @@ Mitakeumi,M3e,M9e,M14e,13,12,24,26,4,2,37.369200000000006,3,5.1612
 Tamawashi,M1e,M9w,M14e,9,8,25,26,3,1,19.8414,1,1.5961
 Takanosho,M11w,M10e,M14w,30,29,26,27,8,1,60.2271,0,0
 Hiradoumi,M9w,M10w,M14w,26,25,27,27,7,0,53.6502,0,0
-Onosho,M4e,M11e,M15e,15,14,28,28,4,0,38.476,1,1.5961
+Onosho,M4e,M11e,M15e,15,14,28,28,4,0,37.2005,1,1.5961
 Takarafuji,M12w,M11w,M15w,32,31,29,29,8,0,53.5549,0,0
 Daishoho,M13e,M12e,M16e,33,32,30,30,8,0,74.0736,0,0
 Hokuseiho,M15e,M12w,M16e,37,36,31,30,9,-1,73.2041,0,0

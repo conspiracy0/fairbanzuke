@@ -1,6 +1,6 @@
 Name,Wins,Losses,Record,Neustadl,Weighted Neustadl,Rank,Inverse Rank,Weight,Sanyaku,Starting Rank,Beats
-Hakuho,14,1,26,113,167.6921,0,69,3.79,Y1e,Y1e,Toyonoshima;Kyokutenho;Miyabiyama;Kotoshogiku;Yoshikaze;Takekaze;Aminishiki;Kisenosato;Baruto;Kaio;Kotomitsuki;Kotooshu;Chiyotaikai;Asashoryu
-Asashoryu,15,0,30,121,183.9225,1,68,3.79,Y1w,Y1w,Kisenosato;Kotoshogiku;Kyokutenho;Miyabiyama;Takekaze;Toyonoshima;Yoshikaze;Aminishiki;Harumafuji;Kotomitsuki;Kotooshu;Baruto;Chiyotaikai;Kaio;Hakuho
+Hakuho,14,1,26,112,163.90210000000002,0,69,3.79,Y1e,Y1e,Toyonoshima;Kyokutenho;Miyabiyama;Kotoshogiku;Yoshikaze;Takekaze;Aminishiki;Kisenosato;Baruto;Kaio;Kotomitsuki;Kotooshu;Chiyotaikai;Asashoryu
+Asashoryu,14,1,28,106,156.04110000000003,1,68,3.79,Y1w,Y1w,Kisenosato;Kotoshogiku;Kyokutenho;Miyabiyama;Takekaze;Toyonoshima;Yoshikaze;Aminishiki;Harumafuji;Kotomitsuki;Kotooshu;Baruto;Chiyotaikai;Kaio
 Kotomitsuki,2,13,-22,18,22.8105,2,67,2.2896,O1e,O1e,Goeido;Yoshikaze
 Chiyotaikai,8,7,2,61,81.04530000000001,3,66,2.2896,O1w,O1w,Kotoshogiku;Toyonoshima;Aminishiki;Yoshikaze;Kyokutenho;Takekaze;Kotooshu;Goeido
 Kotooshu,10,5,10,85,115.9436,4,65,2.2896,O2e,O2e,Kyokutenho;Kisenosato;Yoshikaze;Takekaze;Miyabiyama;Baruto;Goeido;Wakanosato;Kokkai;Kaio
@@ -61,11 +61,11 @@ Wakatenro,6,9,-6,47,47,58,11,1,,J9e,Daishoumi;Tamaasuka;Mokonami;Ushiomaru;Kotok
 Wakakoyu,7,8,-2,54,51,59,10,1,,J9w,Wakatenro;Kitazakura;Asofuji;Hakuba;Kotokasuga;Shirononami;Daishoumi
 Daishoumi,7,8,-2,56,54,60,9,1,,J10e,Yotsuguruma;Kaiho;Kitazakura;Mokonami;Kotokasuga;Ushiomaru;Sakaizawa
 Yotsuguruma,6,9,-6,45,45,61,8,1,,J10w,Wakakoyu;Kitataiki;Tamaasuka;Kasugao;Otsukasa;Wakatenro
-Asofuji,7,8,-2,60,57,62,7,1,,J11e,Kitazakura;Mokonami;Hakuba;Yotsuguruma;Shotenro;Shimotori
-Kitazakura,5,10,-10,25,22,63,6,1,,J11w,Kotokuni;Otsukasa;Shirononami
+Asofuji,7,8,-2,59,57,62,7,1,,J11e,Kitazakura;Mokonami;Hakuba;Yotsuguruma;Shotenro;Shimotori
+Kitazakura,5,10,-10,23,22,63,6,1,,J11w,Kotokuni;Otsukasa;Shirononami
 Ushiomaru,9,6,6,76,74,64,5,1,,J12e,Asofuji;Kiyoseumi;Otsukasa;Kotokuni;Yotsuguruma;Kaiho;Sakaizawa;Tosayutaka;Hoshihikari
 Mokonami,9,6,6,77,75,65,4,1,,J12w,Ushiomaru;Kitazakura;Yotsuguruma;Kaiho;Wakakoyu;Hakuba;Kitataiki;Kiyoseumi;Otsukasa
 Kiyoseumi,9,6,6,73,69,66,3,1,,J13e,Tamaasuka;Kotokuni;Wakatenro;Kitazakura;Daishoumi;Asofuji;Toyozakura;Kasuganishiki;Kasugao
 Tamaasuka,5,10,-10,37,34,67,2,1,,J13w,Asofuji;Wakakoyu;Hoshihikari;Kitazakura;Sakaizawa
 Hakuba,11,4,14,93,90,68,1,1,,J14e,Kotokuni;Kiyoseumi;Ushiomaru;Tamaasuka;Daishoumi;Yotsuguruma;Kasuganishiki;Otsukasa;Wakakirin;Kitazakura;Shimotori
-Kotokuni,9,6,6,65,63,69,0,1,,J14w,Tamaasuka;Mokonami;Wakatenro;Asofuji;Daishoumi;Kaiho;Hoshihikari;Wakakoyu
+Kotokuni,9,6,6,64,63,69,0,1,,J14w,Tamaasuka;Mokonami;Wakatenro;Asofuji;Daishoumi;Kaiho;Hoshihikari;Wakakoyu

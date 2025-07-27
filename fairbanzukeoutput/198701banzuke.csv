@@ -1,20 +1,20 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
-Chiyonofuji,Y1e,Y1e,N/A,0,0,0,-22,13,-22,156.23299999999998,8,17.0955
-Futahaguro,Y1w,Y1w,N/A,1,1,1,-17,12,-18,152.2821,8,17.0955
+Chiyonofuji,Y1e,Y1e,N/A,0,0,0,-24,12,-24,131.1214,7,13.3055
+Futahaguro,Y1w,Y1w,N/A,1,1,1,-17,12,-18,148.4921,8,17.0955
 Hokutenyu,O1w,O1e,N/A,3,3,2,-11,11,-13,118.9753,7,12.612000000000002
 Hokutoumi,O2e,O1w,N/A,4,4,3,-10,11,-13,131.04149999999998,7,12.612
 Onokuni,O1e,O2e,N/A,2,2,4,-4,9,-8,100.4426,4,9.6447
 Asashio,O2w,O2w,N/A,5,5,5,-1,9,-6,75.3402,4,6.4367
 Wakashimazu,O3e,O3e,M9e,6,6,6,16,5,10,36.312200000000004,2,3.8857
-Konishiki,S1e,S1e,N/A,7,7,7,-3,10,-10,140.24689999999998,5,13.4347
+Konishiki,S1e,S1e,N/A,7,7,7,-3,10,-10,136.4569,5,13.4347
 Asahifuji,M1e,S1w,M5w,11,11,8,9,8,1,92.57169999999999,6,12.030000000000001
 Tochitsukasa,K1w,K1e,M7e,10,10,9,12,7,3,90.65650000000001,4,7.7714
 Daitetsu,M6e,K1w,M8w,21,21,10,15,9,5,93.8991,1,1.2755
 Masurao,M4e,M1e,M8w,17,17,11,15,8,4,92.5309,3,8.3692
 Hananoumi,M7e,M1w,M9w,23,23,12,17,9,5,67.5446,0,0
 Dewanohana,K1e,M2e,M10w,9,9,13,19,5,6,36.8333,3,5.1612
-Sakahoko,M2w,M2w,M11e,14,14,14,20,6,6,65.1736,2,5.0655
-Kirinishiki,M6w,M3e,M11e,22,22,15,20,8,5,63.18169999999999,0,0
+Kirinishiki,M6w,M2w,M11e,22,22,14,20,8,6,63.18169999999999,0,0
+Sakahoko,M2w,M3e,M11e,14,14,15,20,6,5,61.3836,2,5.0655
 Daijuyama,M8e,M3w,M12w,25,25,16,23,8,7,77.6724,0,0
 Itai,M10w,M4e,M13e,30,30,17,24,9,7,84.6146,0,0
 Tochitsurugi,M8w,M4w,M13e,26,26,18,24,8,6,69.3039,0,0

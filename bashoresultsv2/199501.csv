@@ -1,13 +1,13 @@
 Name,Wins,Losses,Record,Neustadl,Weighted Neustadl,Rank,Inverse Rank,Weight,Sanyaku,Starting Rank,Beats
-Takanohana,14,1,26,99,129.6112,0,65,3.79,Y1e,Y1e,Daizen;Tomonohana;Kotonowaka;Kotoinazuma;Kushimaumi;Hamanoshima;Terao;Kirishima;Mainoumi;Tochinowaka;Kenko;Musashimaru;Akebono;Musashimaru
+Takanohana,13,2,26,85,107.30799999999999,0,65,3.79,Y1e,Y1e,Daizen;Tomonohana;Kotonowaka;Kotoinazuma;Kushimaumi;Hamanoshima;Terao;Kirishima;Mainoumi;Tochinowaka;Kenko;Akebono;Musashimaru
 Akebono,12,3,18,88,107.45869999999998,1,64,3.79,Y1w,Y1w,Kotonowaka;Akinoshima;Kenko;Kotonishiki;Mainoumi;Kaio;Terao;Hamanoshima;Kushimaumi;Tochinowaka;Wakanohana;Takanonami
 Takanonami,11,4,14,61,73.39829999999999,2,63,2.2896,O1e,O1e,Daizen;Tomonohana;Kotoinazuma;Kushimaumi;Musoyama;Hamanoshima;Mainoumi;Kotonishiki;Terao;Kaio;Kotonowaka
 Musashimaru,13,2,22,97,124.44169999999997,3,62,2.2896,O1w,O1w,Kushimaumi;Kenko;Mainoumi;Kotonishiki;Terao;Kaio;Kotonowaka;Tochinowaka;Wakanohana;Hamanoshima;Takatoriki;Akebono;Takanonami
 Wakanohana,12,3,18,67,77.6474,4,61,2.2896,O2e,O2e,Tomonohana;Kotoinazuma;Daizen;Hamanoshima;Kushimaumi;Mainoumi;Terao;Kirishima;Kenko;Tochinowaka;Kotonowaka;Kaio
-Kaio,8,7,2,55,70.82879999999999,5,60,1.5961,S1e,S1e,Mainoumi;Tochinowaka;Takanohana;Kushimaumi;Kotoinazuma;Kotonowaka;Takatoriki;Terao
+Kaio,8,7,2,54,68.5392,5,60,1.5961,S1e,S1e,Mainoumi;Tochinowaka;Takanohana;Kushimaumi;Kotoinazuma;Kotonowaka;Takatoriki;Terao
 Kotonishiki,4,11,-14,34,39.058699999999995,6,59,1.5961,S1w,S1w,Kushimaumi;Hamanoshima;Wakanohana;Akinoshima
 Akinoshima,11,4,14,77,95.0797,7,58,1.2755,K1e,K1e,Musashimaru;Kaio;Kenko;Mainoumi;Hamanoshima;Tochinowaka;Terao;Kushimaumi;Kirishima;Daishoho;Kotonowaka
-Musoyama,4,11,-14,35,49.424099999999996,8,57,1.2755,K1w,K1w,Takanohana;Hamanoshima;Kaio;Kenko
+Musoyama,4,11,-14,34,47.134499999999996,8,57,1.2755,K1w,K1w,Takanohana;Hamanoshima;Kaio;Kenko
 Kotonowaka,5,10,-10,25,31.2618,9,56,1.1274,,M1e,Kushimaumi;Kenko;Musoyama;Daizen;Tomonohana
 Takatoriki,7,8,-2,44,57.851299999999995,10,55,1.1274,,M1w,Hamanoshima;Kitakachidoki;Daizen;Musoyama;Akebono;Mainoumi;Tochinowaka
 Tochinowaka,4,11,-14,25,30.511400000000002,11,54,1.0589,,M2e,Kirishima;Daizen;Takanonami;Kotonishiki
@@ -58,10 +58,10 @@ Mutsuhokkai,8,7,2,59,57,55,10,1,,J8w,Rikio;Hitachiryu;Aogiyama;Ryudo;Wakahayato;
 Sentoryu,6,9,-6,43,42,56,9,1,,J9e,Shikishima;Aogiyama;Tamakairiki;Daishoyama;Tochinofuji;Mutetsuyama
 Dairyu,8,7,2,66,65,57,8,1,,J9w,Sentoryu;Shikishima;Asahiyutaka;Kotofuji;Kirinishiki;Mutsuhokkai;Toyonoumi;Tamakairiki
 Tsurunofuji,8,7,2,57,56,58,7,1,,J10e,Tamakairiki;Mutetsuyama;Shikishima;Ryudo;Sentoryu;Toyonoumi;Kirinishiki;Daishoyama
-Tamakairiki,2,13,-22,8,7,59,6,1,,J10w,Kanechika
+Tamakairiki,2,13,-22,7,7,59,6,1,,J10w,Kanechika
 Kotofuji,8,7,2,53,51,60,5,1,,J11e,Tamakairiki;Wakahayato;Shikishima;Mutetsuyama;Mutsuhokkai;Tsurunofuji;Kirinishiki;Sentoryu
 Tochinofuji,8,7,2,61,60,61,4,1,,J11w,Kotofuji;Tamakairiki;Daishoyama;Shikishima;Mutetsuyama;Hoshiandesu;Rikio;Mutsuhokkai
-Wakahayato,4,11,-14,22,20,62,3,1,,J12e,Tochinofuji;Tamakairiki;Dairyu
+Wakahayato,4,11,-14,21,20,62,3,1,,J12e,Tochinofuji;Tamakairiki;Dairyu
 Tomoefuji,11,4,14,96,95,63,2,1,,J12w,Wakahayato;Kotofuji;Hoshiandesu;Dairyu;Mutsuhokkai;Tsurunofuji;Rikio;Asahiyutaka;Sentoryu;Kyokugozan;Asanosho
 Mutetsuyama,4,11,-14,28,26,64,1,1,,J13e,Ryudo;Wakahayato;Mutsuhokkai;Tamakairiki
 Ryudo,10,5,10,84,82,65,0,1,,J13w,Tochinofuji;Tamakairiki;Wakahayato;Sentoryu;Toyonoumi;Tomoefuji;Rikio;Kotofuji;Tosanoumi;Dairyu

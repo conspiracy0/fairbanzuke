@@ -1,7 +1,7 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
 Taiho,Y1e,Y1e,J1e,0,1,0,31,0,31,0,0,0
-Kitanofuji,O1e,O1e,N/A,1,2,1,-24,14,-25,156.87669999999997,8,14.2081
-Tamanoshima,O1w,O1w,N/A,2,3,2,-19,13,-21,137.3212,6,11.336500000000001
+Kitanofuji,O1e,O1e,N/A,1,2,1,-24,13,-25,135.81100000000004,7,11.9185
+Tamanoshima,O1w,O1w,N/A,2,3,2,-19,13,-21,135.0316,6,11.336500000000001
 Kiyokuni,O2w,O2e,N/A,4,5,3,-5,10,-8,91.2069,4,6.0638
 Kotozakura,O2e,O2w,N/A,3,4,4,-2,9,-6,81.3596,2,3.5651
 Kirinji,S1e,S1e,M3e,5,6,5,4,8,-1,82.2011,3,5.1612
@@ -21,7 +21,7 @@ Kotetsuyama,M10e,M4w,M12w,28,29,18,23,9,5,62.345,0,0
 Asasegawa,M4w,M5e,M13e,17,18,19,24,6,5,53.1425,2,3.1922
 Daiyu,M2w,M5w,M13e,13,14,20,24,5,4,48.662699999999994,3,5.1612
 Tochioyama,M6e,M6e,M12w,20,21,21,23,7,2,62.75620000000001,0,0
-Fukunohana,M3e,M6w,M13w,14,15,22,25,5,3,58.5021,2,3.8857
+Fukunohana,M3e,M6w,M13w,14,15,22,25,5,3,56.2125,2,3.8857
 Daisetsu,M12w,M7e,M15e,33,34,23,28,9,5,73.3661,0,0
 Wakanami,M7w,M7w,M14e,23,24,24,26,7,2,57.2447,0,0
 Dairyugawa,M10w,M8e,M15e,29,30,25,28,8,3,58.2795,0,0

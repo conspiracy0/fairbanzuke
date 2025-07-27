@@ -1,11 +1,11 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
-Wajima,Y1e,Y1e,N/A,0,0,0,-26,14,-26,174.0696,6,11.336500000000001
+Wajima,Y1e,Y1e,N/A,0,0,0,-26,13,-26,155.6992,5,9.0469
 Kotozakura,Y1w,Y1w,J1w,1,1,1,31,0,30,0,0,0
 Kitanofuji,Y2e,Y2e,J2e,2,2,2,32,0,30,0,0,0
 Kitanoumi,O1e,O1e,N/A,3,3,3,-19,13,-22,150.13649999999998,5,7.6598999999999995
 Takanohana,O2w,O1w,N/A,5,5,4,-5,10,-9,115.4272,5,8.3534
 Daikirin,O1w,O2e,J3e,4,4,5,34,0,29,0,0,0
-Takamiyama,S1w,S1e,N/A,7,7,6,-7,11,-13,130.2468,5,9.5332
+Takamiyama,S1w,S1e,N/A,7,7,6,-7,11,-13,127.95720000000001,5,9.5332
 Daiju,S2e,S1w,M2e,8,8,7,2,9,-5,99.45530000000001,5,9.5332
 Kaiketsu,S1e,S2e,M3e,6,6,8,4,8,-4,85.4763,2,3.8857
 Masuiyama,K1e,K1e,M5e,10,10,9,8,8,-1,84.0682,4,7.4508
@@ -14,7 +14,7 @@ Asahikuni,M1e,K2e,M6e,12,12,11,10,8,-1,59.8575,2,6.0796
 Kurohimeyama,S2w,M1e,M6w,9,9,12,11,7,-1,70.29230000000001,4,6.4367
 Kongo,M2e,M1w,M7e,14,14,13,12,8,-1,70.7851,2,2.8716
 Haguroiwa,M2w,M2e,M7w,15,15,14,13,8,-1,81.36880000000001,5,10.226700000000001
-Yutakayama,K1w,M2w,M7w,11,11,15,13,7,-2,80.5057,2,5.3861
+Yutakayama,K1w,M2w,M7w,11,11,15,13,7,-2,78.2161,2,5.3861
 Onishiki,M9e,M3e,M10e,28,28,16,18,10,2,70.61699999999999,1,1.5961
 Arase,M1w,M3w,M10w,13,13,17,19,6,2,50.0587,3,5.8547
 Wakamisugi,M6e,M4e,M11e,22,22,18,20,8,2,63.0417,0,0

@@ -1,14 +1,14 @@
 Name,Wins,Losses,Record,Neustadl,Weighted Neustadl,Rank,Inverse Rank,Weight,Sanyaku,Starting Rank,Beats
-Chiyonofuji,14,1,26,128,173.3933,0,64,3.79,Y1e,Y1e,Asashio;Ozutsu;Sadanoumi;Kurosegawa;Tochihikari;Kirinji;Kotokaze;Wakashimazu;Aobajo;Toryu;Dewanohana;Hokutenyu;Wakanohana;Asashio
-Kitanoumi,9,6,6,62,76.60979999999999,1,63,3.79,Y1w,Y1w,Daijuyama;Kirinji;Sadanoumi;Onishiki;Kurosegawa;Wakashimazu;Tochihikari;Ozutsu;Kotokaze
-Wakanohana,12,3,18,88,107.2055,2,62,3.79,Y2e,Y2e,Amanoyama;Tochihikari;Azumanada;Kirinji;Onishiki;Sadanoumi;Ozutsu;Kurosegawa;Hokutenyu;Toryu;Kitanoumi;Kotokaze
-Takanosato,11,4,14,85,104.0005,3,61,2.2896,O1e,O1e,Kirinji;Amanoyama;Ozutsu;Tochihikari;Sadanoumi;Wakanofuji;Aobajo;Kurosegawa;Hokutenyu;Chiyonofuji;Toryu
-Kotokaze,9,6,6,70,92.63390000000001,4,60,2.2896,O1w,O1w,Tochihikari;Asashio;Daijuyama;Kirinji;Wakanofuji;Amanoyama;Wakashimazu;Takanosato;Hokutenyu
-Dewanohana,11,4,14,91,121.38589999999999,5,59,1.5961,S1e,S1e,Wakanofuji;Amanoyama;Aobajo;Daijuyama;Tochihikari;Azumanada;Kotokaze;Wakanohana;Kitanoumi;Wakashimazu;Takanosato
-Wakashimazu,7,8,-2,55,64.3454,6,58,1.5961,S1w,S1w,Onishiki;Wakanofuji;Aobajo;Sadanoumi;Kurosegawa;Kaiki;Toryu
-Kirinji,2,13,-22,12,15.6568,7,57,1.2755,K1e,K1e,Daijuyama;Azumanada
+Chiyonofuji,13,2,26,114,150.7571,0,63,3.79,Y1e,Y1e,Ozutsu;Sadanoumi;Kurosegawa;Tochihikari;Kirinji;Kotokaze;Wakashimazu;Aobajo;Toryu;Dewanohana;Hokutenyu;Wakanohana;Asashio
+Kitanoumi,9,6,6,62,76.60979999999999,1,62,3.79,Y1w,Y1w,Daijuyama;Kirinji;Sadanoumi;Onishiki;Kurosegawa;Wakashimazu;Tochihikari;Ozutsu;Kotokaze
+Wakanohana,12,3,18,88,107.2055,2,61,3.79,Y2e,Y2e,Amanoyama;Tochihikari;Azumanada;Kirinji;Onishiki;Sadanoumi;Ozutsu;Kurosegawa;Hokutenyu;Toryu;Kitanoumi;Kotokaze
+Takanosato,11,4,14,84,102.72500000000001,3,60,2.2896,O1e,O1e,Kirinji;Amanoyama;Ozutsu;Tochihikari;Sadanoumi;Wakanofuji;Aobajo;Kurosegawa;Hokutenyu;Chiyonofuji;Toryu
+Kotokaze,9,6,6,70,92.63390000000001,4,59,2.2896,O1w,O1w,Tochihikari;Asashio;Daijuyama;Kirinji;Wakanofuji;Amanoyama;Wakashimazu;Takanosato;Hokutenyu
+Dewanohana,11,4,14,91,121.38589999999999,5,58,1.5961,S1e,S1e,Wakanofuji;Amanoyama;Aobajo;Daijuyama;Tochihikari;Azumanada;Kotokaze;Wakanohana;Kitanoumi;Wakashimazu;Takanosato
+Wakashimazu,7,8,-2,55,64.3454,6,57,1.5961,S1w,S1w,Onishiki;Wakanofuji;Aobajo;Sadanoumi;Kurosegawa;Kaiki;Toryu
+Kirinji,2,13,-22,12,15.6568,7,56,1.2755,K1e,K1e,Daijuyama;Azumanada
 Asashio,13,2,22,112,152.4184,8,55,1.2755,K1w,K1w,Takanosato;Tochihikari;Wakanohana;Kitanoumi;Daijuyama;Sadanoumi;Onishiki;Hokutenyu;Ozutsu;Wakashimazu;Dewanohana;Hoo;Wakanofuji
-Daijuyama,5,10,-10,39,49.2402,9,54,1.1274,,M1e,Chiyonofuji;Azumanada;Amanoyama;Kinoarashi;Shishiho
+Daijuyama,5,10,-10,38,47.96470000000001,9,54,1.1274,,M1e,Chiyonofuji;Azumanada;Amanoyama;Kinoarashi;Shishiho
 Amanoyama,5,10,-10,24,25.3932,10,53,1.1274,,M1w,Kirinji;Shishiho;Sadanoumi;Tamaryu;Azumanada
 Tochihikari,4,11,-14,23,30.1547,11,52,1.0589,,M2e,Kirinji;Wakanofuji;Onishiki;Amanoyama
 Onishiki,6,9,-6,46,55.4564,12,51,1.0589,,M2w,Kaiki;Kotokaze;Takanosato;Kirinji;Shishiho;Kurama
@@ -58,8 +58,8 @@ Kaio,7,8,-2,47,47,55,8,1,,J10e,Hachiya;Iwanami;Harunafuji;Kotochitose;Tengozan;K
 Takamisugi,9,6,6,71,68,56,7,1,,J10w,Tengozan;Aobayama;Banryuyama;Tamakiyama;Hakuryu;Hachiya;Kotogatake;Daihi;Zaonishiki
 Tengozan,8,7,2,66,60,57,6,1,,J11e,Oko;Matsuyama;Kotochitose;Kirishima;Tamakiyama;Hachiya;Asahifuji;Itai
 Kotogatake,4,11,-14,40,39,58,5,1,,J11w,Sakahoko;Banryuyama;Masudayama;Oko
-Tamakiyama,7,8,-2,33,28,59,4,1,,J12e,Kirishima;Asahifuji;Hachiya;Washuyama
-Sakahoko,10,5,10,82,81.0003,60,3,1,,J12w,Saisu;Kotochitose;Asahifuji;Daihi;Hachiya;Takamisugi;Wakajishi;Zaonishiki;Washuyama
-Itai,10,5,10,80,77.0003,61,2,1,,J13e,Banryuyama;Kirishima;Kaio;Kotowaka;Koboyama;Masudayama;Daihi;Washuyama;Wakajishi
-Kirishima,6,9,-6,35,33,62,1,1,,J13w,Washuyama;Takamisugi;Kaio;Asahifuji
+Tamakiyama,7,8,-2,30,28,59,4,1,,J12e,Kirishima;Asahifuji;Hachiya;Washuyama
+Sakahoko,10,5,10,81,81.0003,60,3,1,,J12w,Saisu;Kotochitose;Asahifuji;Daihi;Hachiya;Takamisugi;Wakajishi;Zaonishiki;Washuyama
+Itai,10,5,10,79,77.0003,61,2,1,,J13e,Banryuyama;Kirishima;Kaio;Kotowaka;Koboyama;Masudayama;Daihi;Washuyama;Wakajishi
+Kirishima,6,9,-6,33,33,62,1,1,,J13w,Washuyama;Takamisugi;Kaio;Asahifuji
 Tochimatoi,0,15,-30,0,0,63,0,1,,N/A,

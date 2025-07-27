@@ -1,19 +1,19 @@
 Name,Wins,Losses,Record,Neustadl,Weighted Neustadl,Rank,Inverse Rank,Weight,Sanyaku,Starting Rank,Beats
 Taiho,11,4,14,90,121.30749999999999,0,59,3.79,Y1e,Y1e,Wakafutase;Takamiyama;Ryuko;Toda;Dairyugawa;Maenoyama;Hasegawa;Asanobori;Fukunohana;Tamanoshima;Kitanofuji
 Kashiwado,1,14,-26,7,8.782499999999999,1,58,3.79,Y1w,Y1w,Takamiyama
-Kiyokuni,13,2,22,114,158.58060000000003,2,57,2.2896,O1e,O1e,Kirinji;Fukunohana;Kainoyama;Kotetsuyama;Wakafutase;Takamiyama;Toda;Maenoyama;Hasegawa;Kitanofuji;Tamanoshima;Taiho;Fujinokawa
+Kiyokuni,12,3,24,101,143.6593,2,57,2.2896,O1e,O1e,Kirinji;Fukunohana;Kainoyama;Kotetsuyama;Wakafutase;Takamiyama;Toda;Maenoyama;Hasegawa;Kitanofuji;Tamanoshima;Taiho
 Kitanofuji,9,6,6,69,99.42790000000001,3,56,2.2896,O1w,O1w,Asanobori;Wakafutase;Kirinji;Kainoyama;Fukunohana;Kotetsuyama;Tamanoshima;Toda;Kotozakura
-Kotozakura,11,4,14,89,126.56349999999999,4,55,2.2896,O2e,O2e,Fukunohana;Kirinji;Toda;Takamiyama;Kotetsuyama;Ryuko;Wakafutase;Dairyugawa;Asanobori;Kiyokuni;Taiho
+Kotozakura,11,4,14,88,125.5577,4,55,2.2896,O2e,O2e,Fukunohana;Kirinji;Toda;Takamiyama;Kotetsuyama;Ryuko;Wakafutase;Dairyugawa;Asanobori;Kiyokuni;Taiho
 Tamanoshima,9,6,6,71,98.60079999999999,5,54,2.2896,O2w,O2w,Kainoyama;Wakafutase;Ryuko;Takamiyama;Asanobori;Fukunohana;Kotetsuyama;Kotozakura;Mutsuarashi
 Hasegawa,11,4,14,88,116.1949,6,53,1.5961,S1e,S1e,Toda;Kainoyama;Asanobori;Dairyugawa;Ryuko;Wakafutase;Kitanofuji;Takamiyama;Mutsuarashi;Maenoyama;Tamanoshima
 Maenoyama,10,5,10,78,108.11409999999998,7,52,1.5961,S1w,S1w,Toda;Kotetsuyama;Wakafutase;Kainoyama;Kirinji;Ryuko;Tamanoshima;Dairyugawa;Kitanofuji;Kotozakura
 Kirinji,8,7,2,58,77.5129,8,51,1.2755,K1e,K1e,Kashiwado;Fukunohana;Toda;Tamanoshima;Takamiyama;Kotetsuyama;Asanobori;Tochiazuma
 Wakafutase,3,12,-18,17,21.378700000000002,9,50,1.2755,K1w,K1w,Kainoyama;Dairyugawa;Toda
-Ryuko,8,7,2,71,92.51190000000001,10,49,1.1274,,M1e,Dairyugawa;Kiyokuni;Kitanofuji;Fukunohana;Tochiazuma;Tochioyama;Myobudani;Kirinji
+Ryuko,8,7,2,70,91.50610000000002,10,49,1.1274,,M1e,Dairyugawa;Kiyokuni;Kitanofuji;Fukunohana;Tochiazuma;Tochioyama;Myobudani;Kirinji
 Toda,6,9,-6,43,47.8256,11,48,1.1274,,M1w,Dairyugawa;Kainoyama;Yoshinohana;Daiyu;Tochioyama;Tochiazuma
 Kainoyama,4,11,-14,36,49.5601,12,47,1.0589,,M2e,Kotozakura;Taiho;Dairyugawa;Kaigo
 Fukunohana,6,9,-6,35,41.7785,13,46,1.0589,,M2w,Dairyugawa;Kashiwado;Kotetsuyama;Wakafutase;Asasegawa;Tokibayama
-Asanobori,7,8,-2,55,82.2328,14,45,1.0272,,M3e,Maenoyama;Kashiwado;Kainoyama;Kiyokuni;Ryuko;Fukunohana;Kaigo
+Asanobori,7,8,-2,54,81.227,14,45,1.0272,,M3e,Maenoyama;Kashiwado;Kainoyama;Kiyokuni;Ryuko;Fukunohana;Kaigo
 Takamiyama,6,9,-6,41,49.8248,15,44,1.0272,,M3w,Kitanofuji;Toda;Fukunohana;Wakafutase;Yoshinohana;Myobudani
 Kotetsuyama,6,9,-6,48,60.01219999999999,16,43,1.0126,,M4e,Hasegawa;Taiho;Yoshinohana;Kurohimeyama;Asahikuni;Tochiisami
 Dairyugawa,4,11,-14,31,31.6797,17,42,1.0126,,M4w,Mutsuarashi;Yoshinohana;Hanahikari;Tochifuji
@@ -55,7 +55,7 @@ Misogidori,2,13,-22,17,16,52,7,1,,J10e,Wakanaruto;Masuiyama
 Dairyu,8,7,2,60,57,53,6,1,,J10w,Misogidori;Miyama;Masuiyama;Manazuru;Takanohana;Kitanohana;Yoshioyama;Oiyama
 Wakayoshiba,0,15,-30,0,0,54,5,1,,J11e,
 Wakatenryu,6,9,-6,38,38,55,4,1,,J11w,Wakayoshiba;Dairyu;Misogidori;Ageshio;Wakamiyama;Miyama
-Masuiyama,7,8,-2,42,40,56,3,1,,J12e,Kitanohana;Wakatenryu;Wakanaruto;Wakamiyama;Kongo;Wakanami
-Kitanohana,2,13,-22,4,3,57,2,1,,J12w,Misogidori
+Masuiyama,7,8,-2,41,40,56,3,1,,J12e,Kitanohana;Wakatenryu;Wakanaruto;Wakamiyama;Kongo;Wakanami
+Kitanohana,2,13,-22,3,3,57,2,1,,J12w,Misogidori
 Ageshio,9,6,6,57,56,58,1,1,,J13e,Wakayoshiba;Misogidori;Kitanohana;Miyama;Asakaze;Takanohana;Dairyu;Oiyama;Wakamiyama
-Manazuru,10,5,10,76,73.0001,59,0,1,,J13w,Ageshio;Kitanohana;Masuiyama;Daisetsu;Takanohana;Wakatenryu;Asakaze;Mienoumi;Wakanami
+Manazuru,10,5,10,75,73.0001,59,0,1,,J13w,Ageshio;Kitanohana;Masuiyama;Daisetsu;Takanohana;Wakatenryu;Asakaze;Mienoumi;Wakanami

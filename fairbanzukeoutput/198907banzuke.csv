@@ -1,8 +1,8 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
-Chiyonofuji,Y2e,Y1e,N/A,2,2,0,-20,13,-20,160.54620000000003,6,12.8369
+Chiyonofuji,Y2e,Y1e,N/A,2,2,0,-22,12,-22,140.16790000000003,5,9.0469
 Hokutoumi,Y1e,Y1w,N/A,0,0,1,-18,12,-19,146.71540000000002,6,10.3224
 Onokuni,Y1w,Y2e,M14w,1,1,2,27,1,25,6.6124,0,0
-Hokutenyu,O1w,O1e,N/A,4,4,3,-2,9,-5,114.14339999999999,5,11.2408
+Hokutenyu,O1w,O1e,N/A,4,4,3,-2,9,-5,110.3534,5,11.2408
 Asahifuji,O1e,O1w,M1w,3,3,4,1,8,-3,98.2951,3,5.1612
 Konishiki,O2w,O2e,M2w,5,5,5,3,8,-2,91.6684,3,6.9822
 Kotogaume,S1e,S1e,N/A,6,6,6,-4,10,-10,136.50429999999997,5,8.7263
@@ -10,8 +10,8 @@ Terao,M3w,S1w,M3w,15,15,7,5,10,-2,119.23110000000001,4,9.6447
 Tochinowaka,M1w,K1e,M5w,11,11,8,9,8,1,95.167,4,7.4508
 Kirishima,K1e,K1w,M6e,8,8,9,10,7,1,83.1125,3,8.3692
 Daijuyama,M8w,M1e,M6w,25,25,10,11,11,1,109.41829999999999,1,1.2755
-Mitoizumi,K1w,M1w,M6w,9,9,11,11,7,0,85.0085,4,11.1451
-Akinoshima,M1e,M2e,M7e,10,10,12,12,7,0,100.556,5,12.7412
+Mitoizumi,K1w,M1w,M6w,9,9,11,11,7,0,81.2185,4,11.1451
+Akinoshima,M1e,M2e,M7e,10,10,12,12,7,0,96.766,5,12.7412
 Ozutsu,M4w,M2w,M8w,17,17,13,15,8,2,71.7311,2,2.8716
 Misugisato,M5e,M3e,M9e,18,18,14,16,8,2,96.628,2,3.5651
 Hananokuni,M3e,M3w,M9e,14,14,15,16,7,1,74.13589999999999,4,6.7573

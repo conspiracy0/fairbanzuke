@@ -301,21 +301,21 @@ def export_rikishi_to_csv(rikishi_list, filename="rikishi_results.csv"):
         # Write Rikishi data line-by-line
         for rikishi in rikishi_list:
             # try:
-            print(
-                rikishi.name,
-                rikishi.wins,
-                rikishi.losses,
-                rikishi.record,
-                rikishi.neustadl,
-                rikishi.weighted_neustadl if rikishi.weighted_neustadl is not None else "",
-                rikishi.rank if rikishi.rank is not None else "",
-                rikishi.inverse_rank if rikishi.inverse_rank is not None else "",
-                rikishi.weight if rikishi.weight is not None else "",
-                rikishi.sanyaku,
-                rikishi.starting_rank,
-                rikishi.beats,  # Joins opponents by semicolon
-
-            )
+            # print(
+            #     rikishi.name,
+            #     rikishi.wins,
+            #     rikishi.losses,
+            #     rikishi.record,
+            #     rikishi.neustadl,
+            #     rikishi.weighted_neustadl if rikishi.weighted_neustadl is not None else "",
+            #     rikishi.rank if rikishi.rank is not None else "",
+            #     rikishi.inverse_rank if rikishi.inverse_rank is not None else "",
+            #     rikishi.weight if rikishi.weight is not None else "",
+            #     rikishi.sanyaku,
+            #     rikishi.starting_rank,
+            #     rikishi.beats,  # Joins opponents by semicolon
+            #
+            # )
             writer.writerow([
                 rikishi.name,
                 rikishi.wins,
@@ -1326,36 +1326,80 @@ changed_names = {
 
 komusubi_force_offset = 2
 komusubi_threshold_list = []
-banzukecode = "200803"
-# banzukecode ="197111"
-# banzukecode = "199511"
-bashofolder = "bashoresultsv2"
-rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
-make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
-# # # #
+# banzukecode = "200803"
+# # banzukecode ="197111"
+# # banzukecode = "199511"
+# bashofolder = "bashoresultsv2"
+# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
+# make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
+# # # # #
 
 # make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)
 
 # import os
 
-# input_folder = "bashoresultsv2"
-# output_folder = "fairbanzukeoutput"
-#
-# os.makedirs(output_folder, exist_ok=True)
-#
-# for fname in os.listdir(input_folder):
-#     if not fname.endswith(".csv"):
-#         continue
-#     basho_code = fname[:-4]  # removes '.csv'
-#     if basho_code in prestandard_codes:
-#         continue
-#     in_path = os.path.join(input_folder, fname)
-#     out_path = os.path.join(output_folder, f"{basho_code}banzuke.csv")
-#
-#     rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
-#     make_banzuke(rlist, out_path, basho_code, input_folder, 2, 1)
+input_folder = "bashoresultsv2"
+output_folder = "fairbanzukeoutput"
+
+os.makedirs(output_folder, exist_ok=True)
+
+for fname in os.listdir(input_folder):
+    if not fname.endswith(".csv"):
+        continue
+    basho_code = fname[:-4]  # removes '.csv'
+    if basho_code in prestandard_codes:
+        continue
+    in_path = os.path.join(input_folder, fname)
+    out_path = os.path.join(output_folder, f"{basho_code}banzuke.csv")
+
+    rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
+    make_banzuke(rlist, out_path, basho_code, input_folder, 2, 1)
 
 for n in komusubi_threshold_list:
     print(n)
 
 print(len(komusubi_threshold_list))
+
+
+##### fix playoff wins
+
+# input_folder = "bashoresultsv2"
+# input_folder = "editedbashosv2"
+# output_folder =
+# os.makedirs(output_folder, exist_ok=True)
+
+# with open("validators/playofffix.csv", newline='', encoding='utf-8') as f:
+#     reader = csv.DictReader(f)
+#     fixrows = list(reader)
+#     fixfieldnames = reader.fieldnames
+#
+#     for row in fixrows:
+#         bcode = row["Date"]
+#         in_path = os.path.join(input_folder, bcode+".csv")
+#         print(in_path)
+#         # out_path = os.path.join(output_folder, fname)
+#         with open(in_path, newline='', encoding='utf-8') as f2:
+#             bashoreader = csv.DictReader(f2)
+#             bashorows = list(bashoreader)
+#             bashofieldnames = bashoreader.fieldnames
+#             # print(bashofieldnames)
+#         for brow in bashorows:
+#             # print(brow["Name"], row["Winner"])
+#             if brow["Name"] == row["Winner"]:
+#                 print("Before: ", brow["Name"], brow["Beats"])
+#                 brow["Beats"] = brow["Beats"].split(';')
+#                 brow["Beats"].remove(row["Loser"])
+#                 brow["Beats"] = ";".join(brow["Beats"])
+#                 # print(brow["Name"], brow["Beats"])
+#                 brow["Wins"] = int(brow["Wins"])-1
+#                 brow["Record"] = brow['Wins'] * 2
+#                 brow["Losses"] = 15 - brow['Wins']
+#
+#         # Write the updated rows to the output folder
+#         with open(in_path, "w", newline='', encoding='utf-8') as fout:
+#             writer = csv.DictWriter(fout, fieldnames=bashofieldnames)
+#             writer.writeheader()
+#             writer.writerows(bashorows)
+#
+#         rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
+#         export_rikishi_to_csv(rlist, in_path)

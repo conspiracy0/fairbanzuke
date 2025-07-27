@@ -1,7 +1,7 @@
 Name,Wins,Losses,Record,Neustadl,Weighted Neustadl,Rank,Inverse Rank,Weight,Sanyaku,Starting Rank,Beats
 Tochinishiki,14,1,26,113,143.2565,0,90,3.79,Y1e,Y1e,Tokitsuyama;Tsurugamine;Tamanoumi;Shionishiki;Kashiwado;Wakanoumi;Kitabayama;Matsunobori;Fusanishiki;Kitanonada;Wakahaguro;Wakamaeda;Kotogahama;Asashio
-Asashio,10,5,10,82,102.08589999999998,1,89,3.79,Y1w,Y1w,Kiryugawa;Kitanonada;Tamanoumi;Tokitsuyama;Kashiwado;Wakanoumi;Kitabayama;Tsurugamine;Wakahaguro;Wakanohana
-Wakanohana,15,0,30,132,175.55659999999997,2,88,3.79,Y2e,Y2e,Atagoyama;Fusanishiki;Tokitsuyama;Kashiwado;Shionishiki;Kitabayama;Tsurugamine;Wakahaguro;Shinobuyama;Matsunobori;Kitanonada;Tochihikari;Wakamaeda;Tochinishiki;Tochinishiki
+Asashio,10,5,10,81,98.29589999999999,1,89,3.79,Y1w,Y1w,Kiryugawa;Kitanonada;Tamanoumi;Tokitsuyama;Kashiwado;Wakanoumi;Kitabayama;Tsurugamine;Wakahaguro;Wakanohana
+Wakanohana,14,1,28,117,152.135,2,88,3.79,Y2e,Y2e,Atagoyama;Fusanishiki;Tokitsuyama;Kashiwado;Shionishiki;Kitabayama;Tsurugamine;Wakahaguro;Shinobuyama;Matsunobori;Kitanonada;Tochihikari;Wakamaeda;Tochinishiki
 Kotogahama,8,7,2,64,78.3215,3,87,2.2896,O1e,O1e,Shinobuyama;Atagoyama;Kitanonada;Kitabayama;Tokitsuyama;Tsurugamine;Matsunobori;Asashio
 Wakahaguro,7,8,-2,48,59.811800000000005,4,86,1.5961,S1e,S1e,Wakanoumi;Kashiwado;Tsurugamine;Atagoyama;Fusanishiki;Wakamaeda;Kotogahama
 Tochihikari,10,5,10,76,95.8594,5,85,1.5961,S1w,S1w,Kitabayama;Kashiwado;Wakanoumi;Kitanonada;Tokitsuyama;Asashio;Kotogahama;Matsunobori;Wakamaeda;Wakahaguro
@@ -82,11 +82,11 @@ Hanada,10,5,10,90,89,79,11,1,,N/A,Taikai;Dairyu;Amatsunada;Udagawa;Nishinaka;Hak
 Ononishiki,7,8,-2,60,57,80,10,1,,N/A,Otayama;Taikai;Asanoumi;Taiho;Amatsunada;Nanatsuumi;Matsunishiki
 Ichinoya,7,8,-2,64,61,81,9,1,,N/A,Dairyu;Taikai;Sagahikari;Udagawa;Oiteyama;Asanoumi;Onoura
 Dairyu,4,11,-14,22,21,82,8,1,,N/A,Otayama;Okinoshima;Tsuboi;Ijuin
-Sagahikari,11,4,14,89,86,83,7,1,,N/A,Ononishiki;Hirosegawa;Udagawa;Kochi;Nishinaka;Asanoumi;Hanada;Hoshikabuto;Fukunosato;Fukunoumi
+Sagahikari,11,4,14,88,86,83,7,1,,N/A,Ononishiki;Hirosegawa;Udagawa;Kochi;Nishinaka;Asanoumi;Hanada;Hoshikabuto;Fukunosato;Fukunoumi
 Otayama,1,14,-26,3,3,84,6,1,,N/A,Hirosegawa
 Hirosegawa,2,13,-22,9,9,85,5,1,,N/A,Takimiyama;Asanishiki
 Asanishiki,1,14,-26,5,5,86,4,1,,N/A,Dairyu
-Taiho,9,6,6,48,45,87,3,1,,N/A,Asanishiki;Hirosegawa;Otayama;Asanoumi;Hakuyuzan;Ichinoya;Kochi;Yoshiiyama
+Taiho,9,6,6,47,45,87,3,1,,N/A,Asanishiki;Hirosegawa;Otayama;Asanoumi;Hakuyuzan;Ichinoya;Kochi;Yoshiiyama
 Udagawa,10,5,10,81,77,88,2,1,,N/A,Asanoumi;Taiho;Asanishiki;Ijuin;Ononishiki;Taikai;Amatsunada;Matsunishiki;Tsuboi;Hakuryuyama
-Asanoumi,8,7,2,42,39,89,1,1,,N/A,Tsuboi;Dairyu;Matsunishiki;Yoshiiyama;Tamanoura;Okinoshima
-Tsuboi,5,10,-10,15,14,90,0,1,,N/A,Asanishiki;Hirosegawa;Otayama;Takimiyama
+Asanoumi,8,7,2,40,39,89,1,1,,N/A,Tsuboi;Dairyu;Matsunishiki;Yoshiiyama;Tamanoura;Okinoshima
+Tsuboi,5,10,-10,14,14,90,0,1,,N/A,Asanishiki;Hirosegawa;Otayama;Takimiyama

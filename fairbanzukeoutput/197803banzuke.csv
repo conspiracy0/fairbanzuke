@@ -1,7 +1,7 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
-Kitanoumi,Y1e,Y1e,N/A,0,0,0,-26,14,-26,157.2579,8,14.9016
+Kitanoumi,Y1e,Y1e,N/A,0,0,0,-26,13,-26,135.1371,7,12.612
 Wajima,Y1w,Y1w,M14w,1,1,1,27,1,26,6.874299999999999,0,0
-Wakamisugi,O1e,O1e,N/A,2,2,2,-20,13,-22,151.54139999999998,6,12.516300000000001
+Wakamisugi,O1e,O1e,N/A,2,2,2,-20,13,-22,149.2518,6,12.516300000000001
 Asahikuni,O2e,O1w,N/A,4,4,3,-6,10,-9,104.1197,5,8.0328
 Mienoumi,O1w,O2e,M1w,3,3,4,1,8,-3,74.0324,3,5.1612
 Takanohana,O2w,O2w,M2w,5,5,5,3,8,-2,81.8763,2,3.8857
@@ -17,7 +17,7 @@ Aobajo,M5w,M3e,M9w,19,19,14,17,8,3,68.9359,1,1.2755
 Takamiyama,M1w,M3w,M9w,11,11,15,17,6,2,57.068799999999996,2,2.8716
 Taiko,J2e,M4e,M11e,38,38,16,20,12,4,112.0039,0,0
 Futatsuryu,M9e,M4w,M11e,26,26,17,20,9,3,80.18949999999998,0,0
-Kotokaze,M3e,M5e,M11e,14,14,18,20,6,2,70.3576,3,7.3551
+Kotokaze,M3e,M5e,M11e,14,14,18,20,6,2,68.068,3,7.3551
 Yutakayama,M1e,M5w,M11e,10,10,19,20,5,1,44.0164,1,1.5961
 Takanosato,M10e,M6e,M12e,28,28,20,22,9,2,71.4936,0,0
 Chiyonofuji,M8e,M6w,M12e,24,24,21,22,8,1,61.5003,0,0

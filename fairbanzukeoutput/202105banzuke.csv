@@ -1,21 +1,21 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
 Hakuho,Y1e,Y1e,M16e,0,0,0,30,0,30,0,0,0
-Terunofuji,O2w,O1e,N/A,4,4,1,-18,13,-19,144.0825,5,8.0328
-Takakeisho,O1w,O1w,N/A,2,2,2,-16,12,-18,135.71040000000002,3,6.1753
+Terunofuji,O2w,O1e,N/A,4,4,1,-20,12,-21,126.2055,4,5.7432
+Takakeisho,O1w,O1w,N/A,2,2,2,-16,12,-18,133.4208,3,6.1753
 Shodai,O2e,O2e,N/A,3,3,3,-3,9,-6,82.70949999999999,2,2.8716
 Asanoyama,O1e,O2w,M2w,1,1,4,3,7,-1,65.25229999999999,3,4.1471
 Takayasu,S1e,S1e,N/A,5,5,5,-5,10,-10,95.5968,4,7.1302
 Mitakeumi,K1e,S1w,N/A,7,7,6,-3,10,-9,97.5361,4,7.4508
 Wakatakakage,M1e,K1e,M2w,9,9,7,3,9,-4,93.28560000000002,5,9.0469
 Meisei,M2e,K1w,M5w,11,11,8,9,8,1,77.8408,3,4.8406
-Endo,M8w,M1e,M6e,24,24,9,10,11,1,108.8371,2,4.5792
+Endo,M8w,M1e,M6e,24,24,9,10,11,1,106.54750000000001,2,4.5792
 Ichinojo,M6w,M1w,M8e,20,20,10,14,9,4,78.69039999999998,1,1.5961
 Daieisho,K1w,M2e,M8e,8,8,11,14,6,3,50.4478,2,3.8857
 Hokutofuji,M1w,M2w,M9e,10,10,12,16,6,4,59.1725,4,5.743200000000001
 Takanosho,S1w,M3e,M9e,6,6,13,16,5,3,45.232600000000005,1,1.5961
 Tobizaru,M2w,M3w,M12e,12,12,14,22,5,8,33.6786,1,1.5961
 Kiribayama,M4e,M4e,M11w,15,15,15,21,6,6,54.1732,1,2.2896
-Myogiryu,M4w,M4w,M12e,16,16,16,22,6,6,60.7876,2,4.5792
+Myogiryu,M4w,M4w,M12e,16,16,16,22,6,6,58.498000000000005,2,4.5792
 Hoshoryu,M5e,M5e,M10w,17,17,17,19,7,2,66.39,3,6.1753
 Onosho,M5w,M5w,M11e,18,18,18,20,7,2,60.4474,1,1.2755
 Kotoeko,M12e,M6e,M13w,31,31,19,25,9,6,87.1337,0,0

@@ -1,5 +1,5 @@
 Name,Old Rank Title,New Rank Title,"""True Rank"" Title",Old Rank,Old Rank Adj,New Rank,True Rank,Wins,Signed Diff,Weighted Neustadl,Sanyaku Defeated Score Raw,Sanyaku Defeated Score Weighted
-Akebono,Y1w,Y1e,N/A,1,1,0,-25,14,-25,157.40509999999998,7,16.6269
+Akebono,Y1w,Y1e,N/A,1,1,0,-25,13,-25,138.171,6,12.8369
 Takanohana,Y1e,Y1w,N/A,0,0,1,-22,13,-23,125.37660000000001,3,5.1612
 Takanonami,O1w,O1e,N/A,3,3,2,-7,10,-9,98.1666,4,6.757300000000001
 Musashimaru,O1e,O1w,N/A,2,2,3,-4,9,-7,71.8403,2,2.8716
@@ -9,7 +9,7 @@ Wakanohana,O2e,S2e,J1w,4,4,6,34,0,28,0,0,0
 Tochiazuma,M6e,K1e,M3w,19,19,7,5,11,-2,108.3558,3,5.1612
 Tamakasuga,M1e,K1w,M4w,9,9,8,7,8,-1,82.59400000000001,4,7.9371
 Kaio,S1e,M1e,M4w,5,5,9,7,7,-2,55.78789999999999,2,2.551
-Musoyama,K1e,M1w,M7w,7,7,10,13,6,3,63.503399999999985,2,5.0655
+Musoyama,K1e,M1w,M7w,7,7,10,13,6,3,59.71339999999999,2,5.0655
 Takatoriki,K1w,M2e,M8e,8,8,11,14,6,3,48.259,0,0
 Akinoshima,M2w,M2w,M8e,12,12,12,14,7,2,59.45910000000001,1,1.2755
 Aogiyama,M6w,M3e,M10e,20,20,13,18,8,5,64.8844,1,1.2755
@@ -39,7 +39,7 @@ Rikio,M15w,M14w,J2w,38,38,36,36,8,0,71.03110000000001,0,0
 Gojoro,M13w,M15e,J2w,34,34,37,36,7,-1,62.0301,0,0
 Kushimaumi,J2w,M15w,J3e,43,43,38,37,9,-1,75.0013,0,0
 Yamato,M14w,M16e,J3w,36,36,39,38,7,-1,58.0363,0,0
-Kyokushuzan,M4w,M16w,J3w,16,16,40,38,2,-2,38.40219999999999,2,5.0655
+Kyokushuzan,M4w,M16w,J3w,16,16,40,38,2,-2,34.6122,2,5.0655
 Akinoshu,J6w,M17e,J5e,51,51,41,41,10,0,77,0,0
 Misugisato,J4w,J1e,J5e,47,47,42,41,9,-1,62,0,0
 Wakanojo,J3w,J1w,J6e,45,45,43,43,8,0,64,0,0

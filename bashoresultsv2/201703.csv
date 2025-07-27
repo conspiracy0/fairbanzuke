@@ -1,8 +1,8 @@
 Name,Wins,Losses,Record,Neustadl,Weighted Neustadl,Rank,Inverse Rank,Weight,Sanyaku,Starting Rank,Beats
 Hakuho,2,13,-22,11,16.8048,0,69,3.79,Y1e,Y1e,Sokokurai;Takekaze
-Kakuryu,10,5,10,86,126.8072,1,68,3.79,Y1w,Y1w,Mitakeumi;Takekaze;Ikioi;Sokokurai;Takanoiwa;Shodai;Takarafuji;Takayasu;Kisenosato;Harumafuji
-Harumafuji,10,5,10,86,122.81289999999998,2,67,3.79,Y2e,Y2e,Ikioi;Takekaze;Shohozan;Yoshikaze;Shodai;Takanoiwa;Endo;Mitakeumi;Takayasu;Kisenosato
-Kisenosato,14,1,26,113,172.0143,3,66,3.79,Y2w,Y2w,Takekaze;Shodai;Takanoiwa;Sokokurai;Ikioi;Takarafuji;Mitakeumi;Shohozan;Kotoshogiku;Tamawashi;Yoshikaze;Arawashi;Terunofuji;Terunofuji
+Kakuryu,10,5,10,85,124.51759999999999,1,68,3.79,Y1w,Y1w,Mitakeumi;Takekaze;Ikioi;Sokokurai;Takanoiwa;Shodai;Takarafuji;Takayasu;Kisenosato;Harumafuji
+Harumafuji,10,5,10,85,120.52329999999998,2,67,3.79,Y2e,Y2e,Ikioi;Takekaze;Shohozan;Yoshikaze;Shodai;Takanoiwa;Endo;Mitakeumi;Takayasu;Kisenosato
+Kisenosato,13,2,26,99,151.76069999999999,3,66,3.79,Y2w,Y2w,Takekaze;Shodai;Takanoiwa;Sokokurai;Ikioi;Takarafuji;Mitakeumi;Shohozan;Kotoshogiku;Tamawashi;Yoshikaze;Arawashi;Terunofuji
 Goeido,1,14,-26,6,9.8485,4,65,2.2896,O1e,O1e,Ikioi
 Terunofuji,13,2,22,97,152.7912,5,64,2.2896,O1w,O1w,Sokokurai;Tamawashi;Shohozan;Yoshikaze;Takanoiwa;Takekaze;Mitakeumi;Ikioi;Shodai;Arawashi;Endo;Kakuryu;Kotoshogiku
 Tamawashi,8,7,2,60,96.1575,6,63,1.5961,S1e,S1e,Takanoiwa;Shodai;Kotoshogiku;Goeido;Ikioi;Kakuryu;Takarafuji;Harumafuji
@@ -61,11 +61,11 @@ Daiamami,8,7,2,69,66,58,11,1,,J9e,Ryuden;Amakaze;Kitataiki;Kitaharima;Kyokutaise
 Azumaryu,9,6,6,80,79,59,10,1,,J9w,Satoyama;Ryuden;Kitaharima;Aminishiki;Kitataiki;Asanoyama;Toyohibiki;Daiamami;Chiyotairyu
 Satoyama,7,8,-2,59,57,60,9,1,,J10e,Daiamami;Ryuden;Chiyomaru;Seiro;Oyanagi;Fujiazuma;Asahisho
 Seiro,8,7,2,63,60,61,8,1,,J10w,Kitataiki;Kitaharima;Daiamami;Aminishiki;Azumaryu;Fujiazuma;Hidenoumi;Ryuden
-Kitataiki,7,8,-2,47,46,62,7,1,,J11e,Asanoyama;Satoyama;Asahisho;Ryuden;Homarefuji;Amakaze
+Kitataiki,7,8,-2,46,46,62,7,1,,J11e,Asanoyama;Satoyama;Asahisho;Ryuden;Homarefuji;Amakaze
 Kitaharima,4,11,-14,28,28,63,6,1,,J11w,Ryuden;Satoyama;Amakaze;Kotoeko
 Asanoyama,10,5,10,85,79,64,5,1,,J12e,Kitaharima;Terutsuyoshi;Rikishin;Aminishiki;Fujiazuma;Kotoeko;Yamaguchi;Daiamami;Seiro;Onosho
 Aminishiki,9,6,6,71,66,65,4,1,,J12w,Asahisho;Rikishin;Kitaharima;Fujiazuma;Daiamami;Satoyama;Kotoeko;Kitataiki;Oyanagi
 Asahisho,7,8,-2,64,58,66,3,1,,J13e,Fujiazuma;Asanoyama;Terutsuyoshi;Rikishin;Tsurugisho;Ryuden;Azumaryu
-Rikishin,9,6,6,56,51,67,2,1,,J13w,Kitataiki;Fujiazuma;Satoyama;Seiro;Azumaryu;Kitaharima;Hidenoumi
-Terutsuyoshi,9,6,6,58,52,68,1,1,,J14e,Rikishin;Fujiazuma;Azumaryu;Seiro;Kitaharima;Satoyama;Hidenoumi
-Fujiazuma,6,9,-6,26,23,69,0,1,,J14w,Kitataiki;Kitaharima;Kotoeko;Homarefuji
+Rikishin,9,6,6,54,51,67,2,1,,J13w,Kitataiki;Fujiazuma;Satoyama;Seiro;Azumaryu;Kitaharima;Hidenoumi
+Terutsuyoshi,9,6,6,56,52,68,1,1,,J14e,Rikishin;Fujiazuma;Azumaryu;Seiro;Kitaharima;Satoyama;Hidenoumi
+Fujiazuma,6,9,-6,24,23,69,0,1,,J14w,Kitataiki;Kitaharima;Kotoeko;Homarefuji

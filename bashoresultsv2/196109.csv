@@ -1,19 +1,19 @@
 Name,Wins,Losses,Record,Neustadl,Weighted Neustadl,Rank,Inverse Rank,Weight,Sanyaku,Starting Rank,Beats
 Asashio,0,15,-30,0,0,0,76,3.79,Y1e,Y1e,
 Wakanohana,10,5,10,79,117.8697,1,75,3.79,Y1w,Y1w,Aonosato;Tochinoumi;Maedagawa;Kairyuyama;Tsurugamine;Haguroyama;Iwakaze;Fujinishiki;Hagurohana;Tochihikari
-Taiho,14,1,26,131,195.7908,2,74,2.2896,O1e,O1e,Haguroyama;Kairyuyama;Fujinishiki;Aonosato;Sadanoyama;Dewanishiki;Ohikari;Tsurugamine;Hagurohana;Tochihikari;Tochinoumi;Kitabayama;Kashiwado;Myobudani
-Kashiwado,13,2,22,124,178.5151,3,73,2.2896,O1w,O1w,Ohikari;Sadanoyama;Tochinoumi;Tsurugamine;Iwakaze;Kairyuyama;Fujinishiki;Hagurohana;Tochihikari;Kitabayama;Taiho;Wakanohana;Myobudani
+Taiho,12,3,24,104,157.68269999999998,2,74,2.2896,O1e,O1e,Haguroyama;Kairyuyama;Fujinishiki;Aonosato;Sadanoyama;Dewanishiki;Ohikari;Tsurugamine;Hagurohana;Tochihikari;Tochinoumi;Kitabayama
+Kashiwado,12,3,24,109,161.0253,3,73,2.2896,O1w,O1w,Ohikari;Sadanoyama;Tochinoumi;Tsurugamine;Iwakaze;Kairyuyama;Fujinishiki;Hagurohana;Tochihikari;Kitabayama;Taiho;Wakanohana
 Kitabayama,8,7,2,63,88.5649,4,72,2.2896,O2e,O2e,Iwakaze;Wakamaeda;Maedagawa;Wakamisugi;Fujinishiki;Ohikari;Sadanoyama;Wakanohana
 Wakahaguro,0,15,-30,0,0,5,71,2.2896,O2w,O2w,
-Kotogahama,9,6,6,75,115.34570000000001,6,70,2.2896,O3e,O3e,Aonosato;Kairyuyama;Hagurohana;Dewanishiki;Ohikari;Kitabayama;Kashiwado;Tsurugamine;Maedagawa
+Kotogahama,9,6,6,74,114.3331,6,70,2.2896,O3e,O3e,Aonosato;Kairyuyama;Hagurohana;Dewanishiki;Ohikari;Kitabayama;Kashiwado;Tsurugamine;Maedagawa
 Tochinoumi,8,7,2,61,82.91669999999999,7,69,1.5961,S1e,S1e,Aonosato;Wakamisugi;Wakamaeda;Kotogahama;Kitabayama;Maedagawa;Iwakaze;Udagawa
 Tochihikari,8,7,2,55,84.94369999999999,8,68,1.5961,S1w,S1w,Asashio;Kitabayama;Fujinishiki;Maedagawa;Aonosato;Wakamaeda;Haguroyama;Kotogahama
 Sadanoyama,8,7,2,62,84.2988,9,67,1.5961,S2e,S2e,Wakamaeda;Kotogahama;Maedagawa;Wakamisugi;Tsurugamine;Wakanohana;Kairyuyama;Aonosato
 Hagurohana,6,9,-6,49,74.42739999999999,10,66,1.5961,S2w,S2w,Maedagawa;Dewanishiki;Sadanoyama;Wakamaeda;Kairyuyama;Tochihikari
 Fujinishiki,8,7,2,74,109.94770000000001,11,65,1.2755,K1e,K1e,Kotogahama;Tsurugamine;Ohikari;Aonosato;Haguroyama;Dewanishiki;Kainoyama;Sadanoyama
-Iwakaze,8,7,2,80,112.34819999999998,12,64,1.2755,K1w,K1w,Hagurohana;Sadanoyama;Kotogahama;Tochihikari;Taiho;Ohikari;Kainoyama;Oginohana
-Maedagawa,2,13,-22,29,46.1371,13,63,1.2755,K2e,K2e,Kashiwado;Taiho
-Haguroyama,9,6,6,75,110.64249999999998,14,62,1.2755,K2w,K2w,Sadanoyama;Asashio;Kotogahama;Tochinoumi;Kashiwado;Oginohana;Maedagawa;Kanenohana;Iwakaze
+Iwakaze,8,7,2,78,109.04599999999998,12,64,1.2755,K1w,K1w,Hagurohana;Sadanoyama;Kotogahama;Tochihikari;Taiho;Ohikari;Kainoyama;Oginohana
+Maedagawa,2,13,-22,26,41.8223,13,63,1.2755,K2e,K2e,Kashiwado;Taiho
+Haguroyama,9,6,6,74,109.62989999999999,14,62,1.2755,K2w,K2w,Sadanoyama;Asashio;Kotogahama;Tochinoumi;Kashiwado;Oginohana;Maedagawa;Kanenohana;Iwakaze
 Tsurugamine,7,8,-2,52,72.6978,15,61,1.1274,,M1e,Tochinoumi;Tochihikari;Wakamaeda;Iwakaze;Hagurohana;Ichinoya;Maedagawa
 Ohikari,6,9,-6,50,62.3027,16,60,1.1274,,M1w,Hagurohana;Wakanohana;Myobudani;Maedagawa;Wakachichibu;Miyabashira
 Kairyuyama,8,7,2,67,84.6188,17,59,1.0589,,M2e,Tochihikari;Wakanoumi;Tochinoumi;Kitabayama;Kainoyama;Wakachichibu;Tsunenishiki;Fukudayama
@@ -71,7 +71,7 @@ Uchida,9,6,6,80,80,68,8,1,,J14w,Kochi;Sawakaze;Fukunoumi;Oyazaki;Kurikeyama;Onos
 Sawakaze,8,7,2,57,57,69,7,1,,N/A,Yoshakayama#;Kochi;Osegawa;Yoshinomine;Omidori;Hoshikabuto;Kurikeyama;Wakasugiyama
 Kochi,7,8,-2,46,44,70,6,1,,N/A,Amatsunada;Tokitsunami;Sakunobori;Asanoumi;Takanishiki;Yoshinomine;Arakiyama
 Osegawa,8,7,2,58,56,71,5,1,,N/A,Amatsunada;Makiyama;Uchida;Yasome;Izuminada;Yoshakayama#;Hoshikabuto;Sakunobori
-Amatsunada,3,12,-18,11,9,72,4,1,,N/A,Fukunoumi
+Amatsunada,3,12,-18,9,9,72,4,1,,N/A,Fukunoumi
 Oikawa,8,7,2,62,60,73,3,1,,N/A,Osegawa;Yoshakayama#;Izuminada;Sakunobori;Amatsunada;Fukunoumi;Arakiyama;Miyanaga
 Yasome,9,6,6,74,72,74,2,1,,N/A,Oikawa;Amatsunada;Makiyama;Oyazaki;Uchida;Arakiyama;Miyanohana;Tokitsunami;Tenzan
 Oyazaki,9,6,6,63,61,75,1,1,,N/A,Makiyama;Oikawa;Amatsunada;Sawakaze;Yoshakayama#;Sakunobori;Arakiyama;Izuminada;Yoshinomine

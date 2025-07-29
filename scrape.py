@@ -22,8 +22,11 @@ class Rikishi:
         self.sanyaku_out = ""
         self.starting_rank = ""
         self.new_rank_title = None
+        self.was_juryo = False
 
 import csv
+
+juryo_bias = -6 # taken from the mean of all the sums of signed diffs of juryo placements from 1958 - now
 
 sanyakutitles = {
     "Yokozuna 1 East":	"Y1e",
@@ -354,6 +357,7 @@ def import_rikishi_from_csv(filename="rikishi_results.csv"):
             rikishi.starting_rank = row["Starting Rank"]
             # print(row)
             # print(rikishi.beats)
+            rikishi.was_juryo = True if "J" in rikishi.starting_rank else False
             rikishi_list.append(rikishi)
     return rikishi_list
 
@@ -478,7 +482,10 @@ def scrape_sumodb(suffix, csvname):
 
                         print("name=", name)
 
-
+                        for n in rikishi_list:
+                            if n.name == name:
+                                print("FOUND DUPE!")
+                                time.sleep(10)
 
 
 
@@ -578,6 +585,8 @@ def fill_in_rikishi_list_data(rikishi_list, use_linear_weights=False):
 
     return rikishi_list
 
+
+
 def simple_neustadl_banzuke(rikishi_list):
     return sorted(rikishi_list, key=lambda rikishi: rikishi.neustadl, reverse=True)
 
@@ -651,6 +660,43 @@ def sort_non_ozeki_weighted(a, b):
         return 1
     print("returning 0 on ", a.name, "vs", b.name)
     return 0
+
+def sort_non_ozeki_weighted_juryo_bias(a, b):
+    #true rank is the "true placement" they should be at given their rank and record. i.e, a M8e with a 8-7 should go to M7e
+    ajuryobias = juryo_bias if a.was_juryo else 0
+    bjuryobias = juryo_bias if b.was_juryo else 0
+
+    atruerank = (a.inverse_rank + a.record) + ajuryobias
+    btruerank = (b.inverse_rank + b.record) + bjuryobias
+
+    #first, if one wrestlers true rank is objectively better than another wrestler, then he should go higher.
+    if atruerank > btruerank:
+        print(atruerank, btruerank)
+        return (-1)
+    if atruerank < btruerank:
+        return 1
+
+    #if there are multiple people at the same true rank, then break ties with the weighted neustadl
+    # the neustadl score is the sum of the weighted ranks you beat, and every weighted rank your opponents beat.
+    # this means that if you beat better opponents, who either did better in the tournament, and/or were higher ranked, you will do better
+    # if (a.weighted_neustadl > b.weighted_neustadl):
+    #     return (-1)
+    # elif (a.weighted_neustadl < b.weighted_neustadl):
+    #     return 1
+    if (a.weighted_neustadl > b.weighted_neustadl):
+        return (-1)
+    elif (a.weighted_neustadl < b.weighted_neustadl):
+        return 1
+
+    # final tiebreak, f b is in a.beats, then a should go before b
+    if b in a.beats:
+        return -1
+    elif a in b.beats:
+        # if a is in b.beats, then b should go before a
+        return 1
+    print("returning 0 on ", a.name, "vs", b.name)
+    return 0
+
 
 rank_list_print = [f"M{i}{side}" for i in range(1, 19) for side in ("e", "w")] + [f"J{i}{side}" for i in range(1, 15) for side in ("e", "w")]
 
@@ -760,7 +806,7 @@ def sort_non_ozeki_raw(rlist, rating_options, ghackvar = None):
         case 1:
             return sorted(rlist, key=cmp_to_key(sort_non_ozeki_weighted))
         case 2:
-            return sorted(rlist, key=cmp_to_key(sort_non_ozeki_fuzzy))
+            return sorted(rlist, key=cmp_to_key(sort_non_ozeki_weighted_juryo_bias))
         case 3:
             return sorted(rlist, key=cmp_to_key(sort_non_ozeki_weighted_fuzzy))
 
@@ -1038,8 +1084,11 @@ def get_prev_bashos(basho_code, folder):
 #     TODO Newly promoted wrestlers will start lower than others (check this is real)
 #
 #ranking system:
-#0 = Truerank strict, regular neustadl
+#0 = Truerank strict, raw neustadl
 #1 = Truerank strict, weighted neustadl
+#2 = Truerank strict, weighted neustadl w/ juryo heuristics
+
+#NOT IMPLEMENTED CURRENTLY
 #2 = Truerank fuzzy, regular Neustadl
 #3 = Truerank fuzzy, weighted  neustadl
 def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking_options=0):
@@ -1318,18 +1367,24 @@ komusubi_force_offset = 2
 komusubi_threshold_list = []
 # banzukecode = "200803"
 # banzukecode ="197111"
-banzukecode = "198403"
+# banzukecode = "198403"
+banzukecode = '202405'
 bashofolder = "bashoresultsv2"
-rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
-make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
-# # # # # #
 
-# make_banzuke(rlist, "fairbanzukeoutput/202305banzuke.csv", 2, 1)
 
-# import os
+# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
+# # make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
+# # # # # # #
+#
+# # csv_name = f"bashoresultsv2/{banzukecode}.csv"
+# # scrape_sumodb(f'Banzuke.aspx?b={banzukecode}', csv_name)
+#
+# make_banzuke(rlist, "test.csv", banzukecode, bashofolder, 2, 2)
+
+import os
 
 input_folder = "bashoresultsv2"
-output_folder = "fairbanzukeoutputnofixes"
+output_folder = "fairbanzukeoutputjuryobias"
 # output_folder = "fairbanzukeoutput"
 os.makedirs(output_folder, exist_ok=True)
 
@@ -1343,7 +1398,8 @@ for fname in os.listdir(input_folder):
     out_path = os.path.join(output_folder, f"{basho_code}banzuke.csv")
 
     rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
-    make_banzuke(rlist, out_path, basho_code, input_folder, 0, 1)
+    # make_banzuke(rlist, out_path, basho_code, input_folder, 0, 1)
+    make_banzuke(rlist, out_path, basho_code, input_folder, 2, 2)
 #
 for n in komusubi_threshold_list:
     print(n)

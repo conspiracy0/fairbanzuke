@@ -2,16 +2,17 @@ TODO:
     Add options for putting Sanyaku ranks by newcomers in sanyaku heuristics (putting S2w etc)
 
 
-    Add yusho winner to sort!
+    Add yusho winner to sort options?
 
-    Check that K1e is never set to Maegashira on a losing record
+    Prevent the playoff wins issues in new basho results fetches
 
 
 
     Create the "true banzuke" by running only sims on our made up banzukes
-
-    Make the compare banzuke work with name changes?
+        Make sure to account for retiring
 
 
     Validate wins and losses add up to 15 in bashoresults
 
+
+    Add juryo promotion heuristics to fairbanzuke output

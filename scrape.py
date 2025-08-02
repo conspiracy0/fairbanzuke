@@ -23,6 +23,7 @@ class Rikishi:
         self.starting_rank = ""
         self.new_rank_title = None
         self.was_juryo = False
+        self.juryobias = 0
 
 import csv
 
@@ -663,11 +664,9 @@ def sort_non_ozeki_weighted(a, b):
 
 def sort_non_ozeki_weighted_juryo_bias(a, b):
     #true rank is the "true placement" they should be at given their rank and record. i.e, a M8e with a 8-7 should go to M7e
-    ajuryobias = juryo_bias if a.was_juryo else 0
-    bjuryobias = juryo_bias if b.was_juryo else 0
 
-    atruerank = (a.inverse_rank + a.record) + ajuryobias
-    btruerank = (b.inverse_rank + b.record) + bjuryobias
+    atruerank = (a.inverse_rank + a.record) + a.juryobias
+    btruerank = (b.inverse_rank + b.record) + b.juryobias
 
     #first, if one wrestlers true rank is objectively better than another wrestler, then he should go higher.
     if atruerank > btruerank:
@@ -1291,12 +1290,24 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
         final_rlist += final_komusubi_out
 
 
+        #now, finally handle maegashira
+
+        sanyaku_num = len(final_rlist)
+        maegashira_slots = 42 - sanyaku_num
+        # handle juryo promotion bias
+        if ranking_options == 2:
+            for i, rikishi in enumerate(sorted_list):
+                if i > maegashira_slots-1:
+                    if rikishi.was_juryo:
+                        rikishi.juryobias = juryo_bias
+
+            sorted_list = sort_non_ozeki_raw(sorted_list, ranking_options)
 
         #if we have heuristic set 1, then we prevent spurious down/upranks in the remaining maegashira
         if heuristic_set >= 1:
 
             #this number is the difference between the number of sanyaku without komusubi in the output banzuke, vs the prev banzuke
-            upper_san_diff = old_sanyaku_num- len(final_rlist)
+            upper_san_diff = old_sanyaku_num- sanyaku_num
 
             prev_rank_offset = old_sanyaku_num - upper_san_diff
             # old_sanyaku_num-old_komusubi_len-len(final_rlist)
@@ -1304,10 +1315,8 @@ def make_banzuke(rikishi_list,filename, bcode, bfolder, heuristic_set=1, ranking
             sorted_list = prevent_uprank_with_mk(sorted_list, prev_rank_offset, upper_san_diff)
 
 
-        #now, finally handle maegashira
+        #
 
-        sanyaku_num = len(final_rlist)
-        maegashira_slots = 42 - sanyaku_num
 
         rank_list_print = []
         for i in range(1, math.ceil(maegashira_slots / 2) + 1):
@@ -1372,14 +1381,14 @@ banzukecode = '202405'
 bashofolder = "bashoresultsv2"
 
 
-# rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
+rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(bashofolder+"/"+banzukecode+".csv"))
 # # make_banzuke(rlist, "testoutnewsystem.csv",banzukecode, bashofolder, 2, 1 )
 # # # # # # #
 #
 # # csv_name = f"bashoresultsv2/{banzukecode}.csv"
 # # scrape_sumodb(f'Banzuke.aspx?b={banzukecode}', csv_name)
 #
-# make_banzuke(rlist, "test.csv", banzukecode, bashofolder, 2, 2)
+make_banzuke(rlist, "test.csv", banzukecode, bashofolder, 2, 2)
 
 import os
 
@@ -1400,7 +1409,7 @@ for fname in os.listdir(input_folder):
     rlist = fill_in_rikishi_list_data(import_rikishi_from_csv(in_path))
     # make_banzuke(rlist, out_path, basho_code, input_folder, 0, 1)
     make_banzuke(rlist, out_path, basho_code, input_folder, 2, 2)
-#
+
 for n in komusubi_threshold_list:
     print(n)
 
